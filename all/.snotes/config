@@ -1,0 +1,19 @@
+# ==================================================================
+# FILE     .snotes/config
+# MACHINE  all
+# INFO     - 
+#
+# DATE     18.01.2014
+# OWNER    Bischofberger
+# ==================================================================
+
+
+SNOTES_EDITOR="st -e ${VISUAL:-${EDITOR:-vim}}"
+
+SNOTES_DB="$HOME/.snotes/notes"
+
+# clean trailing whitespace from file automatically
+SNOTES_CLEANUP="no"
+
+# how many commits should be shown for "changed:note"
+SNOTES_CHANGED_COMMITS=2

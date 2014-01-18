@@ -1,0 +1,18 @@
+# ==================================================================
+# FILE     ~/cmus/rc
+# MACHINE  all
+# INFO     -
+#
+# DATE     18.01.2014
+# OWNER    Bischofberger
+# ==================================================================
+
+
+# handle audio device
+set output_plugin=alsa
+
+# go straight to Music directory
+cd ~/Music/
+
+# load streaming list
+load ~/.cmus/stream.list

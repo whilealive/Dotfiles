@@ -1,0 +1,31 @@
+# ==================================================================
+# FILE     .mutt/zhaw-pseudo-account
+# MACHINE  all
+# INFO     account: bischofberger@fastmail.fm, zhaw folder
+#          for use with mbsync
+#
+# DATE     18.01.2014
+# OWNER    Bischofberger
+# ==================================================================
+
+
+# Basic stuff
+set realname      = "Bruno Bischofberger"
+set from          = "bruno.bischofberger@zhaw.ch"
+set use_from      = yes
+set envelope_from = yes
+
+# Folders for use with mbsync (actually, I'm using fastmail here)
+set spoolfile     = "~/Maildir/zhaw-pseudo/INBOX_zhaw"
+set mbox_type     = Maildir
+set folder        = "~/Maildir/zhaw-pseudo"
+set trash         = "~/Maildir/fastmail/INBOX_Trash"
+set record        = "~/Maildir/fastmail/INBOX_Sent\ Items/"
+set postponed     = "~/Maildir/fastmail/INBOX_Drafts/"
+
+mailboxes ~/Maildir/zhaw-pseudo/INBOX_zhaw
+
+# sending mails via SMTP
+# password management via gpg, set in .muttrc
+set smtp_pass	  = $my_pw_fastmail
+set smtp_url      = smtps://bischofberger@fastmail.fm@mail.messagingengine.com:465

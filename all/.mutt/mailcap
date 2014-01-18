@@ -1,0 +1,11 @@
+# ==================================================================
+# FILE     .mutt/mailcap
+# MACHINE  all
+# INFO     -
+#
+# DATE     18.01.2014
+# OWNER    Bischofberger
+# ==================================================================
+
+
+text/html; w3m -I %{charset} -T text/html; -dump %s; copiousoutput;

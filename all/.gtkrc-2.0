@@ -1,0 +1,20 @@
+# ==================================================================
+# FILE     .gtkrc-2.0
+# MACHINE  all
+# INFO     settings for the look and feel of gtk+ 2.x applications
+#          such as Firefox...
+#
+# DATE     18.01.2014
+# OWNER    Bischofberger
+# ==================================================================
+
+
+gtk-theme-name = "Adwaita"
+
+# the theme "Clearlooks" is included in the package "gtk-engines"
+#gtk-theme-name = "Clearlooks"
+
+# other setting to play with: (require "ttf-dejavu, tangerine-icon-theme)
+# libreoffice: change icon-theme under "Extras/Optionen/Ansicht"
+gtk-icon-theme-name = "Tango"
+gtk-font-name = "DejaVu Sans 9"
