@@ -1,11 +1,11 @@
 " ==================================================================
 " FILE     .vim/ftplugin/tex.vim
-" MACHINE  desktop
+" MACHINE  all
 " INFO     Personal tex.vim config file, in addition to the 
 "          standard texrc file in 
 "          /usr/share/vim/vimfiles/ftplugin/latex-suite/
 "
-" DATE     22.12.2013
+" DATE     19.01.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -21,6 +21,7 @@ set iskeyword+=:
 " compile to pdf directly
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf,aux'
+let g:Tex_ViewRule_pdf = "zathuratab"
 
 " set prompted environments at F5 key
 let g:Tex_PromptedEnvironments = '\[,gather*,gather,multline,cases,pmatrix,align'
