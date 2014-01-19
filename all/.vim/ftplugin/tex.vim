@@ -1,24 +1,29 @@
 " ==================================================================
-" FILE     .vim/ftplugin/java.vim
-" MACHINE  all
-" INFO     -
+" FILE      .vim/ftplugin/tex.vim
+" MACHINE   all
+" INFO      Personal tex.vim config file, in addition to the standard
+"           texrc file in /usr/share/vim/vimfiles/ftplugin/latex-suite/
 "
-" DATE     18.01.2014
-" OWNER    Bischofberger
+" DATE      19.01.2014
+" OWNER     Bischofberger
 " ==================================================================
 
 
-" standard eclipse indentation
-set shiftwidth=4
-set tabstop=4
-set noexpandtab
+" little indentation
+set sw=2
 
-" ctags java tags, use Ctrl-] to jump around
-set tags=./.tags
+" if you write your \label's as \label{fig:something}, then if you
+" type in \ref{fig: and press <C-n> you will automatically cycle through
+" all the figure labels. Very useful!
+set iskeyword+=:
 
-" auto-complete classes, methods, etc, use Ctrl-N
-set complete=.,w,b,u,t,i
+" compile to pdf directly
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'pdf,aux'
+let g:Tex_ViewRule_pdf = 'zathuratab'
 
-" folding
-set foldmethod=indent
-set foldlevel=1
+" set prompted environments at F5 key
+let g:Tex_PromptedEnvironments = '\[,gather*,gather,multline,cases,pmatrix,align'
+
+" folding rules (for mathematics)
+let g:Tex_FoldedEnvironments = 'Def,Ex,Thm,Prop,Lem,Cor,Rem,Case,proof,thebibliography'
