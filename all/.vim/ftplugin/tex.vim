@@ -9,8 +9,10 @@
 " ==================================================================
 
 
-" little indentation
-set sw=2
+
+set sw=2   " little indentation
+set nocul  " disable cursorline, too slow
+set tw=90  " limited textwidth for readability
 
 " if you write your \label's as \label{fig:something}, then if you
 " type in \ref{fig: and press <C-n> you will automatically cycle through
