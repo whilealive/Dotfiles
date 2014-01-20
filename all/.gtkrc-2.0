@@ -4,12 +4,12 @@
 # INFO     settings for the look and feel of gtk+ 2.x applications
 #          such as Firefox...
 #
-# DATE     18.01.2014
+# DATE     20.01.2014
 # OWNER    Bischofberger
 # ==================================================================
 
 
-gtk-theme-name = "Adwaita"
+gtk-theme-name = "Adwaita"  # from gnome-themes-standard
 
 # the theme "Clearlooks" is included in the package "gtk-engines"
 #gtk-theme-name = "Clearlooks"
