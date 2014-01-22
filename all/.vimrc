@@ -23,7 +23,10 @@ set ruler		    	"shows row/column number of the cursor
 set nojoinspaces		"insert only one space after .,?!
 set cpo+=$			    "shows the end of the text to be changed when pressing c
 set whichwrap=""		"don't exceed the end of the line with the cursor
+
+" searching and traveling
 set hlsearch			"highlight searching results
+set tags+=tags;/        "make vim search current folder for tags file
 
 " tabs and indent
 set autoindent			"automatically indent lines to previous lines
