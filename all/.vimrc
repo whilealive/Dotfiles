@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     21.01.2014
+" DATE     22.01.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -29,7 +29,7 @@ set hlsearch			"highlight searching results
 set autoindent			"automatically indent lines to previous lines
 set shiftwidth=4		"autoindent indents 4 inits (= 1 tab)
 set tabstop=4			"tabstop length
-set noexpandtab			"don't fill up with spaces when pressing <tab>
+set expandtab			"fill up with spaces when pressing <tab>
 
 " layout
 colorscheme bruno-custom	"my personal color scheme
