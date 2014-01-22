@@ -26,7 +26,6 @@ set whichwrap=""		"don't exceed the end of the line with the cursor
 
 " searching and traveling
 set hlsearch			"highlight searching results
-set tags+=tags;/        "make vim search current folder for tags file
 
 " tabs and indent
 set autoindent			"automatically indent lines to previous lines
