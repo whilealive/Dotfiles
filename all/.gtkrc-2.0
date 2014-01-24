@@ -16,7 +16,7 @@ gtk-theme-name = "Adwaita"  # from gnome-themes-standard
 
 # other setting to play with: (require "ttf-dejavu, tangerine-icon-theme)
 # libreoffice: change icon-theme under "Extras/Optionen/Ansicht"
-gtk-font-name = "DejaVu Sans 9"
+gtk-font-name = "DejaVu Sans 8"
 gtk-icon-theme-name = "Tangerine"
 gtk-icon-sizes = "panel-menu=16,16:panel=16,16:gtk-menu=16,16:gtk-large-toolbar=16,16\
 :gtk-small-toolbar=16,16:gtk-button=16,16"
