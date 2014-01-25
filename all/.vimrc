@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     21.01.2014
+" DATE     22.01.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -23,13 +23,15 @@ set ruler		    	"shows row/column number of the cursor
 set nojoinspaces		"insert only one space after .,?!
 set cpo+=$			    "shows the end of the text to be changed when pressing c
 set whichwrap=""		"don't exceed the end of the line with the cursor
+
+" searching and traveling
 set hlsearch			"highlight searching results
 
 " tabs and indent
 set autoindent			"automatically indent lines to previous lines
 set shiftwidth=4		"autoindent indents 4 inits (= 1 tab)
 set tabstop=4			"tabstop length
-set noexpandtab			"don't fill up with spaces when pressing <tab>
+set expandtab			"fill up with spaces when pressing <tab>
 
 " layout
 colorscheme bruno-custom	"my personal color scheme
