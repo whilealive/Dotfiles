@@ -4,11 +4,13 @@
 " INFO      Personal tex.vim config file, in addition to the standard
 "           texrc file in /usr/share/vim/vimfiles/ftplugin/latex-suite/
 "
-" DATE      19.01.2014
+" DATE      31.01.2014
 " OWNER     Bischofberger
 " ==================================================================
 
 
+set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+set grepprg=grep\ -nH\ $*
 
 set sw=2   " little indentation
 set nocul  " disable cursorline, too slow
@@ -19,7 +21,8 @@ set tw=90  " limited textwidth for readability
 " all the figure labels. Very useful!
 set iskeyword+=:
 
-" compile to pdf directly
+" compile stuff
+let g:tex_flavor = "latex"
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf,aux'
 let g:Tex_ViewRule_pdf = 'zathuratab'

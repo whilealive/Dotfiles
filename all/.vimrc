@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     22.01.2014
+" DATE     31.01.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -47,30 +47,5 @@ autocmd FileType java map <F3> :!java -cp "%:p:h" "%:t:r"<CR>
 " brackets as I like them...
 imap <F4> <Space>{<CR>}<Esc>%a<CR>
 
-
-"===================================================================================
-"Plugins
-"===================================================================================
-
-"--------------------------
-"Options for vim-latexsuite
-"--------------------------
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
-
-"--------------------
-" Options for NERDTree
-"--------------------
-" start NERDTree if vim is open with no files are open
-"autocmd vimenter * if !argc() | NERDTree | endif  
-" toggle NERDTree with <F5>
-"map <F5> :NERDTreeToggle<CR>
-" close vim if the only buffer left open is NERDTree
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"-------------------
-" Options for taglist
-"-------------------
-" toggle taglist with <F6>
-"nnoremap <silent> <F6> :TlistToggle<CR>
+" Allows writing to files with root priviledges
+cmap w!! w !sudo tee % > /dev/null
