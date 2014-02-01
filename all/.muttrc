@@ -1,10 +1,10 @@
 # ==================================================================
 # FILE     .muttrc
-# MACHINE  desktop
-# INFO     for use with mbsync
-#          additional files to be found in ~/.mutt/
+# MACHINE  all
+# INFO     for use with mbsync,
+#          additional account files to be found in ~/.mutt/
 #
-# DATE     18.01.2014
+# DATE     01.02.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -27,8 +27,8 @@ source "~/.mutt/zhaw-pseudo-account"
 folder-hook zhaw-pseudo 'source ~/.mutt/zhaw-pseudo-account'
 
 # mgmit.zhaw@gmail.com
-source "~/.mutt/gmail-mgmit-account"
-folder-hook gmail-mgmit 'source ~/.mutt/gmail-mgmit-account'
+#source "~/.mutt/gmail-mgmit-account"
+#folder-hook gmail-mgmit 'source ~/.mutt/gmail-mgmit-account'
 
 # bischofberger@fastmail.fm
 source "~/.mutt/fastmail-account"
@@ -135,6 +135,6 @@ auto_view text/html
 macro index,pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
 
 # pymuttprint
-set print_command="~/Build/desktop/pymuttprint/pymuttprint.py && zathura /tmp/texput.pdf"
-set print_decode="no"
+set print_command="~/Build/$(hostname)/pymuttprint/pymuttprint.py && zathura /tmp/texput.pdf"
+set print_decode="yes"
 set print_split="no"
