@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     18.01.2014
+# DATE     01.02.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -105,26 +105,26 @@ Group fastmail
 Channels fastmail_in fastmail_sent fastmail_uzh fastmail_zhaw
 
 
-# Account gmail mgmit.zhaw ---------------------------------------------------------------------------
-IMAPAccount gmail-mgmit
-Host imap.gmail.com
-User mgmit.zhaw@gmail.com
-#Pass2
-UseIMAPS yes
-CertificateFile /etc/ssl/certs/ca-certificates.crt
-
-IMAPStore gmail-mgmit-remote
-Account gmail-mgmit
-
-MaildirStore gmail-mgmit-local
-Path ~/Maildir/gmail-mgmit/
-Inbox ~/Maildir/gmail-mgmit/INBOX
-Flatten "_"
-
-Channel gmail-mgmit
-Master :gmail-mgmit-remote:
-Slave :gmail-mgmit-local:
-Patterns "[Gmail]/Gesendet" "[Gmail]/Papierkorb" "INBOX"
-Sync All
-Create Slave
-SyncState *
+## Account gmail mgmit.zhaw ---------------------------------------------------------------------------
+#IMAPAccount gmail-mgmit
+#Host imap.gmail.com
+#User mgmit.zhaw@gmail.com
+##Pass2
+#UseIMAPS yes
+#CertificateFile /etc/ssl/certs/ca-certificates.crt
+#
+#IMAPStore gmail-mgmit-remote
+#Account gmail-mgmit
+#
+#MaildirStore gmail-mgmit-local
+#Path ~/Maildir/gmail-mgmit/
+#Inbox ~/Maildir/gmail-mgmit/INBOX
+#Flatten "_"
+#
+#Channel gmail-mgmit
+#Master :gmail-mgmit-remote:
+#Slave :gmail-mgmit-local:
+#Patterns "[Gmail]/Gesendet" "[Gmail]/Papierkorb" "INBOX"
+#Sync All
+#Create Slave
+#SyncState *
