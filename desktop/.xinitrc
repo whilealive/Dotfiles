@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     03.01.2014
+# DATE     02.02.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -29,7 +29,7 @@ xset fp rehash
 xset b off
 
 # statusbar
-while true; do Scripts/dwm-statusbar-desktop.sh ; sleep 5; done &
+while true; do Scripts/dwm-statusbar.sh ; sleep 5; done &
 
 # background image
 #sh ~/.fehbg &
