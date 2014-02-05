@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     03.02.2014
+" DATE     05.02.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -51,3 +51,9 @@ imap <F4> <Space>{<CR>}<Esc>%a<CR>
 
 " Allows writing to files with root priviledges
 cmap w!! w !sudo tee % > /dev/null
+
+" taglist plugin
+let Tlist_Compact_Format = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+nnoremap <C-l> :TlistToggle<CR>
