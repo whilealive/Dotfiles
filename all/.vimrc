@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     05.02.2014
+" DATE     10.02.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -26,8 +26,8 @@ set whichwrap=""    "don't exceed the end of the line with the cursor
 
 " searching and traveling
 set hlsearch                                  "highlight searching results
-let g:netrw_liststyle=3                       "default liststyle
 let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+'  "hide dotfiles by default
+nnoremap <F10> :buffers<Cr>:buffer<Space> 
 
 " tabs and indent
 set autoindent      "automatically indent lines to previous lines
