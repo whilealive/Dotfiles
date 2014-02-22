@@ -4,7 +4,7 @@
 " INFO      Personal tex.vim config file, in addition to the standard
 "           texrc file in /usr/share/vim/vimfiles/ftplugin/latex-suite/
 "
-" DATE      19.02.2014
+" DATE      20.02.2014
 " OWNER     Bischofberger
 " ==================================================================
 
@@ -15,8 +15,12 @@ set grepprg=grep\ -nH\ $*
 set sw=2   " little indentation
 set nocul  " disable cursorline, too slow
 set tw=90  " limited textwidth for readability
-"set formatoptions=tl    " automatic wrapping
-"set formatoptions+=a    " automatic wrapping
+
+"behave like a word processor
+set formatoptions+=tlw
+autocmd InsertEnter * set formatoptions+=a
+autocmd InsertLeave * set formatoptions-=a
+noremap Q :set fo-=w<Cr>gqap<Esc>:set fo+=w<CR>
 
 " if you write your \label's as \label{fig:something}, then if you
 " type in \ref{fig: and press <C-n> you will automatically cycle through
