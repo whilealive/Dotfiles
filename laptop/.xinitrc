@@ -29,7 +29,7 @@ xset fp rehash
 xset b off
 
 # statusbar
-while true; do Scripts/dwm-statusbar.sh ; sleep 5; done &
+while true; do Scripts/dwm-statusbar ; sleep 5; done &
 
 # background image
 sh ~/.fehbg &
