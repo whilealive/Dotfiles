@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     custom commands at the end of the file
 #
-# DATE     18.01.2014
+# DATE     27.02.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -1256,9 +1256,9 @@ class log(Command):
 
 
 
-# ===================================================================
-# == Custom settings and commands by myself (Bruno)
-# ===================================================================
+# =========================================================
+# == Custom commands by myself (Bischofberger)
+# =========================================================
 
 class empty(Command):
     """:empty
@@ -1268,3 +1268,13 @@ class empty(Command):
 
     def execute(self):
         self.fm.run("rm -rf $HOME/.trash/{*,.[^.]*}")
+
+
+class delete_desktop(Command):
+    """:delete-desktop
+
+    Removes the stupid ~/Desktop/ -folder
+    """
+
+    def execute(self):
+        self.fm.run("rm -rf $HOME/Desktop/")
