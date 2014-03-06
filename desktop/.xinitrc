@@ -29,7 +29,7 @@ xset fp rehash
 xset b off
 
 # statusbar
-while true; do Scripts/dwm-statusbar ; sleep 5; done &
+#while true; do Scripts/dwm-statusbar ; sleep 5; done &
 
 # background image
 #sh ~/.fehbg &
@@ -40,7 +40,7 @@ numlockx &
 # start conky
 #conky &
 
-# clipboard management
+# clipboard management, daemon needs to be running for "xcmenuctl" command
 xcmenu --daemon &
 
 # start gpg agent
