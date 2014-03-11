@@ -1,7 +1,10 @@
 Dotfiles
 ================
 
-universal dotfiles, hardlinked to folder "Dotfiles/all"
-will run on all machines
-
-private dotfiles under machine name
+- dotfiles in folder "all/" represent machine-independent
+  preferences.
+- other dotfiles contain machine-dependent stuff.
+- I manage my dotfiles through an extra folder "~/Dotfiles/" 
+  which contains the original files. All dotfiles are
+  symlinked to this folder. Makes it possible to handle 
+  machine-independent files.
