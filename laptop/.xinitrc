@@ -4,7 +4,7 @@
 # MACHINE  laptop
 # INFO     Executed by startx
 #
-# DATE     12.03.2014
+# DATE     13.03.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -30,7 +30,7 @@ xset b off
 
 # statusbar
 #while true; do Scripts/dwm-statusbar ; sleep 5; done &
-dwmstatus &
+dwmstatus -laptop &
 
 # background image
 sh ~/.fehbg &
