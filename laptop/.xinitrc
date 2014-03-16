@@ -30,7 +30,7 @@ xset b off
 
 # statusbar
 #while true; do Scripts/dwm-statusbar ; sleep 5; done &
-dwmstatus -laptop &
+dwmstatus --laptop &
 
 # background image
 sh ~/.fehbg &
