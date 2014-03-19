@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     24.02.2014
+# DATE     15.03.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -30,6 +30,7 @@ xset b off
 
 # statusbar
 #while true; do Scripts/dwm-statusbar ; sleep 5; done &
+dwmstatus --desktop &
 
 # background image
 #sh ~/.fehbg &
