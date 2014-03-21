@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     18.01.2014
+# DATE     21.03.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -44,7 +44,7 @@ man() {
 }
 
 # Shortkeys, Aliases
-alias susp="systemctl suspend"
+#alias susp="systemctl suspend"
 
 # Extract Files
 extract() {
