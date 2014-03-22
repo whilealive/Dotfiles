@@ -57,13 +57,11 @@ autocmd FileType cpp map <F3> :!"%:p:r.out"<CR>
 autocmd FileType java map <F2> :!javac "%:p" <bar> more<CR>
 autocmd FileType java map <F3> :!java -cp "%:p:h" "%:t:r"<CR>
 
-" brackets as I like them...
+" brackets as I like them... 
 " --------------------------
-imap <F4> <Space>{<CR>}<Esc>%a<CR>
-
-" Allows writing to files with root priviledges
-" ---------------------------------------------
-cmap w!! w !sudo tee % > /dev/null
+" -> <S-F4> doesn't work
+" -> ...
+imap <F4> {<CR>}<Esc>O
 
 " taglist plugin
 " --------------
