@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     22.03.2014
+" DATE     23.03.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -68,4 +68,6 @@ imap <F4> {<CR>}<Esc>O
 let Tlist_Compact_Format = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_WinWidth = 40
 nnoremap <C-l> :TlistToggle<CR>
