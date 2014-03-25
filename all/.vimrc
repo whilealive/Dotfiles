@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     23.03.2014
+" DATE     25.03.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -34,6 +34,7 @@ set hlsearch        "highlight searching results
 let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+'  "hide dotfiles by default
 let g:netrw_browse_split=3                    "open files in new tabs
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buffer switching)
 
 " tabs and indent
 " ---------------
