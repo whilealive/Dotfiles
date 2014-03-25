@@ -8,7 +8,7 @@
 " ==================================================================
 
 
-" omnicompletition
+" omnicompletition  (needs cppomnicomplete plugin)
 " tags file created with:
 "     ctags -R --c++-kinds=+p --fields=+iaS --extra=+q /usr/include/c++
-set tags+=~/.vim/tags/cpp.tags
+"set tags+=~/.vim/tags/cpp.tags
