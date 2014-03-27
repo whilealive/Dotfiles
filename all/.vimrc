@@ -54,8 +54,8 @@ set number                  "show line numbers
 " ----------------------------------------------------------------------
 autocmd FileType c map <F2> :!gcc -o "%:p:r.out" "%:p" <bar> more<CR>
 autocmd FileType c map <F3> :!"%:p:r.out"<CR>
-autocmd FileType cpp map <F2> :!g++ -std=c++11 -o "%:p:r.out" "%:p" <bar> more<CR>
-autocmd FileType cpp map <F3> :!"%:p:r.out"<CR>
+"autocmd FileType cpp map <F2> :!g++ -std=c++11 -o "%:p:r.out" "%:p" <bar> more<CR>
+autocmd FileType cpp map <F3> :!"%:p:r"<CR>
 autocmd FileType java map <F2> :!javac "%:p" <bar> more<CR>
 autocmd FileType java map <F3> :!java -cp "%:p:h" "%:t:r"<CR>
 
