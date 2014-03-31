@@ -50,14 +50,11 @@ colorscheme bruno-custom    "my personal color scheme
 set cursorline              "cursorline, sometimes pretty slow...
 set number                  "show line numbers
 
-" brackets as I like them... 
-" --------------------------
-" -> <S-F2> doesn't work
-" -> ...
+" the <F-XX> keys...
+" ------------------
+" brackets as I like them
 imap <F2> {<CR>}<Esc>O
-
 " timestamp
-" ---------
 :nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
 
 " taglist plugin
@@ -68,22 +65,4 @@ let Tlist_Close_On_Select = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 40
 nnoremap <C-l> :TlistToggle<CR>
-
-
-
-
-
-" --------------
-" some old stuff
-" --------------
-"
-"
-" quickly compile within vim, compilation with <F2>, execution with <F3>
-" ----------------------------------------------------------------------
-"autocmd FileType c map <F2> :!gcc -o "%:p:r.out" "%:p" <bar> more<CR>
-"autocmd FileType c map <F3> :!"%:p:r.out"<CR>
-"autocmd FileType cpp map <F2> :!g++ -std=c++11 -o "%:p:r.out" "%:p" <bar> more<CR>
-"autocmd FileType cpp map <F3> :!"%:p:r"<CR>
-"autocmd FileType java map <F2> :!javac "%:p" <bar> more<CR>
-"autocmd FileType java map <F3> :!java -cp "%:p:h" "%:t:r"<CR>
 
