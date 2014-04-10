@@ -5,7 +5,7 @@
 #          for use with mbsync
 #          extra-folder: suckless-dev (Mailing list)
 #
-# DATE     18.01.2014
+# DATE     10.04.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -25,7 +25,7 @@ set record        = "~/Maildir/fastmail/INBOX_Sent\ Items/"
 set trash         = "~/Maildir/fastmail/INBOX_Trash/"
 
 # include all gmail folders synced by mbsync to ~/Maildir/
-mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/INBOX_Archive ~/Maildir/fastmail/INBOX_Sent\ Items ~/Maildir/fastmail/INBOX_Trash ~/Maildir/fastmail/INBOX_suckless-dev
+mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/INBOX_Archive ~/Maildir/fastmail/INBOX_Sent\ Items ~/Maildir/fastmail/INBOX_Trash ~/Maildir/fastmail/INBOX_suckless-dev ~/Maildir/fastmail/INBOX_vim
 
 # sending mails via SMTP
 # password management via gpg, set in .muttrc

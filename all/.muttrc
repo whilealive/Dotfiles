@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     01.02.2014
+# DATE     10.04.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -71,7 +71,11 @@ set abort_nosubject = no
 
 # Mailing lists
 lists dev@suckless.org
+lists vim@googlegroups.com
+lists vim_dev@googlegroups.com
 subscribe dev@suckless.org
+subscribe vim@googlegroups.com
+subscribe vim_dev@googlegroups.com
 
 # bindings
 bind pager q            exit
@@ -100,7 +104,8 @@ macro index,pager gb "<change-folder> ~/Maildir/gmail-bischi/INBOX<enter>" "go t
 macro index,pager gu "<change-folder> ~/Maildir/uzh-pseudo/INBOX_uzh<enter>" "go to pseudo-uzh INBOX"
 macro index,pager gz "<change-folder> ~/Maildir/zhaw-pseudo/INBOX_zhaw<enter>" "go to pseudo-zhaw INBOX"
 macro index,pager gs "<change-folder> ~/Maildir/fastmail/INBOX_suckless-dev<enter>" "go to suckless-dev INBOX"
-macro index,pager gm "<change-folder> ~/Maildir/gmail-mgmit/INBOX<enter>" "go to mgmit INBOX"
+macro index,pager gv "<change-folder> ~/Maildir/fastmail/INBOX_vim<enter>" "go to vim INBOX"
+#macro index,pager gm "<change-folder> ~/Maildir/gmail-mgmit/INBOX<enter>" "go to mgmit INBOX"
 
 # change folders quickly
 set sleep_time = 0

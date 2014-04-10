@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     01.02.2014
+# DATE     10.04.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -69,7 +69,7 @@ Flatten "_"
 Channel fastmail_in
 Master :fastmail-remote:
 Slave :fastmail-local:
-Patterns "INBOX" "INBOX/Trash" "INBOX/Archive" "INBOX/Drafts" "INBOX/suckless-dev"
+Patterns "INBOX" "INBOX/Trash" "INBOX/Archive" "INBOX/Drafts" "INBOX/suckless-dev" "INBOX/vim"
 Sync All
 Create Slave
 SyncState *
