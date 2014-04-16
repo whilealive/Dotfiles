@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     31.03.2014
+" DATE     16.04.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -52,7 +52,9 @@ set number                  "show line numbers
 
 " the <F-XX> keys...
 " ------------------
-" brackets as I like them
+"brackets as I like them
 imap <F2> {<CR>}<Esc>O
-" timestamp
+"timestamp
 :nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
+"run executable in shell
+map <F4> :!"%:p:r"<CR>
