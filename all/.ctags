@@ -1,0 +1,19 @@
+# ==================================================================
+# FILE     .ctags
+# MACHINE  all
+# INFO     -
+#
+# DATE     23.04.2014
+# OWNER    Bischofberger
+# ==================================================================
+
+# create tags of latex files
+--langdef=latex
+--langmap=latex:.tex
+--regex-latex=/\\label\{([^}]*)\}/\1/l,label/
+--regex-latex=/\\section\{([^}]*)\}/\1/s,section/
+--regex-latex=/\\subsection\{([^}]*)\}/\1/t,subsection/
+--regex-latex=/\\subsubsection\{([^}]*)\}/\1/u,subsubsection/
+--regex-latex=/\\section\*\{([^}]*)\}/\1/s,section/
+--regex-latex=/\\subsection\*\{([^}]*)\}/\1/t,subsection/
+--regex-latex=/\\subsubsection\*\{([^}]*)\}/\1/u,subsubsection/
