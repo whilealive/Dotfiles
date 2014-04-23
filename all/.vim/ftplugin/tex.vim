@@ -18,3 +18,10 @@ set formatoptions+=atlw
 "autocmd InsertLeave * set formatoptions-=a
 noremap Q :set fo-=w<Cr>gqap<Esc>:set fo+=w<CR>
 
+"compile within vim using rubber
+setlocal errorformat=%f:%l:\ %m,%f:%l-%\\d%\\+:\ %m
+if filereadable('Makefile')
+    setlocal makeprg=make
+else
+    exec "setlocal makeprg=make\\ -f\\ ~/Developer/make/latex.mk\\ " . substitute(bufname("%"),"tex$","pdf", "")
+endif
