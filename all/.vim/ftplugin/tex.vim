@@ -18,7 +18,9 @@ set formatoptions+=atlw
 "autocmd InsertLeave * set formatoptions-=a
 noremap Q :set fo-=w<Cr>gqap<Esc>:set fo+=w<CR>
 
-"compile within vim using rubber
+"compile within vim using make and rubber
+"if the current dir doesn't have a Makefile, it compiles using the generic
+"Makefile given after exec...
 setlocal errorformat=%f:%l:\ %m,%f:%l-%\\d%\\+:\ %m
 if filereadable('Makefile')
     setlocal makeprg=make
