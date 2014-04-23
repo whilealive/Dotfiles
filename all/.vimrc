@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     16.04.2014
+" DATE     23.04.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -26,6 +26,7 @@ set nojoinspaces    "insert only one space after .,?!
 set cpo+=$          "shows the end of the text to be changed when pressing c
 set whichwrap=""    "don't exceed the end of the line with the cursor
 set hlsearch        "highlight searching results
+set tags=./tags;    "search for tags file in current dir
 
 " file and path managing
 " ----------------------
