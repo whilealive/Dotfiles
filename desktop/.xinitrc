@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     15.03.2014
+# DATE     04.05.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -30,7 +30,7 @@ xset b off
 
 # statusbar
 #while true; do Scripts/dwm-statusbar ; sleep 5; done &
-dwmstatus --desktop &
+dwmstatus &
 
 # background image
 #sh ~/.fehbg &
@@ -42,7 +42,7 @@ numlockx &
 #conky &
 
 # clipboard management, daemon needs to be running for "xcmenuctl" command
-xcmenu --daemon &
+#xcmenu --daemon &
 
 # start gpg agent
 eval $(gpg-agent --daemon)
