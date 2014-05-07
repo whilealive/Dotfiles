@@ -27,7 +27,8 @@ set trash         = "~/Maildir/fastmail/Trash"
 set record        = "~/Maildir/fastmail/Sent\ Items/"
 set postponed     = "~/Maildir/fastmail/Drafts/"
 
-mailboxes ~/Maildir/uzh-pseudo/INBOX_uzh
+#mailboxes ~/Maildir/uzh-pseudo/INBOX_uzh
+mailboxes ~/Maildir/uzh-pseudo/uzh
 
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
