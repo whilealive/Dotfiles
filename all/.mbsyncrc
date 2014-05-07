@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     10.04.2014
+# DATE     07.05.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -44,7 +44,8 @@ SyncState *
 # Account fastmail.fm ------------------------------------------------------------------------------------
 IMAPAccount fastmail
 Host mail.messagingengine.com
-Port 993
+#Port 993
+Port 992
 User bischofberger@fastmail.fm
 #Pass3
 UseIMAPS yes
@@ -69,7 +70,8 @@ Flatten "_"
 Channel fastmail_in
 Master :fastmail-remote:
 Slave :fastmail-local:
-Patterns "INBOX" "INBOX/Trash" "INBOX/Archive" "INBOX/Drafts" "INBOX/suckless-dev" "INBOX/vim"
+#Patterns "INBOX" "INBOX/Trash" "INBOX/Archive" "INBOX/Drafts" "INBOX/suckless-dev" "INBOX/vim"
+Patterns "INBOX" "Trash" "Archive" "Drafts" "suckless-dev" "vim"
 Sync All
 Create Slave
 SyncState *
@@ -77,7 +79,8 @@ SyncState *
 Channel fastmail_sent
 Master :fastmail-remote:
 Slave :fastmail-local:
-Patterns "INBOX/Sent Items"
+#Patterns "INBOX/Sent Items"
+Patterns "Sent Items"
 Sync All
 Expunge Both
 Create Slave
@@ -86,7 +89,8 @@ SyncState *
 Channel fastmail_uzh
 Master :fastmail-remote:
 Slave :uzh-pseudo:
-Patterns "INBOX/uzh"
+#Patterns "INBOX/uzh"
+Patterns "uzh"
 Sync All
 Expunge Both
 Create Slave
@@ -95,7 +99,8 @@ SyncState *
 Channel fastmail_zhaw
 Master :fastmail-remote:
 Slave :zhaw-pseudo:
-Patterns "INBOX/zhaw"
+#Patterns "INBOX/zhaw"
+Patterns "zhaw"
 Sync All
 Expunge Both
 Create Slave

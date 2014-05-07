@@ -4,7 +4,7 @@
 # INFO     account: bischofberger@fastmail.fm, zhaw folder
 #          for use with mbsync
 #
-# DATE     18.01.2014
+# DATE     07.05.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -16,12 +16,16 @@ set use_from      = yes
 set envelope_from = yes
 
 # Folders for use with mbsync (actually, I'm using fastmail here)
-set spoolfile     = "~/Maildir/zhaw-pseudo/INBOX_zhaw"
+#set spoolfile     = "~/Maildir/zhaw-pseudo/INBOX_zhaw"
+set spoolfile     = "~/Maildir/zhaw-pseudo/zhaw"
 set mbox_type     = Maildir
 set folder        = "~/Maildir/zhaw-pseudo"
-set trash         = "~/Maildir/fastmail/INBOX_Trash"
-set record        = "~/Maildir/fastmail/INBOX_Sent\ Items/"
-set postponed     = "~/Maildir/fastmail/INBOX_Drafts/"
+#set trash         = "~/Maildir/fastmail/INBOX_Trash"
+#set record        = "~/Maildir/fastmail/INBOX_Sent\ Items/"
+#set postponed     = "~/Maildir/fastmail/INBOX_Drafts/"
+set trash         = "~/Maildir/fastmail/Trash"
+set record        = "~/Maildir/fastmail/Sent\ Items/"
+set postponed     = "~/Maildir/fastmail/Drafts/"
 
 mailboxes ~/Maildir/zhaw-pseudo/INBOX_zhaw
 
