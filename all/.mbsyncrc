@@ -70,8 +70,16 @@ Flatten "_"
 Channel fastmail_in
 Master :fastmail-remote:
 Slave :fastmail-local:
-#Patterns "INBOX" "INBOX/Trash" "INBOX/Archive" "INBOX/Drafts" "INBOX/suckless-dev" "INBOX/vim"
-Patterns "INBOX" "Trash" "Archive" "Drafts" "suckless-dev" "vim"
+Patterns "INBOX"
+Sync All
+Create Slave
+SyncState *
+
+Channel fastmail_rest
+Master :fastmail-remote:
+Slave :fastmail-local:
+#Patterns "INBOX/Trash" "INBOX/Archive" "INBOX/Drafts" "INBOX/suckless-dev" "INBOX/vim"
+Patterns "Archive" "Trash" "Drafts" "suckless-dev" "vim"
 Sync All
 Create Slave
 SyncState *
@@ -107,7 +115,7 @@ Create Slave
 SyncState *
 
 Group fastmail
-Channels fastmail_in fastmail_sent fastmail_uzh fastmail_zhaw
+Channels fastmail_in fastmail_rest fastmail_sent fastmail_uzh fastmail_zhaw
 
 
 ## Account gmail mgmit.zhaw ---------------------------------------------------------------------------
