@@ -39,7 +39,7 @@ sh ~/.fehbg &
 numlockx &
 
 # clipboard management
-xcmenu --daemon &
+#xcmenu --daemon &
 
 # start gpg agent
 eval $(gpg-agent --daemon)

@@ -4,7 +4,7 @@
 # INFO     for HDD temperature, hddtemp is used as enabled unit under
 #          systemd and netcat has to be installed in addition
 #
-# DATE     17.12.2013
+# DATE     05.02.2014
 # OWNER    Bischofberger
 # ==================================================================
 
