@@ -4,7 +4,7 @@
 # INFO     account: bruno.bischi@gmail.com
 #          for use with mbsync
 #
-# DATE     18.01.2014
+# DATE     11.05.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -27,7 +27,7 @@ set trash         = "~/Maildir/gmail-bischi/[Gmail]_Trash/"
 unset record
 
 # include all gmail folders synced by mbsync to ~/Maildir/
-mailboxes ~/Maildir/gmail-bischi/INBOX
+mailboxes ~/Maildir/gmail-bischi/INBOX ~/Maildir/gmail-bischi/[Gmail]_Trash
 #~/Maildir/gmail-bischi/[Gmail]_Trash ~/Maildir/gmail-bischi/[Gmail]_Sent\ Mail ~/Maildir/gmail-bischi/[Gmail]_Drafts
 
 # sending mails via SMTP
