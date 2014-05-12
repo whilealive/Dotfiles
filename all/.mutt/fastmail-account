@@ -31,13 +31,10 @@ set trash         = "~/Maildir/fastmail/Trash/"
 
 # include all gmail folders synced by mbsync to ~/Maildir/
 #mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/INBOX_Archive ~/Maildir/fastmail/INBOX_Sent\ Items ~/Maildir/fastmail/INBOX_Trash ~/Maildir/fastmail/INBOX_suckless-dev ~/Maildir/fastmail/INBOX_vim
-mailboxes ~/Maildir/fastmail/INBOX \
-          #~/Maildir/fastmail/Archive \
-          ~/Maildir/fastmail/Sent\ Items \
-          ~/Maildir/fastmail/Trash \
-          ~/Maildir/fastmail/suckless-dev \
-          ~/Maildir/fastmail/vim \
-          ~/Maildir/local/archive
+mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Sent\ Items ~/Maildir/fastmail/Trash
+mailboxes ~/Maildir/fastmail/suckless-dev
+mailboxes ~/Maildir/fastmail/vim
+mailboxes ~/Maildir/local/archive
 
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
