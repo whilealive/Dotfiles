@@ -3,9 +3,11 @@
 # MACHINE  all
 # INFO     account bischofberger@fastmail.fm
 #          for use with mbsync
-#          extra-folder: suckless-dev (Mailing list)
+#          extra-folders: suckless-dev (Mailing list)
+#                         vim (Mailing list)
+#                         local/archive (only local!!!)
 #
-# DATE     07.05.2014
+# DATE     12.05.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -29,7 +31,13 @@ set trash         = "~/Maildir/fastmail/Trash/"
 
 # include all gmail folders synced by mbsync to ~/Maildir/
 #mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/INBOX_Archive ~/Maildir/fastmail/INBOX_Sent\ Items ~/Maildir/fastmail/INBOX_Trash ~/Maildir/fastmail/INBOX_suckless-dev ~/Maildir/fastmail/INBOX_vim
-mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Archive ~/Maildir/fastmail/Sent\ Items ~/Maildir/fastmail/Trash ~/Maildir/fastmail/suckless-dev ~/Maildir/fastmail/vim
+mailboxes ~/Maildir/fastmail/INBOX \
+          #~/Maildir/fastmail/Archive \
+          ~/Maildir/fastmail/Sent\ Items \
+          ~/Maildir/fastmail/Trash \
+          ~/Maildir/fastmail/suckless-dev \
+          ~/Maildir/fastmail/vim \
+          ~/Maildir/local/archive
 
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
