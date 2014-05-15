@@ -4,7 +4,7 @@
 # MACHINE  laptop
 # INFO     Executed by startx
 #
-# DATE     13.03.2014
+# DATE     15.05.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -28,47 +28,17 @@ xset fp rehash
 # mute the stupid "Bing" sound
 xset b off
 
-# statusbar
-#while true; do Scripts/dwm-statusbar ; sleep 5; done &
-dwmstatus --laptop &
+# statusbar in C
+dwmstatus &
 
 # background image
 sh ~/.fehbg &
 
-# set NumLock
-numlockx &
-
-# clipboard management
-#xcmenu --daemon &
+# keys
+numlockx
+xbindkeys
 
 # start gpg agent
 eval $(gpg-agent --daemon)
 
 exec dwm
-
-
-
-
-# ---------------------------------------------
-# old stuff
-# ----------------------------------------------
-
-# take care of .Xresources (urxvt etc.)
-#[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-
-# start urxvt daemon
-#urxvtd -f &
-
-# start conky
-# conky &
-
-# disable touchpad while typing
-#syndaemon -t -k -i 2 -d &
-
-# sync clipboard, uses quite a lot of cpu!!!
-#/usr/bin/autocutsel -fork &
-#/usr/bin/autocutsel -selection CLIPBOARD -fork &
-
-# start xscreensaver daemon
-#/usr/bin/xscreensaver -no-splash &
-
