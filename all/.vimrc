@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     22.05.2014
+" DATE     02.06.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -59,3 +59,4 @@ imap <F2> {<CR>}<Esc>O
 :nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
 "run executable in shell
 map <F4> :!"%:p:r"<CR>
+
