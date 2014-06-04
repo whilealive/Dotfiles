@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     02.06.2014
+" DATE     04.06.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -32,9 +32,6 @@ set tags=./tags;    "search for tags file in current dir
 " ----------------------
 " -> press ,cd for changing to current dir
 " -> ...
-let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+'  "hide dotfiles by default
-let g:netrw_keepdir=0                         "make vim's current track netrw directory
-let g:nerw_browsex_viewer="xdg-open"          "default viewer
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buffer switching)
 
