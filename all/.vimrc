@@ -27,12 +27,9 @@ set nojoinspaces    "insert only one space after .,?!
 set cpo+=$          "shows the end of the text to be changed when pressing c
 set whichwrap=""    "don't exceed the end of the line with the cursor
 set hlsearch        "highlight searching results
-set tags=./tags;    "search for tags file in current dir
 
 " file and path managing
 " ----------------------
-" -> press ,cd for changing to current dir
-" -> ...
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buffer switching)
 
@@ -42,6 +39,7 @@ set autoindent      "automatically indent lines to previous lines
 set shiftwidth=4    "autoindent indents 4 inits (= 1 tab)
 set tabstop=4       "tabstop length
 set expandtab       "fill up with spaces when pressing <tab>
+nnoremap <Tab> :tabnext<CR>
 
 " layout
 " ------
@@ -51,10 +49,29 @@ set number                  "show line numbers
 
 " the <F-XX> keys...
 " ------------------
-"brackets as I like them
+"F2: brackets as I like them
 imap <F2> {<CR>}<Esc>O
-"timestamp
-:nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
-"run executable in shell
+"F3: timestamp
+nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
+"F4: run executable in shell
 map <F4> :!"%:p:r"<CR>
+"F5: create C++ tags
+map <F5> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q --exclude="libraries" .<CR>
 
+" configure tags
+" --------------
+"set tags+=~/.vim/tags/systags  "all C system headers
+
+" OmniCppComplete
+" ---------------
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set completeopt=menuone,menu,longest,preview
