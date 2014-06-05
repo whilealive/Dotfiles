@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     04.06.2014
+" DATE     05.06.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -15,6 +15,7 @@ set nocompatible    "no vi-compatible modus
 set autowrite       "automatically writes when switching buffers, :wnext not necessary
 filetype plugin indent on
 syntax enable
+set mouse=a         "now works properly with st/tmux 
 
 " writing and reading
 " -------------------
