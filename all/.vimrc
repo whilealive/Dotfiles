@@ -3,30 +3,31 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     05.06.2014
+" DATE     11.06.2014
 " OWNER    Bischofberger
 " ==================================================================
 
 
 " general settings
 " ----------------
-set ttyfast         "fast terminal connection
-set nocompatible    "no vi-compatible modus
-set autowrite       "automatically writes when switching buffers, :wnext not necessary
+set ttyfast                 "fast terminal connection
+set nocompatible            "no vi-compatible modus
+set autowrite               "automatically writes when switching buffers, :wnext not necessary
 filetype plugin indent on
 syntax enable
-set mouse=a         "now works properly with st/tmux 
+set mouse=a                 "now works properly with st/tmux 
 
 " writing and reading
 " -------------------
-set showmode        "shows, in which mode you are currently in
-set showmatch       "shows the opening bracket when typing )}]
-set showcmd         "for longer commands in command mode
-set ruler           "shows row/column number of the cursor
-set nojoinspaces    "insert only one space after .,?!
-set cpo+=$          "shows the end of the text to be changed when pressing c
-set whichwrap=""    "don't exceed the end of the line with the cursor
-set hlsearch        "highlight searching results
+set showmode                "shows, in which mode you are currently in
+set showmatch               "shows the opening bracket when typing )}]
+set showcmd                 "for longer commands in command mode
+set ruler                   "shows row/column number of the cursor
+set nojoinspaces            "insert only one space after .,?!
+set cpo+=$                  "shows the end of the text to be changed when pressing c
+set whichwrap=""            "don't exceed the end of the line with the cursor
+set hlsearch                "highlight searching results
+set clipboard=unnamedplus   "alias unnamed register to the + register, which is the X Window clipboard
 
 " file and path managing
 " ----------------------
@@ -35,10 +36,10 @@ set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buf
 
 " tabs and indent
 " ---------------
-set autoindent      "automatically indent lines to previous lines
-set shiftwidth=4    "autoindent indents 4 inits (= 1 tab)
-set tabstop=4       "tabstop length
-set expandtab       "fill up with spaces when pressing <tab>
+set autoindent              "automatically indent lines to previous lines
+set shiftwidth=4            "autoindent indents 4 inits (= 1 tab)
+set tabstop=4               "tabstop length
+set expandtab               "fill up with spaces when pressing <tab>
 nnoremap <Tab> :tabnext<CR>
 
 " layout
@@ -67,10 +68,10 @@ map <F5> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q -
 let OmniCpp_NamespaceSearch = 1
 let OmniCpp_GlobalScopeSearch = 1
 let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_ShowPrototypeInAbbr = 1     "show function parameters
+let OmniCpp_MayCompleteDot = 1          "autocomplete after .
+let OmniCpp_MayCompleteArrow = 1        "autocomplete after ->
+let OmniCpp_MayCompleteScope = 1        "autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
