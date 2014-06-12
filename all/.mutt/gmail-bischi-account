@@ -4,7 +4,7 @@
 # INFO     account: bruno.bischi@gmail.com
 #          for use with mbsync
 #
-# DATE     11.05.2014
+# DATE     12.06.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -34,6 +34,3 @@ mailboxes ~/Maildir/gmail-bischi/INBOX ~/Maildir/gmail-bischi/[Gmail]_Trash
 # password management via gpg, set in .muttrc
 set smtp_pass	  = $my_pw_gmail_bischi
 set smtp_url      = smtps://bruno.bischi@gmail.com@smtp.gmail.com
-
-# gmail specific, mark read mails as "read" after syncing
-set imap_peek = no
