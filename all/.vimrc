@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     11.06.2014
+" DATE     16.06.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -41,6 +41,7 @@ set shiftwidth=4            "autoindent indents 4 inits (= 1 tab)
 set tabstop=4               "tabstop length
 set expandtab               "fill up with spaces when pressing <tab>
 nnoremap <Tab> :tabnext<CR>
+nnoremap <S-Tab> :tabprevious<CR>
 
 " layout
 " ------
