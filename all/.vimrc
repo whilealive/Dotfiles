@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     16.06.2014
+" DATE     17.06.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -40,6 +40,7 @@ set autoindent              "automatically indent lines to previous lines
 set shiftwidth=4            "autoindent indents 4 inits (= 1 tab)
 set tabstop=4               "tabstop length
 set expandtab               "fill up with spaces when pressing <tab>
+" super-fast tab switching:
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
@@ -53,12 +54,10 @@ set number                  "show line numbers
 " ------------------
 "F2: brackets as I like them
 imap <F2> {<CR>}<Esc>O
-"F3: timestamp
+"F3: timestamp for title
 nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
-"F4: run executable in shell
-map <F4> :!"%:p:r"<CR>
-"F5: create C++ tags
-map <F5> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q --exclude="libraries" .<CR>
+"F4: create C++ tags
+map <F4> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q --exclude="libraries" .<CR>
 
 " configure tags
 " --------------
