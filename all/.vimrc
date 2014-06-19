@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     17.06.2014
+" DATE     19.06.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -56,23 +56,7 @@ set number                  "show line numbers
 imap <F2> {<CR>}<Esc>O
 "F3: timestamp for title
 nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
-"F4: create C++ tags
-map <F4> :!ctags -R -I --languages=c++ --c++-kinds=+p --fields=+iaS --extra=+q --exclude="libraries" .<CR>
 
 " configure tags
 " --------------
 "set tags+=~/.vim/tags/systags  "all C system headers
-
-" OmniCppComplete
-" ---------------
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1     "show function parameters
-let OmniCpp_MayCompleteDot = 1          "autocomplete after .
-let OmniCpp_MayCompleteArrow = 1        "autocomplete after ->
-let OmniCpp_MayCompleteScope = 1        "autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-set completeopt=menuone,menu,longest,preview
