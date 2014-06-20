@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     02.05.2014
+# DATE     20.06.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -30,6 +30,8 @@ shopt -s dotglob            # include dotfiles in pathname expansion
 # color coreutils
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
+
+# various aliasses
 alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
 
 # color manpages
