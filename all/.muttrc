@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     07.05.2014
+# DATE     25.06.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -140,10 +140,7 @@ macro index,pager A "<pipe-message>abook --add-email-quiet<return>" "add the sen
 set mailcap_path = "~/.mutt/mailcap"
 auto_view text/html
 
-# urlview stuff
-macro index,pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
-
 # pymuttprint
-set print_command="~/Build/$(hostname)/pymuttprint/pymuttprint.py && zathura /tmp/texput.pdf"
+set print_command="~/Build/$(hostname)/pymuttprint/pymuttprint.py && zathuratab /tmp/texput.pdf"
 set print_decode="yes"
 set print_split="no"
