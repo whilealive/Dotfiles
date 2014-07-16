@@ -4,10 +4,9 @@
 # INFO     account bischofberger@fastmail.fm
 #          for use with mbsync
 #          extra-folders: suckless-dev (Mailing list)
-#                         vim (Mailing list)
 #                         local/archive (only local!!!)
 #
-# DATE     12.05.2014
+# DATE     16.07.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -22,19 +21,20 @@ set envelope_from = yes
 set spoolfile     = "~/Maildir/fastmail/INBOX"
 set mbox_type     = Maildir
 set folder        = "~/Maildir/fastmail"
-#set postponed     = "~/Maildir/fastmail/INBOX_Drafts/"
-#set record        = "~/Maildir/fastmail/INBOX_Sent\ Items/"
-#set trash         = "~/Maildir/fastmail/INBOX_Trash/"
 set postponed     = "~/Maildir/fastmail/Drafts/"
 set record        = "~/Maildir/fastmail/Sent\ Items/"
 set trash         = "~/Maildir/fastmail/Trash/"
+# old port
+#set postponed     = "~/Maildir/fastmail/INBOX_Drafts/"
+#set record        = "~/Maildir/fastmail/INBOX_Sent\ Items/"
+#set trash         = "~/Maildir/fastmail/INBOX_Trash/"
 
 # include all gmail folders synced by mbsync to ~/Maildir/
-#mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/INBOX_Archive ~/Maildir/fastmail/INBOX_Sent\ Items ~/Maildir/fastmail/INBOX_Trash ~/Maildir/fastmail/INBOX_suckless-dev ~/Maildir/fastmail/INBOX_vim
 mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Sent\ Items ~/Maildir/fastmail/Trash
 mailboxes ~/Maildir/fastmail/suckless-dev
-mailboxes ~/Maildir/fastmail/vim
 mailboxes ~/Maildir/local/archive
+# old port
+#mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/INBOX_Archive ~/Maildir/fastmail/INBOX_Sent\ Items ~/Maildir/fastmail/INBOX_Trash ~/Maildir/fastmail/INBOX_suckless-dev
 
 # sending mails via SMTP
 # password management via gpg, set in .muttrc

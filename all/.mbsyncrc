@@ -3,42 +3,9 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     12.05.2014
+# DATE     16.07.2014
 # OWNER    Bischofberger
 # ==================================================================
-
-
-# Account gmail bruno.bischi ---------------------------------------------------------------------------
-IMAPAccount gmail-bischi
-# Address to connect to
-Host imap.gmail.com
-User bruno.bischi@gmail.com
-# The next line gets replaced by a gpg encrypted password
-#Pass1
-UseIMAPS yes
-CertificateFile /etc/ssl/certs/ca-certificates.crt
-
-IMAPStore gmail-bischi-remote
-Account gmail-bischi
-
-MaildirStore gmail-bischi-local
-# The trailing "/" is important
-Path ~/Maildir/gmail-bischi/
-Inbox ~/Maildir/gmail-bischi/INBOX
-# flatten gmail subfolders
-Flatten "_"
-
-Channel gmail-bischi
-Master :gmail-bischi-remote:
-Slave :gmail-bischi-local:
-Patterns "INBOX" "[Gmail]/Trash" 
-#"[Gmail]/Sent Mail" "[Gmail]/Drafts"
-# Synching options
-Sync All
-# Automatically create missing mailboxes, only locally
-Create Slave
-# Save the synchronization state files in the relevant directory
-SyncState *
 
 
 # Account fastmail.fm ------------------------------------------------------------------------------------
@@ -79,7 +46,7 @@ Channel fastmail_rest
 Master :fastmail-remote:
 Slave :fastmail-local:
 #Patterns "INBOX/Trash" "INBOX/Archive" "INBOX/Drafts" "INBOX/suckless-dev" "INBOX/vim"
-Patterns "Trash" "Drafts" "suckless-dev" "vim"
+Patterns "Trash" "Drafts" "suckless-dev"
 Sync All
 Create Slave
 SyncState *
@@ -116,6 +83,41 @@ SyncState *
 
 Group fastmail
 Channels fastmail_in fastmail_rest fastmail_sent fastmail_uzh fastmail_zhaw
+
+
+
+## Account gmail bruno.bischi ---------------------------------------------------------------------------
+#IMAPAccount gmail-bischi
+## Address to connect to
+#Host imap.gmail.com
+#User bruno.bischi@gmail.com
+## The next line gets replaced by a gpg encrypted password
+##Pass1
+#UseIMAPS yes
+#CertificateFile /etc/ssl/certs/ca-certificates.crt
+#
+#IMAPStore gmail-bischi-remote
+#Account gmail-bischi
+#
+#MaildirStore gmail-bischi-local
+## The trailing "/" is important
+#Path ~/Maildir/gmail-bischi/
+#Inbox ~/Maildir/gmail-bischi/INBOX
+## flatten gmail subfolders
+#Flatten "_"
+#
+#Channel gmail-bischi
+#Master :gmail-bischi-remote:
+#Slave :gmail-bischi-local:
+#Patterns "INBOX" "[Gmail]/Trash" 
+##"[Gmail]/Sent Mail" "[Gmail]/Drafts"
+## Synching options
+#Sync All
+## Automatically create missing mailboxes, only locally
+#Create Slave
+## Save the synchronization state files in the relevant directory
+#SyncState *
+
 
 
 ## Account gmail mgmit.zhaw ---------------------------------------------------------------------------
