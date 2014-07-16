@@ -14,7 +14,7 @@ Host mail.messagingengine.com
 #Port 993
 Port 992
 User bischofberger@fastmail.fm
-#Pass3
+#Pass1
 UseIMAPS yes
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
@@ -92,7 +92,7 @@ Channels fastmail_in fastmail_rest fastmail_sent fastmail_uzh fastmail_zhaw
 #Host imap.gmail.com
 #User bruno.bischi@gmail.com
 ## The next line gets replaced by a gpg encrypted password
-##Pass1
+##Pass2
 #UseIMAPS yes
 #CertificateFile /etc/ssl/certs/ca-certificates.crt
 #
@@ -124,7 +124,7 @@ Channels fastmail_in fastmail_rest fastmail_sent fastmail_uzh fastmail_zhaw
 #IMAPAccount gmail-mgmit
 #Host imap.gmail.com
 #User mgmit.zhaw@gmail.com
-##Pass2
+##Pass3
 #UseIMAPS yes
 #CertificateFile /etc/ssl/certs/ca-certificates.crt
 #
