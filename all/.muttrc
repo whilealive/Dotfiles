@@ -14,10 +14,6 @@ source "gpg2 -dq ~/.my-pwds.gpg |"
 
 
 ## ===================== ACCOUNTS =====================
-# bischofberger@fastmail.fm
-source "~/.mutt/fastmail-account"
-folder-hook fastmail 'source ~/.mutt/fastmail-account'
-
 # pseudo-uzh account
 source "~/.mutt/uzh-pseudo-account"
 folder-hook uzh-pseudo 'source ~/.mutt/uzh-pseudo-account'
@@ -25,6 +21,10 @@ folder-hook uzh-pseudo 'source ~/.mutt/uzh-pseudo-account'
 # pseudo-zhaw account
 source "~/.mutt/zhaw-pseudo-account"
 folder-hook zhaw-pseudo 'source ~/.mutt/zhaw-pseudo-account'
+
+# bischofberger@fastmail.fm
+source "~/.mutt/fastmail-account"
+folder-hook fastmail 'source ~/.mutt/fastmail-account'
 
 # bruno.bischi@gmail.com
 #source "~/.mutt/gmail-bischi-account"
