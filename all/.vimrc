@@ -3,11 +3,12 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     20.06.2014
+" DATE     16.07.2014
 " OWNER    Bischofberger
 " ==================================================================
 
 
+" ----------------
 " general settings
 " ----------------
 set ttyfast                 "fast terminal connection
@@ -17,6 +18,8 @@ filetype plugin indent on
 syntax enable
 set mouse=a                 "now works properly with st/tmux 
 
+
+" -------------------
 " writing and reading
 " -------------------
 set showmode                "shows, in which mode you are currently in
@@ -29,11 +32,17 @@ set whichwrap=""            "don't exceed the end of the line with the cursor
 set hlsearch                "highlight searching results
 set clipboard=unnamedplus   "alias unnamed register to the + register, which is the X Window clipboard
 
+
+" ----------------------
 " file and path managing
 " ----------------------
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buffer switching)
+" Allows writing to files with root priviledges
+cmap w!! w !sudo tee % > /dev/null
 
+
+" ---------------
 " tabs and indent
 " ---------------
 set autoindent              "automatically indent lines to previous lines
@@ -44,12 +53,16 @@ set expandtab               "fill up with spaces when pressing <tab>
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
+
+" ------
 " layout
 " ------
 colorscheme bruno-custom    "my personal color scheme
 set cursorline              "cursorline, sometimes pretty slow...
 set number                  "show line numbers
 
+
+" ------------------
 " the <F-XX> keys...
 " ------------------
 "F2: brackets as I like them
@@ -57,6 +70,8 @@ imap <F2> {<CR>}<Esc>O
 "F3: timestamp for title
 nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
 
+
+" --------------
 " configure tags
 " --------------
 "set tags+=~/.vim/tags/systags  "all C system headers
