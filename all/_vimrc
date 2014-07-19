@@ -1,0 +1,63 @@
+" ==================================================================
+" FILE     _vimrc
+" MACHINE  Schneeberger PC, Windows 7
+" INFO     minimalistic
+"
+" DATE     20.06.2014
+" OWNER    Bischofberger
+" ==================================================================
+
+
+" general settings
+" ----------------
+set nocompatible            "no vi-compatible modus
+set autowrite               "automatically writes when switching buffers, :wnext not necessary
+filetype plugin indent on
+syntax enable
+
+" windows gui settings
+" --------------------
+set backspace=2
+set guicursor+=a:blinkon0
+set gfn=Consolas:h11:cEASTEUROPE
+colorscheme Darkblue
+
+" writing and reading
+" -------------------
+set showmode                "shows, in which mode you are currently in
+set showmatch               "shows the opening bracket when typing )}]
+set showcmd                 "for longer commands in command mode
+set ruler                   "shows row/column number of the cursor
+set nojoinspaces            "insert only one space after .,?!
+set cpo+=$                  "shows the end of the text to be changed when pressing c
+set whichwrap=""            "don't exceed the end of the line with the cursor
+set hlsearch                "highlight searching results
+
+" file and path managing
+" ----------------------
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buffer switching)
+
+" tabs and indent
+" ---------------
+set autoindent              "automatically indent lines to previous lines
+set shiftwidth=4            "autoindent indents 4 inits (= 1 tab)
+set tabstop=4               "tabstop length
+set expandtab               "fill up with spaces when pressing <tab>
+" super-fast tab switching:
+nnoremap <Tab> :tabnext<CR>
+nnoremap <S-Tab> :tabprevious<CR>
+
+" layout
+" ------
+set cursorline              "cursorline, sometimes pretty slow...
+set number                  "show line numbers
+
+" the <F-XX> keys...
+" ------------------
+"F2: brackets as I like them
+imap <F2> {<CR>}<Esc>O
+"F3: timestamp for title
+nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
+"F4: latex - insert \end{blah}
+imap <F4> <Esc>yyplcwend<Esc>O
