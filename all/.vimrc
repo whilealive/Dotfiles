@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     16.07.2014
+" DATE     19.07.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -69,6 +69,8 @@ set number                  "show line numbers
 imap <F2> {<CR>}<Esc>O
 "F3: timestamp for title
 nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
+"F4: latex - insert \end{blah}
+imap <F4> <Esc>yyplcwend<Esc>O
 
 
 " --------------
