@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     19.07.2014
+" DATE     21.07.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -66,7 +66,7 @@ set number                  "show line numbers
 " the <F-XX> keys...
 " ------------------
 "F2: brackets as I like them
-imap <F2> {<CR>}<Esc>O
+imap <F2> <SPACE>{<CR>}<Esc>O
 "F3: timestamp for title
 nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
 "F4: latex - insert \end{blah}
