@@ -11,6 +11,8 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # start X automatically
-vt=$(fgconsole 2>/dev/null)
-(( vt == 1 )) && exec startx -- vt$vt &> ~/.xlog
-unset vt
+#vt=$(fgconsole 2>/dev/null)
+#(( vt == 1 )) && exec startx -- vt$vt &> ~/.xlog
+#unset vt
+
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx

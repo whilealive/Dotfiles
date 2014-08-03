@@ -32,6 +32,7 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
 # various aliasses
+#alias startx='startx &> ~/.xlog'
 alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
 
 # color manpages
