@@ -1,9 +1,9 @@
 " ==================================================================
 " FILE     _vimrc
 " MACHINE  Schneeberger PC, Windows 7
-" INFO     minimalistic
+" INFO     Visual Studio integration
 "
-" DATE     20.06.2014
+" DATE     04.08.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -38,12 +38,13 @@ set hlsearch                "highlight searching results
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buffer switching)
 
-" tabs and indent
-" ---------------
-set autoindent              "automatically indent lines to previous lines
-set shiftwidth=4            "autoindent indents 4 inits (= 1 tab)
-set tabstop=4               "tabstop length
-set expandtab               "fill up with spaces when pressing <tab>
+" tabs and indent (Visual Studio style)
+" -------------------------------------
+set autoindent
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set noexpandtab
 " super-fast tab switching:
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
@@ -56,8 +57,6 @@ set number                  "show line numbers
 " the <F-XX> keys...
 " ------------------
 "F2: brackets as I like them
-imap <F2> {<CR>}<Esc>O
-"F3: timestamp for title
-nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
+imap <F2> <SPACE>{<CR>}<Esc>O
 "F4: latex - insert \end{blah}
 imap <F4> <Esc>yyplcwend<Esc>O
