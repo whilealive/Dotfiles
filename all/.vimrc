@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     21.07.2014
+" DATE     11.08.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -40,6 +40,9 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buffer switching)
 " Allows writing to files with root priviledges
 cmap w!! w !sudo tee % > /dev/null
+" super-fast tab switching:
+nnoremap <Tab> :tabnext<CR>
+nnoremap <S-Tab> :tabprevious<CR>
 
 
 " ---------------
@@ -48,10 +51,9 @@ cmap w!! w !sudo tee % > /dev/null
 set autoindent              "automatically indent lines to previous lines
 set shiftwidth=4            "autoindent indents 4 inits (= 1 tab)
 set tabstop=4               "tabstop length
-set expandtab               "fill up with spaces when pressing <tab>
-" super-fast tab switching:
-nnoremap <Tab> :tabnext<CR>
-nnoremap <S-Tab> :tabprevious<CR>
+set softtabstop=4           "softtabstop length
+set noexpandtab             "do not fill up with spaces, use TAB
+"set expandtab               "fill up with spaces when pressing <tab>
 
 
 " ------
