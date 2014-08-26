@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     17.08.2014
+" DATE     26.08.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -53,25 +53,26 @@ set shiftwidth=2            "autoindent indents 4 inits (= 1 tab)
 set tabstop=2               "tabstop length
 set softtabstop=2           "softtabstop length
 set noexpandtab             "do not fill up with spaces, use TAB
-"set expandtab               "fill up with spaces when pressing <tab>
+
 
 
 " ------
 " layout
 " ------
-colorscheme bruno-custom    "my personal color scheme
-set cursorline              "cursorline, sometimes pretty slow...
-set number                  "show line numbers
+colorscheme bruno-custom         "my personal color scheme
+set cursorline                   "cursorline, sometimes pretty slow...
+set number                       "show line numbers
+if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 
-
-" ------------------
-" the <F-XX> keys...
-" ------------------
-"F2: brackets as I like them
-imap <F2> <CR>{<CR>}<Esc>O
-"F3: timestamp for title
+" ----------------
+" various mappings
+" ----------------
+" brackets
+imap <Leader>sl <Space>{<CR>}<Esc>O
+imap <Leader>nl <CR>{<CR>}<Esc>O
+"timestamp for title
 nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
-"F4: latex - insert \end{blah}
+"latex - insert \end{blah}
 imap <F4> <Esc>yyplcwend<Esc>O
 
 
