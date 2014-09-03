@@ -3,7 +3,7 @@
 " MACHINE  Schneeberger PC, Windows 7
 " INFO     Visual Studio integration
 "
-" DATE     04.08.2014
+" DATE     27.08.2014
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -53,10 +53,15 @@ nnoremap <S-Tab> :tabprevious<CR>
 " ------
 set cursorline              "cursorline, sometimes pretty slow...
 set number                  "show line numbers
+if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 
-" the <F-XX> keys...
-" ------------------
-"F2: brackets as I like them
-imap <F2> <SPACE>{<CR>}<Esc>O
-"F4: latex - insert \end{blah}
+" ----------------
+" various mappings
+" ----------------
+" brackets
+imap <Leader>sl <Space>{<CR>}<Esc>O
+imap <Leader>nl <CR>{<CR>}<Esc>O
+"timestamp for title
+nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
+"latex - insert \end{blah}
 imap <F4> <Esc>yyplcwend<Esc>O
