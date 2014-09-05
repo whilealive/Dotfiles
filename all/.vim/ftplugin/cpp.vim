@@ -3,10 +3,10 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     24.03.2014
+" DATE     05.09.2014
 " OWNER    Bischofberger
 " ==================================================================
 
 
 " omnicompletition  (needs cppomnicomplete plugin)
-set tags+=~/.vim/tags/cpp.tags
+setlocal tags+=~/.vim/tags/cpp.tags

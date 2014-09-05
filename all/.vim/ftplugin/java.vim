@@ -3,22 +3,22 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     19.01.2014
+" DATE     05.09.2014
 " OWNER    Bischofberger
 " ==================================================================
 
 
 " standard eclipse indentation
-set shiftwidth=4
-set tabstop=4
-set noexpandtab
+setlocal shiftwidth=4
+setlocal tabstop=4
+setlocal noexpandtab
 
 " ctags java tags, use Ctrl-] to jump around
-set tags=./.tags
+setlocal tags=./.tags
 
 " auto-complete classes, methods, etc, use Ctrl-N
-set complete=.,w,b,u,t,i
+setlocal complete=.,w,b,u,t,i
 
 " folding
-set foldmethod=indent
-set foldlevel=1
+setlocal foldmethod=indent
+setlocal foldlevel=1

@@ -3,11 +3,11 @@
 " MACHINE  all
 " INFO     -
 "
-" DATE     22.01.2014
+" DATE     05.09.2014
 " OWNER    Bischofberger
 " ==================================================================
 
-set tabstop=8
-set expandtab
-set shiftwidth=4
-set softtabstop=4
+setlocal tabstop=8
+setlocal expandtab
+setlocal shiftwidth=4
+setlocal softtabstop=4
