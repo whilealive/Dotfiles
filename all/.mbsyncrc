@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     03.09.2014
+# DATE     26.12.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -23,10 +23,6 @@ Account fastmail
 MaildirStore fastmail-local
 Path ~/Maildir/fastmail/
 Inbox ~/Maildir/fastmail/INBOX
-Flatten "_"
-
-MaildirStore uzh-pseudo
-Path ~/Maildir/uzh-pseudo/
 Flatten "_"
 
 Channel fastmail_in
@@ -54,14 +50,5 @@ Expunge Both
 Create Slave
 SyncState *
 
-Channel fastmail_uzh
-Master :fastmail-remote:
-Slave :uzh-pseudo:
-Patterns "uzh"
-Sync All
-Expunge Both
-Create Slave
-SyncState *
-
 Group fastmail
-Channels fastmail_in fastmail_rest fastmail_sent fastmail_uzh
+Channels fastmail_in fastmail_rest fastmail_sent
