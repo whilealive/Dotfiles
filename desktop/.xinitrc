@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     04.05.2014
+# DATE     29.12.2014
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -65,4 +65,9 @@ exec dwm
 # sync clipboard, uses quite a lot of cpu!!!
 #/usr/bin/autocutsel -fork &
 #/usr/bin/autocutsel -selection CLIPBOARD -fork &
+
+
+# load gnome-keyring
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+#export SSH_AUTH_SOCK
 
