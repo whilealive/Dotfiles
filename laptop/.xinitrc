@@ -42,6 +42,6 @@ xbindkeys
 xcmenu --daemon
 
 # start gpg agent
-#eval $(gpg-agent --daemon)
+eval $(gpg-agent --daemon)
 
 exec dwm
