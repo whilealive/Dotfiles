@@ -20,5 +20,5 @@ setlocal tags=./.tags
 setlocal complete=.,w,b,u,t,i
 
 " folding
-setlocal foldmethod=indent
-setlocal foldlevel=1
+"setlocal foldmethod=indent
+"setlocal foldlevel=1
