@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     26.08.2014
+" DATE     29.04.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -31,6 +31,7 @@ set cpo+=$                  "shows the end of the text to be changed when pressi
 set whichwrap=""            "don't exceed the end of the line with the cursor
 set hlsearch                "highlight searching results
 set clipboard=unnamedplus   "alias unnamed register to the + register, which is the X Window clipboard
+setlocal spell spelllang=de_de
 
 
 " ----------------------
