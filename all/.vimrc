@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     29.04.2015
+" DATE     16.05.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -31,7 +31,8 @@ set cpo+=$                  "shows the end of the text to be changed when pressi
 set whichwrap=""            "don't exceed the end of the line with the cursor
 set hlsearch                "highlight searching results
 set clipboard=unnamedplus   "alias unnamed register to the + register, which is the X Window clipboard
-setlocal spell spelllang=de_de
+setlocal spell spelllang=de_de,en
+set complete+=kspell				"auto completition with Ctrl-N, Ctrl-P
 
 
 " ----------------------
@@ -54,7 +55,6 @@ set shiftwidth=2            "autoindent indents 4 inits (= 1 tab)
 set tabstop=2               "tabstop length
 set softtabstop=2           "softtabstop length
 set noexpandtab             "do not fill up with spaces, use TAB
-
 
 
 " ------
