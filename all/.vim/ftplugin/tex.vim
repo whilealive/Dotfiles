@@ -3,13 +3,13 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file, no plugin needed
 "
-" DATE     05.09.2014
+" DATE     01.06.2015
 " OWNER    Bischofberger
 " ==================================================================
 
 
 setlocal sw=2   " little indentation
-setlocal nocul  " disable cursorline, too slow
+"setlocal nocul  " disable cursorline, too slow
 setlocal tw=90  " limited textwidth for readability
 
 "behave like a word processor
