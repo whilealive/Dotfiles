@@ -1,0 +1,12 @@
+# ==================================================================
+# FILE     .gitignore (for Dotfiles repository)
+# MACHINE  all
+# INFO     -
+#
+# DATE     24.06.2015
+# OWNER    Bischofberger
+# ==================================================================
+
+# git shall ignore the following
+all/.vim/spell/
+
