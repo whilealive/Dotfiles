@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     17.05.2015
+" DATE     02.07.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -18,7 +18,6 @@ filetype plugin indent on
 syntax enable
 set mouse=a                 "now works properly with st/tmux 
 
-
 " -------------------
 " writing and reading
 " -------------------
@@ -32,14 +31,12 @@ set whichwrap=""            "don't exceed the end of the line with the cursor
 set hlsearch                "highlight searching results
 set clipboard=unnamedplus   "alias unnamed register to the + register, which is the X Window clipboard
 
-
 " -------------------
 " spell checking
 " -------------------
 nnoremap <F2> :setlocal spell! spelllang=de_de,en<CR>
 set complete+=kspell													"auto completition with Ctrl-N, Ctrl-P
 set spellfile=$HOME/.vim/spell/de.utf-8.add		"custom spell file
-
 
 " ----------------------
 " file and path managing
@@ -52,7 +49,6 @@ cmap w!! w !sudo tee % > /dev/null
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
 
-
 " ---------------
 " tabs and indent
 " ---------------
@@ -61,7 +57,6 @@ set shiftwidth=2            "autoindent indents 4 inits (= 1 tab)
 set tabstop=2               "tabstop length
 set softtabstop=2           "softtabstop length
 set noexpandtab             "do not fill up with spaces, use TAB
-
 
 " ------
 " layout
@@ -77,4 +72,4 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " brackets
 imap <Leader>sl <Space>{<CR>}<Esc>O
 imap <Leader>nl <CR>{<CR>}<Esc>O
-nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
+nnoremap <F3> D"=strftime("%d.%m.%Y")<CR>p
