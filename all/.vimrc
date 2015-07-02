@@ -36,7 +36,7 @@ set clipboard=unnamedplus   "alias unnamed register to the + register, which is 
 " -------------------
 " spell checking
 " -------------------
-setlocal spell spelllang=de_de,en							"spell check activation
+nnoremap <F2> :setlocal spell! spelllang=de_de,en<CR>
 set complete+=kspell													"auto completition with Ctrl-N, Ctrl-P
 set spellfile=$HOME/.vim/spell/de.utf-8.add		"custom spell file
 
@@ -77,13 +77,4 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " brackets
 imap <Leader>sl <Space>{<CR>}<Esc>O
 imap <Leader>nl <CR>{<CR>}<Esc>O
-"timestamp for title
 nnoremap <F3> D"=strftime("DATE     %d.%m.%Y")<CR>p
-"latex - insert \end{blah}
-imap <F4> <Esc>yyplcwend<Esc>O
-
-
-" --------------
-" configure tags
-" --------------
-"set tags+=~/.vim/tags/systags  "all C system headers
