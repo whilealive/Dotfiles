@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     02.07.2015
+# DATE     05.07.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -78,7 +78,3 @@ extract() {
 # udisks_functions to automount devices
 # (from the AUR)
 . /etc/udisks_functions/udisks_functions
-
-# fzf keybindings
-. /etc/profile.d/fzf.bash
-
