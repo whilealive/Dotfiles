@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     26.12.2014
+# DATE     13.07.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -52,3 +52,49 @@ SyncState *
 
 Group fastmail
 Channels fastmail_in fastmail_rest fastmail_sent
+
+
+
+# Account bms-zuerich.ch ------------------------------------------------------------------------------------
+IMAPAccount bmz
+Host tcs.tam.ch
+Port 993
+User bruno.bischofberger@bms-zuerich.ch
+#Pass2
+UseIMAPS yes
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore bmz-remote
+Account bmz
+
+MaildirStore bmz-local
+Path ~/Maildir/bmz/
+Inbox ~/Maildir/bmz/INBOX
+
+Channel bmz_in
+Master :bmz-remote:
+Slave :bmz-local:
+Patterns "INBOX"
+Sync All
+Create Slave
+SyncState *
+
+Channel bmz_rest
+Master :bmz-remote:
+Slave :bmz-local:
+Patterns "Trash" "Drafts"
+Sync All
+Create Slave
+SyncState *
+
+Channel bmz_sent
+Master :bmz-remote:
+Slave :bmz-local:
+Patterns "Sent"
+Sync All
+Expunge Both
+Create Slave
+SyncState *
+
+Group bmz
+Channels bmz_in bmz_rest bmz_sent
