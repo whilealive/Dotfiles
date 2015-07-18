@@ -13,7 +13,8 @@ setlocal sw=2   " little indentation
 setlocal tw=90  " limited textwidth for readability
 
 "behave like a word processor
-setlocal formatoptions+=atlw
+"setlocal formatoptions+=atlw
+setlocal formatoptions+=tlw
 "autocmd InsertEnter * set formatoptions+=a
 "autocmd InsertLeave * set formatoptions-=a
 noremap Q :set fo-=w<Cr>gqap<Esc>:set fo+=w<CR>
@@ -23,7 +24,7 @@ noremap Q :set fo-=w<Cr>gqap<Esc>:set fo+=w<CR>
 "Makefile given after exec...
 setlocal errorformat=%f:%l:\ %m,%f:%l-%\\d%\\+:\ %m
 if filereadable('Makefile')
-    setlocal makeprg=make
+  setlocal makeprg=make
 else
-    exec "setlocal makeprg=make\\ -f\\ ~/Developer/make/latex.mk\\ " . substitute(bufname("%"),"tex","pdf", "")
+  exec "setlocal makeprg=make\\ -f\\ ~/Developer/make/latex.mk\\ " . substitute(bufname("%"),"tex","pdf", "")
 endif

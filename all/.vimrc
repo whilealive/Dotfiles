@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     02.07.2015
+" DATE     10.07.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -29,14 +29,13 @@ set nojoinspaces            "insert only one space after .,?!
 set cpo+=$                  "shows the end of the text to be changed when pressing c
 set whichwrap=""            "don't exceed the end of the line with the cursor
 set hlsearch                "highlight searching results
-set clipboard=unnamedplus   "alias unnamed register to the + register, which is the X Window clipboard
 
 " -------------------
 " spell checking
 " -------------------
-nnoremap <F2> :setlocal spell! spelllang=de_de,en<CR>
+nnoremap <F2> :setlocal spell! spelllang=de_ch,en<CR>
 set complete+=kspell													"auto completition with Ctrl-N, Ctrl-P
-set spellfile=$HOME/.vim/spell/de.utf-8.add		"custom spell file
+"set spellfile=$HOME/.vim/spell/de.utf-8.add		"custom spell file
 
 " ----------------------
 " file and path managing
@@ -73,3 +72,24 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 imap <Leader>sl <Space>{<CR>}<Esc>O
 imap <Leader>nl <CR>{<CR>}<Esc>O
 nnoremap <F3> D"=strftime("%d.%m.%Y")<CR>p
+
+" -------------------------------
+" use dmenu to open files quickly
+" -------------------------------
+" Strip the newline from the end of a string
+function! Chomp(str)
+	return substitute(a:str, '\n$', '', '')
+endfunction
+"
+"   " Find a file and pass it to cmd
+function! DmenuOpen(cmd)
+	let fname = Chomp(system("git ls-files | dmenu -i -l 20 -p " . a:cmd))
+	"let fname = Chomp(system("find . | dmenu -i -l 20 -p " . a:cmd))
+	if empty(fname)
+		return
+	endif
+	execute a:cmd . " " . fname
+endfunction
+
+map <c-t> :call DmenuOpen("tabe")<cr>
+map <c-f> :call DmenuOpen("e")<cr>
