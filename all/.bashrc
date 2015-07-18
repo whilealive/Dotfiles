@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     05.07.2015
+# DATE     13.07.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -27,7 +27,8 @@ set -o vi                   # Vi mode
 shopt -s autocd             # change to named directory
 shopt -s dotglob            # include dotfiles in pathname expansion
 
-# color coreutils
+# colors
+alias dvtm="DVTM_TERM=st dvtm"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
