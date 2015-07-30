@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     10.07.2015
+" DATE     29.07.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -16,6 +16,7 @@ set nocompatible            "no vi-compatible modus
 set autowrite               "automatically writes when switching buffers, :wnext not necessary
 filetype plugin indent on
 syntax enable
+set ttymouse=xterm
 set mouse=a                 "now works properly with st/tmux 
 
 " -------------------
@@ -45,8 +46,10 @@ set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buf
 " Allows writing to files with root priviledges
 cmap w!! w !sudo tee % > /dev/null
 " super-fast tab switching:
-nnoremap <Tab> :tabnext<CR>
-nnoremap <S-Tab> :tabprevious<CR>
+"nnoremap <Tab> :tabnext<CR>
+"nnoremap <S-Tab> :tabprevious<CR>
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
 
 " ---------------
 " tabs and indent
