@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     13.07.2015
+# DATE     18.07.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -48,9 +48,6 @@ man() {
     man "$@"
 }
 
-# Shortkeys, Aliases
-#alias susp="systemctl suspend"
-
 # Extract Files
 extract() {
   if [ -f $1 ] ; then
@@ -79,3 +76,6 @@ extract() {
 # udisks_functions to automount devices
 # (from the AUR)
 . /etc/udisks_functions/udisks_functions
+
+# bashmarks script
+source /usr/local/bin/bashmarks.sh
