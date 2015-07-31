@@ -3,20 +3,17 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file, no plugin needed
 "
-" DATE     01.06.2015
+" DATE     31.07.2015
 " OWNER    Bischofberger
 " ==================================================================
 
 
-setlocal sw=2   " little indentation
-"setlocal nocul  " disable cursorline, too slow
-setlocal tw=90  " limited textwidth for readability
+setlocal sw=2        " little indentation
+setlocal tw=90       " limited textwidth for readability
+setlocal expandtab   " tex intendation works better with spaces
 
 "behave like a word processor
-"setlocal formatoptions+=atlw
 setlocal formatoptions+=tlw
-"autocmd InsertEnter * set formatoptions+=a
-"autocmd InsertLeave * set formatoptions-=a
 noremap Q :set fo-=w<Cr>gqap<Esc>:set fo+=w<CR>
 
 "compile within vim using make and rubber
