@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file, no plugin needed
 "
-" DATE     31.07.2015
+" DATE     12.08.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -12,9 +12,7 @@ setlocal sw=2        " little indentation
 setlocal tw=90       " limited textwidth for readability
 setlocal expandtab   " tex intendation works better with spaces
 
-"behave like a word processor
 setlocal formatoptions+=tlw
-noremap Q :set fo-=w<Cr>gqap<Esc>:set fo+=w<CR>
 
 "compile within vim using make and rubber
 "if the current dir doesn't have a Makefile, it compiles using the generic
@@ -25,3 +23,7 @@ if filereadable('Makefile')
 else
   exec "setlocal makeprg=make\\ -f\\ ~/Developer/make/latex.mk\\ " . substitute(bufname("%"),"tex","pdf", "")
 endif
+
+function! Chomp(str)
+	return substitute(a:str, '\n$', '', '')
+endfunction

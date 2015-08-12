@@ -3,10 +3,9 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     29.07.2015
+" DATE     12.08.2015
 " OWNER    Bischofberger
 " ==================================================================
-
 
 " ----------------
 " general settings
@@ -16,8 +15,9 @@ set nocompatible            "no vi-compatible modus
 set autowrite               "automatically writes when switching buffers, :wnext not necessary
 filetype plugin indent on
 syntax enable
-set ttymouse=xterm
+set ttymouse=xterm          "vim doesn't know st
 set mouse=a                 "now works properly with st/tmux 
+set shortmess=a             "short messages for external commands
 
 " -------------------
 " writing and reading
@@ -34,31 +34,31 @@ set hlsearch                "highlight searching results
 " -------------------
 " spell checking
 " -------------------
-nnoremap <F2> :setlocal spell! spelllang=de_ch,en<CR>
-set complete+=kspell													"auto completition with Ctrl-N, Ctrl-P
-"set spellfile=$HOME/.vim/spell/de.utf-8.add		"custom spell file
+"nnoremap <F2> :setlocal spell! spelllang=de_ch,en<CR>
+nnoremap ,sp :setlocal spell! spelllang=de_ch,en<CR>
+set complete+=kspell		    "auto completition with Ctrl-N, Ctrl-P
 
 " ----------------------
 " file and path managing
 " ----------------------
+"go to current directory
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
-set wildchar=<Tab> wildmenu wildmode=full     "wildmenu activation (good for buffer switching)
-" Allows writing to files with root priviledges
+"wildmenu activation (good for buffer switching)
+set wildchar=<Tab> wildmenu wildmode=full
+"Allows writing to files with root priviledges
 cmap w!! w !sudo tee % > /dev/null
-" super-fast tab switching:
-"nnoremap <Tab> :tabnext<CR>
-"nnoremap <S-Tab> :tabprevious<CR>
+"super fast buffer switching:
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
 
 " ---------------
 " tabs and indent
 " ---------------
-set autoindent              "automatically indent lines to previous lines
-set shiftwidth=2            "autoindent indents 4 inits (= 1 tab)
-set tabstop=2               "tabstop length
-set softtabstop=2           "softtabstop length
-set noexpandtab             "do not fill up with spaces, use TAB
+set autoindent      "automatically indent lines to previous lines
+set shiftwidth=2    "autoindent indents 2 inits (= 1 tab)
+set tabstop=2       "tabstop length
+set softtabstop=2   "softtabstop length
+set noexpandtab     "do not fill up with spaces, use TAB
 
 " ------
 " layout
@@ -71,20 +71,19 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " ----------------
 " various mappings
 " ----------------
-" brackets
-imap <Leader>sl <Space>{<CR>}<Esc>O
-imap <Leader>nl <CR>{<CR>}<Esc>O
-nnoremap <F3> D"=strftime("%d.%m.%Y")<CR>p
+"put date at current position
+nnoremap ,d D"=strftime("%d.%m.%Y")<CR>p
+"recreate tags file in current folder
+nnoremap ,t :! ctags -R<CR>
 
 " -------------------------------
 " use dmenu to open files quickly
 " -------------------------------
-" Strip the newline from the end of a string
+"Strip the newline from the end of a string
 function! Chomp(str)
 	return substitute(a:str, '\n$', '', '')
 endfunction
-"
-"   " Find a file and pass it to cmd
+"Find a file and pass it to cmd
 function! DmenuOpen(cmd)
 	let fname = Chomp(system("git ls-files | dmenu -i -l 20 -p " . a:cmd))
 	"let fname = Chomp(system("find . | dmenu -i -l 20 -p " . a:cmd))
@@ -93,6 +92,8 @@ function! DmenuOpen(cmd)
 	endif
 	execute a:cmd . " " . fname
 endfunction
-
+" Mappings
 map <c-t> :call DmenuOpen("tabe")<cr>
 map <c-f> :call DmenuOpen("e")<cr>
+
+
