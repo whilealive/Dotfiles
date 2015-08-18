@@ -4,7 +4,7 @@
 # MACHINE  laptop
 # INFO     Executed by startx
 #
-# DATE     12.08.2014
+# DATE     18.08.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -37,9 +37,6 @@ sh ~/.fehbg &
 # keys
 numlockx
 xbindkeys
-
-# start xcmenu daemon for clipboard sync
-xcmenu --daemon
 
 # start gpg agent
 eval $(gpg-agent --daemon)
