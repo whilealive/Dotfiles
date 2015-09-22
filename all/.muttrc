@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     19.09.2015
+# DATE     22.09.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -102,7 +102,7 @@ macro index .n "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<clear-flag>*" "m
 set sidebar_visible      = yes
 set sidebar_width        = 30
 set sidebar_sort         = yes
-set sidebar_shortpath    = no
+#set sidebar_shortpath    = no
 color sidebar_new brightcyan default
 macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
 macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
