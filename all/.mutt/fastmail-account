@@ -6,7 +6,7 @@
 #          extra-folders: suckless-dev (Mailing list)
 #                         local/archive (only local!!!)
 #
-# DATE     16.07.2014
+# DATE     26.09.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -23,13 +23,13 @@ set mbox_type     = Maildir
 set folder        = "~/Maildir/fastmail"
 set postponed     = "~/Maildir/fastmail/Drafts/"
 set record        = "~/Maildir/fastmail/Sent\ Items/"
-set trash         = "~/Maildir/fastmail/Trash/"
+#set trash         = "~/Maildir/fastmail/Trash/"
+
 # old port
 #set postponed     = "~/Maildir/fastmail/INBOX_Drafts/"
 #set record        = "~/Maildir/fastmail/INBOX_Sent\ Items/"
 #set trash         = "~/Maildir/fastmail/INBOX_Trash/"
 
-# include all gmail folders synced by mbsync to ~/Maildir/
 mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Sent\ Items ~/Maildir/fastmail/Trash
 mailboxes ~/Maildir/fastmail/suckless-dev
 mailboxes ~/Maildir/local/archive
@@ -39,4 +39,4 @@ mailboxes ~/Maildir/local/archive
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
 set smtp_pass	  = $my_pw_fastmail
-set smtp_url      = smtps://bischofberger@fastmail.fm@mail.messagingengine.com:465
+set smtp_url    = smtps://bischofberger@fastmail.fm@mail.messagingengine.com:465
