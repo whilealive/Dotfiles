@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     12.08.2015
+" DATE     26.09.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -17,7 +17,6 @@ filetype plugin indent on
 syntax enable
 set ttymouse=xterm          "vim doesn't know st
 set mouse=a                 "now works properly with st/tmux 
-set shortmess=a             "short messages for external commands
 
 " -------------------
 " writing and reading
@@ -96,4 +95,5 @@ endfunction
 map <c-t> :call DmenuOpen("tabe")<cr>
 map <c-f> :call DmenuOpen("e")<cr>
 
-
+nnoremap ,pt :set invpaste paste?<CR>
+set pastetoggle=,pt

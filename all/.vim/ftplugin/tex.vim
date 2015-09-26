@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file, no plugin needed
 "
-" DATE     19.08.2015
+" DATE     03.09.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -15,6 +15,7 @@ setlocal expandtab   " tex intendation works better with spaces
 setlocal formatoptions+=tlw
 nnoremap ,af :setlocal formatoptions+=a<CR>
 nnoremap ,mf :setlocal formatoptions-=a<CR>
+nnoremap ,ind gg=G''
 
 "compile within vim using make and rubber
 "if the current dir doesn't have a Makefile, it compiles using the generic
