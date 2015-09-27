@@ -1,33 +1,33 @@
-# ==================================================================
-# FILE     .conkyrc
-# MACHINE  laptop
-# INFO     for HDD temperature, hddtemp is used as enabled unit under
-#          systemd and netcat has to be installed in addition
-#
-# DATE     05.02.2014
-# OWNER    Bischofberger
-# ==================================================================
+conky.config = {
+-- ==================================================================
+-- FILE     .conkyrc
+-- MACHINE  laptop
+-- INFO     for HDD temperature, hddtemp is used as enabled unit under
+--          systemd and netcat has to be installed in addition
+
+-- DATE     27.09.2015
+-- OWNER    Bischofberger
+-- ==================================================================
+
+-- Window Layout --
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	double_buffer = true,
+	alignment = 'top_right',
+	gap_x = 10,
+	gap_y = 45,
+	update_interval = 3.0,
+
+-- Colors, Sizes, Fonts --
+	maximum_width = 250,
+	default_color = 'white',
+	use_xft = true,
+	font = 'Monospace:size=10',
+};
 
 
-# --- Window Layout --- #
-own_window yes
-own_window_type override
-own_window_transparent yes
-double_buffer yes
-alignment top_right
-gap_x 10
-gap_y 45
-update_interval 3.0
-
-# --- Colors, Sizes, Fonts --- #
-maximum_width 250
-default_color white
-use_xft yes
-xftfont Monospace:size=10
-
-
-TEXT
-
+conky.text = [[
 ${color #ff6565}SYSTEM INFORMATION ${hr 2}${color}
 ${time %A},${time %e} ${time %B} ${time %G}
 User    $nodename
@@ -61,3 +61,4 @@ CPU ${execi 20 sensors | grep -m 1 -A 1 'temp1' | cut -c16-22 | sed '2d'} ${alig
 ${color #ff6565}WIRELESS (${addr wlan0}) ${hr 2}$color
 Down: ${downspeed wlan0} ${alignr} Up: ${upspeed wlan0} 
 ${color #FFFFFF}${downspeedgraph wlan0 20,120 000000 FFFFFF} ${alignr}${color #CFCFCF}${upspeedgraph wlan0 20,120 000000 CFCFCF}$color
+]];

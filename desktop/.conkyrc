@@ -1,33 +1,33 @@
-# ==================================================================
-# FILE     .conkyrc
-# MACHINE  desktop
-# INFO     for HDD temperature, hddtemp is used as enabled unit 
-#          under systemd and netcat has to be installed in addition.
-#
-# DATE     10.05.2014
-# OWNER    Bischofberger
-# ==================================================================
+conky.config = {
+-- ==================================================================
+-- FILE     .conkyrc
+-- MACHINE  desktop
+-- INFO     for HDD temperature, hddtemp is used as enabled unit 
+--          under systemd and netcat has to be installed in addition.
+
+-- DATE     27.09.2015
+-- OWNER    Bischofberger
+-- ==================================================================
+
+-- Window Layout --
+own_window = true,
+own_window_type = 'override',
+own_window_transparent = true,
+double_buffer = true,
+alignment = 'top_right',
+gap_x = 10,
+gap_y = 45,
+update_interval = 3.0,
+
+-- Colors, Sizes, Fonts --
+maximum_width = 250,
+default_color = 'white',
+use_xft = true,
+font = 'Monospace:size=10',
+};
 
 
-# --- Window Layout --- #
-own_window yes
-own_window_type override
-own_window_transparent yes
-double_buffer yes
-alignment top_right
-gap_x 10
-gap_y 45
-update_interval 3.0
-
-# --- Colors, Sizes, Fonts --- #
-maximum_width 250
-default_color white
-use_xft yes
-xftfont Monospace:size=10
-
-
-TEXT
-
+conky.text = [[
 ${color #ff6565}SYSTEM INFORMATION ${hr 2}${color}
 ${time %A},${time %e} ${time %B} ${time %G}
 User    $nodename
@@ -53,7 +53,6 @@ ${color #ff6565}DRIVES - FREE SPACE ${hr 2}$color
 / ${fs_free_perc /}% $alignr${fs_free /}/${fs_size /}
 ${color #ff6565}${fs_bar 6 /}$color
 
-# ugly formatting. TODO: use awk
 ${color #ff6565}TEMPERATURES ${hr 2}$color
 CPU¹ ${execi 20 sensors | grep 'Core' | cut -c18-19 | sed -n 1p}°C ${alignc}  CPU³ ${execi 20 sensors | grep 'Core' | cut -c18-19 | sed -n 3p}°C ${alignr}HDD ${execi 20 netcat localhost 7634 | cut -c32-33}°C
 CPU² ${execi 20 sensors | grep 'Core' | cut -c18-19 | sed -n 2p}°C ${alignc}  CPU⁴ ${execi 20 sensors | grep 'Core' | cut -c18-19 | sed -n 4p}°C ${alignr} 
@@ -61,3 +60,4 @@ CPU² ${execi 20 sensors | grep 'Core' | cut -c18-19 | sed -n 2p}°C ${alignc}  
 ${color #ff6565}LAN (${addr enp2s0}) ${hr 2}$color
 Down: ${downspeed enp2s0} ${alignr} Up: ${upspeed enp2s0} 
 ${color #FFFFFF}${downspeedgraph enp2s0 20,120 000000 FFFFFF} ${alignr}${color #CFCFCF}${upspeedgraph enp2s0 20,120 000000 CFCFCF}$color
+]];
