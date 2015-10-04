@@ -4,7 +4,7 @@
 # MACHINE  laptop
 # INFO     Executed by startx
 #
-# DATE     18.08.2015
+# DATE     29.09.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -40,5 +40,8 @@ xbindkeys
 
 # start gpg agent
 eval $(gpg-agent --daemon)
+
+# for geogebra
+wmname LG3D
 
 exec dwm
