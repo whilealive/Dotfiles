@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     26.09.2015
+" DATE     06.10.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -33,7 +33,6 @@ set hlsearch                "highlight searching results
 " -------------------
 " spell checking
 " -------------------
-"nnoremap <F2> :setlocal spell! spelllang=de_ch,en<CR>
 nnoremap ,sp :setlocal spell! spelllang=de_ch,en<CR>
 set complete+=kspell		    "auto completition with Ctrl-N, Ctrl-P
 
@@ -74,6 +73,9 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 nnoremap ,d D"=strftime("%d.%m.%Y")<CR>p
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
+"change paste mode
+nnoremap ,pt :set invpaste paste?<CR>
+set pastetoggle=,pt
 
 " -------------------------------
 " use dmenu to open files quickly
@@ -83,17 +85,18 @@ function! Chomp(str)
 	return substitute(a:str, '\n$', '', '')
 endfunction
 "Find a file and pass it to cmd
-function! DmenuOpen(cmd)
-	let fname = Chomp(system("git ls-files | dmenu -i -l 20 -p " . a:cmd))
-	"let fname = Chomp(system("find . | dmenu -i -l 20 -p " . a:cmd))
+function! DmenuOpen(cmd,type)
+	if (a:type == "git")
+		let fname = Chomp(system("git ls-files | dmenu -i -l 20 -p " . a:cmd))
+	else
+		let fname = Chomp(system("find . -not -path '*/\.*' | dmenu -i -l 20 -p " . a:cmd))
+	endif
 	if empty(fname)
 		return
 	endif
 	execute a:cmd . " " . fname
 endfunction
 " Mappings
-map <c-t> :call DmenuOpen("tabe")<cr>
-map <c-f> :call DmenuOpen("e")<cr>
-
-nnoremap ,pt :set invpaste paste?<CR>
-set pastetoggle=,pt
+map <c-f> :call DmenuOpen("e", "")<cr>
+map <c-g> :call DmenuOpen("e", "git")<cr>
+"map <c-t> :call DmenuOpen("tabe", "")<cr>
