@@ -39,6 +39,9 @@ ignore *
 unignore From: To: Subject: CC: Reply-To: 
 unignore User-Agent:
 
+# order of prefered mime types
+alternative_order text/html text/enriched text/plain
+
 # sort threads from newest to oldest (top to bottom)
 set sort         = threads
 set sort_browser = reverse-date
@@ -110,10 +113,9 @@ macro index .n "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<clear-flag>*" "m
 #bind index,pager \Co sidebar-open
 
 ## ===================== other extensions =====================
-set alias_file=~/.mutt/mutt-alias
-source ~/.mutt/mutt-alias
 set query_command= "abook --mutt-query '%s'" 
 macro index,pager A "<pipe-message>abook --add-email-quiet<return>" "add the sender address to abook"
+bind editor <Tab> complete-query
 
 # html view in w3m
 set mailcap_path = "~/.mutt/mailcap"
