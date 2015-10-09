@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     26.09.2015
+# DATE     09.10.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -36,10 +36,8 @@ set mark_old = no                    # Don't mark messages as old
 # convert time to local timezone and print in pager
 set pager_format  = "%4C %Z %[!%e. %B %Y - %H:%M]  %.20n  %s%* -- (%P)"
 ignore *
-unignore From:
-unignore To:
-unignore Subject:
-unignore Reply-To:
+unignore From: To: Subject: CC: Reply-To: 
+unignore User-Agent:
 
 # sort threads from newest to oldest (top to bottom)
 set sort         = threads
