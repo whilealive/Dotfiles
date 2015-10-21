@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     06.10.2015
+" DATE     21.10.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -29,6 +29,7 @@ set nojoinspaces            "insert only one space after .,?!
 set cpo+=$                  "shows the end of the text to be changed when pressing c
 set whichwrap=""            "don't exceed the end of the line with the cursor
 set hlsearch                "highlight searching results
+set scrolloff=5							"keep some lines before and after cursor
 
 " -------------------
 " spell checking
