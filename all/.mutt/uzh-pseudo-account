@@ -4,7 +4,7 @@
 # INFO     account: bischofberger@fastmail.fm, uzh folder
 #          for use with mbsync
 #
-# DATE     26.09.2015
+# DATE     27.10.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -31,3 +31,6 @@ mailboxes ~/Maildir/uzh-pseudo/uzh
 # password management via gpg, set in .muttrc
 set smtp_pass	  = $my_pw_fastmail
 set smtp_url    = smtps://bischofberger@fastmail.fm@mail.messagingengine.com:465
+
+# trash
+macro index,pager d "<save-message>" "move message to trash"
