@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     21.10.2015
+" DATE     05.11.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -34,8 +34,10 @@ set scrolloff=5							"keep some lines before and after cursor
 " -------------------
 " spell checking
 " -------------------
-nnoremap ,sp :setlocal spell! spelllang=de_ch,en<CR>
+nnoremap ,sp :setlocal spell! spelllang=hun-de-CH-frami<CR>
+"nnoremap ,sp :setlocal spell! spelllang=de_ch,en<CR>
 set complete+=kspell		    "auto completition with Ctrl-N, Ctrl-P
+set spellfile=~/.vim/spell/bischofberger.utf-8.add
 
 " ----------------------
 " file and path managing
