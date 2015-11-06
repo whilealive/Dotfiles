@@ -1,11 +1,2 @@
-# ==================================================================
-# FILE     .fehbg
-# MACHINE  desktop
-# INFO     not in use yet
-#
-# DATE     22.12.2013
-# OWNER    Bischofberger
-# ==================================================================
-
-
-feh  --bg-scale '/home/desktop/Pictures/wallpapers-custom/do-the-right-thing-radio-raheem-sw.jpg' 
+#!/bin/sh
+feh  --bg-scale '/home/desktop/Pictures/wallpapers-custom/CharizmaWallpaper.jpg' 

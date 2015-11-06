@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     29.12.2014
+# DATE     06.11.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -29,46 +29,18 @@ xset fp rehash
 xset b off
 
 # statusbar
-#while true; do Scripts/dwm-statusbar ; sleep 5; done &
 dwmstatus &
 
 # background image
-#sh ~/.fehbg &
+sh ~/.fehbg &
 
 # set NumLock
 numlockx &
 
 # start conky
-#conky &
-
-# clipboard management, daemon needs to be running for "xcmenuctl" command
-#xcmenu --daemon &
+conky &
 
 # start gpg agent
 eval $(gpg-agent --daemon)
 
 exec dwm
-
-
-
-
-# ---------------------------------------------
-# old stuff
-# ----------------------------------------------
-
-# take care of .Xresources (urxvt etc.)
-#[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-
-# start urxvt daemon
-#urxvtd -f &
-
-# sync clipboard, uses quite a lot of cpu!!!
-#/usr/bin/autocutsel -fork &
-#/usr/bin/autocutsel -selection CLIPBOARD -fork &
-
-
-
-
-# load gnome-keyring
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-#export SSH_AUTH_SOCK
