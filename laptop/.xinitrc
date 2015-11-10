@@ -4,7 +4,7 @@
 # MACHINE  laptop
 # INFO     Executed by startx
 #
-# DATE     29.09.2015
+# DATE     10.11.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -35,7 +35,7 @@ dwmstatus &
 sh ~/.fehbg &
 
 # keys
-numlockx
+numlockx &
 xbindkeys
 
 # start gpg agent

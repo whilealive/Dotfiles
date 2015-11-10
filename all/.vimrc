@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     05.11.2015
+" DATE     06.11.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -76,9 +76,8 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 nnoremap ,d D"=strftime("%d.%m.%Y")<CR>p
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
-"change paste mode
-nnoremap ,pt :set invpaste paste?<CR>
-set pastetoggle=,pt
+"paste from paste buffer and indent at once
+nnoremap ,p "+p=}
 
 " -------------------------------
 " use dmenu to open files quickly
