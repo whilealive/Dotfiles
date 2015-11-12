@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     06.11.2015
+" DATE     12.11.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -78,6 +78,10 @@ nnoremap ,d D"=strftime("%d.%m.%Y")<CR>p
 nnoremap ,t :! ctags -R<CR>
 "paste from paste buffer and indent at once
 nnoremap ,p "+p=}
+" toggle auto formatting
+nnoremap ,af :setlocal formatoptions+=a<CR>
+nnoremap ,mf :setlocal formatoptions-=a<CR>
+
 
 " -------------------------------
 " use dmenu to open files quickly
