@@ -6,7 +6,7 @@
 #          extra-folders: suckless-dev (Mailing list)
 #                         local/archive (only local!!!)
 #
-# DATE     27.10.2015
+# DATE     15.11.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -34,4 +34,4 @@ set smtp_pass	  = $my_pw_fastmail
 set smtp_url    = smtps://bischofberger@fastmail.fm@mail.messagingengine.com:465
 
 # trash
-macro index,pager d "<save-message>=/Trash/<enter>" "move message to trash"
+macro index,pager d "<save-message>=Trash/<enter>" "move message to trash"

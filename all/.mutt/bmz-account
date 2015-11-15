@@ -4,7 +4,7 @@
 # INFO     account bruno.bischofberger@bms-zuerich.ch
 #          for use with mbsync
 #
-# DATE     27.10.2015
+# DATE     15.11.2015
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -31,4 +31,4 @@ set smtp_pass	  = $my_pw_bmz
 set smtp_url    = smtps://bruno.bischofberger@bms-zuerich.ch@mta.tam.ch:465
 
 # trash
-macro index,pager d "<save-message>=/Trash/<enter>" "move message to trash"
+macro index,pager d "<save-message>=Trash/<enter>" "move message to trash"
