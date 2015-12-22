@@ -22,3 +22,8 @@ inoremap [      []<C-G>U<Left>
 inoremap [<CR>  [<CR>]<Esc>O
 inoremap [[     [
 inoremap []     []
+
+inoremap $      $$<C-G>U<Left>
+inoremap $<CR>  $<CR>$<Esc>O
+inoremap $$     $
+inoremap $$     $$
