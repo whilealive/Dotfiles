@@ -4,7 +4,7 @@
 " INFO     auto close brackets
 "          requires at least vim-7.4.849
 "
-" DATE     21.12.2015
+" DATE     22.12.2015
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -26,4 +26,3 @@ inoremap []     []
 inoremap $      $$<C-G>U<Left>
 inoremap $<CR>  $<CR>$<Esc>O
 inoremap $$     $
-inoremap $$     $$
