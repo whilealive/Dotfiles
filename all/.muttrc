@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     27.10.2015
+# DATE     09.01.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -49,8 +49,11 @@ set sort_aux     = reverse-last-date-received
 set uncollapse_jump
 
 # include attachments in forwarded messages
-set mime_forward = yes
+set mime_forward = ask-yes
 set mime_forward_rest = yes
+# Note: for forwarding a html message included below current message, use v to see
+# the attachements and tag ("t") "text/html". Then press ;f.
+# For forwarding any attachments use the same procedure.
 
 # skip prompts
 set fast_reply    = yes
