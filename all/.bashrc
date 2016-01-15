@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     18.07.2015
+# DATE     15.01.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -33,8 +33,9 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
 # various aliasses
-#alias startx='startx &> ~/.xlog'
 alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
+alias gitlog="git log --name-status"
+alias gitstat="git status"
 
 # color manpages
 man() {
