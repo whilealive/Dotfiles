@@ -3,10 +3,9 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     15.01.2016
+# DATE     27.01.2016
 # OWNER    Bischofberger
 # ==================================================================
-
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -26,16 +25,6 @@ set_prompt_style
 set -o vi                   # Vi mode
 shopt -s autocd             # change to named directory
 shopt -s dotglob            # include dotfiles in pathname expansion
-
-# colors
-alias dvtm="DVTM_TERM=st dvtm"
-alias ls="ls --color=auto"
-alias grep="grep --color=auto"
-
-# various aliasses
-alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
-alias gitlog="git log --name-status"
-alias gitstat="git status"
 
 # color manpages
 man() {
@@ -76,7 +65,27 @@ extract() {
 
 # udisks_functions to automount devices
 # (from the AUR)
-. /etc/udisks_functions/udisks_functions
+source /etc/udisks_functions/udisks_functions
 
-# bashmarks script
-source /usr/local/bin/bashmarks.sh
+# Automatically change the directory in bash after closing ranger
+function ranger-cd {
+	tempfile="$(mktemp -t tmp.XXXXXX)"
+	/usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+	test -f "$tempfile" &&
+		if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+			cd -- "$(cat "$tempfile")"
+		fi
+	rm -f -- "$tempfile"
+}
+
+# colors
+alias dvtm="DVTM_TERM=st dvtm"
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+
+# various aliasses
+alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
+alias gitlog="git log --name-status"
+alias gitstat="git status"
+alias ranger="ranger-cd"
+
