@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     21.12.2015
+" DATE     09.02.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -35,7 +35,6 @@ set scrolloff=5							"keep some lines before and after cursor
 " spell checking
 " -------------------
 nnoremap ,sp :setlocal spell! spelllang=hun-de-CH-frami<CR>
-"nnoremap ,sp :setlocal spell! spelllang=de_ch,en<CR>
 set complete+=kspell		    "auto completition with Ctrl-N, Ctrl-P
 set spellfile=~/.vim/spell/bischofberger.utf-8.add
 
@@ -73,14 +72,15 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " various mappings
 " ----------------
 "put date at current position
-nnoremap ,d D"=strftime("%d.%m.%Y")<CR>p
+nnoremap <F2> D"=strftime("%d.%m.%Y")<CR>p
 "recreate tags file in current folder
-nnoremap ,t :! ctags -R<CR>
+nnoremap <F3> :! ctags -R<CR>
 "paste from paste buffer and indent at once
 nnoremap ,p "+p=}
 " toggle auto formatting
 nnoremap ,af :setlocal formatoptions+=a<CR>
 nnoremap ,mf :setlocal formatoptions-=a<CR>
+nnoremap <F12> :mak<CR><CR>
 
 
 " -------------------------------
