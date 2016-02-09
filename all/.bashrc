@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     27.01.2016
+# DATE     09.02.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -89,3 +89,5 @@ alias gitlog="git log --name-status"
 alias gitstat="git status"
 alias ranger="ranger-cd"
 
+# autojump
+source /etc/profile.d/autojump.bash
