@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     09.02.2016
+" DATE     10.02.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -73,20 +73,12 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " ----------------
 "put date at current position
 nnoremap <F2> D"=strftime("%d.%m.%Y")<CR>p
-"recreate tags file in current folder
-nnoremap <F3> :! ctags -R<CR>
 "paste from paste buffer and indent at once
-nnoremap ,p "+p=}
+nnoremap <F3> "+p=}
+"recreate tags file in current folder
+nnoremap <F4> :! ctags -R<CR>
 " toggle auto formatting
 nnoremap ,af :setlocal formatoptions+=a<CR>
 nnoremap ,mf :setlocal formatoptions-=a<CR>
 nnoremap <F12> :mak<CR><CR>
-
-
-" -------------------------------
-" plugins
-" -------------------------------
-source $HOME/.vim/plugin/dmenu.vim     " use dmenu to open files quickly
-source $HOME/.vim/plugin/brackets.vim  " auto-close brackets
-
 
