@@ -6,7 +6,7 @@
 #          extra-folders: suckless-dev (Mailing list)
 #                         local/archive (only local!!!)
 #
-# DATE     15.11.2015
+# DATE     18.02.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -26,6 +26,7 @@ set record        = "~/Maildir/fastmail/Sent\ Items/"
 
 mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Sent\ Items ~/Maildir/fastmail/Trash
 mailboxes ~/Maildir/fastmail/suckless-dev
+mailboxes ~/Maildir/fastmail/texhax
 mailboxes ~/Maildir/local/archive
 
 # sending mails via SMTP
