@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     06.11.2015
+# DATE     27.02.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -42,5 +42,8 @@ conky &
 
 # start gpg agent
 eval $(gpg-agent --daemon)
+
+# for geogebra
+wmname LG3D
 
 exec dwm
