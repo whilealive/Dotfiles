@@ -1,0 +1,19 @@
+# ==================================================================
+# FILE     ~/.abook/abookrc
+# MACHINE  all
+# INFO     - 
+#
+# DATE     09.03.2016
+# OWNER    Bischofberger
+# ==================================================================
+
+field group = Group
+
+view CONTACT = name, email, group
+view ADDRESS = address, city, state, zip, country
+view PHONE = phone, workphone, mobile
+view OTHER = url, anniversary, notes
+
+set index_format=" {name:22} {email:40} {group:10}"
+
+set sort_field = group
