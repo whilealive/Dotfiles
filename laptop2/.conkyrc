@@ -1,0 +1,64 @@
+conky.config = {
+-- ==================================================================
+-- FILE     .conkyrc
+-- MACHINE  laptop2
+-- INFO     for HDD temperature, hddtemp is used as enabled unit under
+--          systemd and netcat has to be installed in addition
+
+-- DATE     18.03.2016
+-- OWNER    Bischofberger
+-- ==================================================================
+
+-- Window Layout --
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	double_buffer = true,
+	alignment = 'top_right',
+	gap_x = 10,
+	gap_y = 45,
+	update_interval = 3.0,
+
+-- Colors, Sizes, Fonts --
+	maximum_width = 250,
+	default_color = 'white',
+	use_xft = true,
+	font = 'Monospace:size=10',
+};
+
+
+conky.text = [[
+${color #ff6565}SYSTEM INFORMATION ${hr 2}${color}
+${time %A},${time %e} ${time %B} ${time %G}
+User    $nodename
+Uptime  $uptime
+Kernel  $kernel
+
+${color #ff6565}CPU ${hr 2}${color}
+${cpugraph cpu0 20,250,000000 CFCFCF}
+${color #ff6565}${cpubar cpu0 6,250} ${color #cc0033}$color
+
+${color #ff6565}TOP 5 PROCESSES ${hr 2}$color
+NAME              CPU      MEM
+${top name 1}${top cpu 1}%  ${top mem 1}%
+${top name 2}${top cpu 2}%  ${top mem 2}%
+${top name 3}${top cpu 3}%  ${top mem 3}%
+${top name 4}${top cpu 4}%  ${top mem 4}%
+${top name 5}${top cpu 5}%  ${top mem 5}%
+
+${color #ff6565}MEMORY ${hr 2}$color
+RAM $memperc% ${membar 6}
+
+${color #ff6565}DRIVES - FREE SPACE ${hr 2}$color
+/ ${fs_free_perc /}% $alignr${fs_free /}/${fs_size /}
+${color #ff6565}${fs_bar 6 /}$color
+/home ${fs_free_perc /home}% $alignr${fs_free /home}/${fs_size /home}
+${color #ff6565}${fs_bar 6 /home}$color
+
+${color #ff6565}TEMPERATURES ${hr 2}$color
+CPU ${execi 20 sensors | grep -m 1 -A 1 'temp1' | cut -c16-22 | sed '2d'} ${alignr}HDD ${execi 20 netcat localhost 7634 | cut -c34-35}°C
+
+${color #ff6565}WIRELESS (${addr wlan0}) ${hr 2}$color
+Down: ${downspeed wlan0} ${alignr} Up: ${upspeed wlan0} 
+${color #FFFFFF}${downspeedgraph wlan0 20,120 000000 FFFFFF} ${alignr}${color #CFCFCF}${upspeedgraph wlan0 20,120 000000 CFCFCF}$color
+]];
