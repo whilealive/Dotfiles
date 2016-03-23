@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     10.02.2016
+" DATE     23.03.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -56,9 +56,9 @@ nnoremap <S-Tab> :bp<CR>
 " ---------------
 set autoindent      "automatically indent lines to previous lines
 set shiftwidth=2    "autoindent indents 2 inits (= 1 tab)
+set expandtab       "fill up with spaces
 set tabstop=2       "tabstop length
 set softtabstop=2   "softtabstop length
-set noexpandtab     "do not fill up with spaces, use TAB
 
 " ------
 " layout
