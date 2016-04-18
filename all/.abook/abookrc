@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     - 
 #
-# DATE     09.03.2016
+# DATE     18.04.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -17,3 +17,4 @@ view OTHER = url, anniversary, notes
 set index_format=" {name:22} {email:40} {group:10}"
 
 set sort_field = group
+set autosave=false
