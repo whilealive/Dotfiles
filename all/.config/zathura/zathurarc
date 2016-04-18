@@ -1,0 +1,10 @@
+# ==================================================================
+# FILE     ~/.config/zathura/zathurarc
+# MACHINE  all
+# INFO     - 
+#
+# DATE     13.04.2016
+# OWNER    Bischofberger
+# ==================================================================
+set adjust-open "width"
+set selection-clipboard "clipboard"
