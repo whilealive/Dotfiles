@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     20.02.2016
+# DATE     21.04.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -65,7 +65,7 @@ set confirmappend = no
 set abort_nosubject = no
 
 # Mailing lists
-subscribe dev@suckless.org texhax@tug.org
+subscribe dev@suckless.org texhax@tug.org latex-l@listserv.uni-heidelberg.de
 
 # bindings
 bind pager q            exit
@@ -90,11 +90,11 @@ bind attach <return>    view-mailcap
 
 # folder changes
 macro index,pager gf "<change-folder> ~/Maildir/fastmail/INBOX<enter>" "go to fastmail INBOX"
-macro index,pager gs "<change-folder> ~/Maildir/fastmail/suckless-dev<enter>" "go to suckless-dev INBOX"
-macro index,pager gt "<change-folder> ~/Maildir/fastmail/texhax<enter>" "go to texhax INBOX"
-macro index,pager gl "<change-folder> ~/Maildir/local/archive<enter>" "go to local archive"
 macro index,pager gb "<change-folder> ~/Maildir/bmz/INBOX<enter>" "go to bmz INBOX"
 macro index,pager gu "<change-folder> ~/Maildir/uzh-pseudo/uzh<enter>" "go to pseudo-uzh INBOX"
+macro index,pager gs "<change-folder> ~/Maildir/fastmail/suckless-dev<enter>" "go to suckless-dev INBOX"
+macro index,pager gth "<change-folder> ~/Maildir/fastmail/texhax<enter>" "go to texhax INBOX"
+macro index,pager gt3 "<change-folder> ~/Maildir/fastmail/LaTeX3<enter>" "go to LaTeX3 (LATEX-L) INBOX"
 
 # change folders quickly
 set sleep_time = 0
