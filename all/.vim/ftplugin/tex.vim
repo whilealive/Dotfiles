@@ -3,16 +3,15 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file, no plugin needed
 "
-" DATE     12.11.2015
+" DATE     26.04.2016
 " OWNER    Bischofberger
 " ==================================================================
-
 
 setlocal sw=2        " little indentation
 setlocal tw=90       " limited textwidth for readability
 setlocal expandtab   " tex intendation works better with spaces
 
-setlocal formatoptions+=tlw
+setlocal formatoptions=tcroqawl  " see :help fo-table
 
 "compile within vim using make and rubber
 "if the current dir doesn't have a Makefile, it compiles using the generic

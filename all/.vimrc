@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     23.03.2016
+" DATE     26.04.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -72,13 +72,16 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " various mappings
 " ----------------
 "put date at current position
-nnoremap <F2> D"=strftime("%d.%m.%Y")<CR>p
-"paste from paste buffer and indent at once
+nnoremap <F2> :set paste<CR>D"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
+"paste from paste buffer and indent
 nnoremap <F3> "+p=}
+" show all trailing spaces at end of line
+nnoremap <F4> /\s\+$<Cr>
+" toggle hlsearch
+nnoremap <F5> :set hlsearch!<CR>
 "recreate tags file in current folder
-nnoremap <F4> :! ctags -R<CR>
+nnoremap ,t :! ctags -R<CR>
 " toggle auto formatting
 nnoremap ,af :setlocal formatoptions+=a<CR>
 nnoremap ,mf :setlocal formatoptions-=a<CR>
-nnoremap <F12> :mak<CR><CR>
 
