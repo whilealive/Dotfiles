@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     26.04.2016
+" DATE     27.04.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -84,4 +84,5 @@ nnoremap ,t :! ctags -R<CR>
 " toggle auto formatting
 nnoremap ,af :setlocal formatoptions+=a<CR>
 nnoremap ,mf :setlocal formatoptions-=a<CR>
-
+" make
+nnoremap <F12> :mak<CR><CR>
