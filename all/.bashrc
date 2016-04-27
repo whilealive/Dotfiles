@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     09.02.2016
+# DATE     27.04.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -78,16 +78,10 @@ function ranger-cd {
 	rm -f -- "$tempfile"
 }
 
-# colors
-alias dvtm="DVTM_TERM=st dvtm"
+# various aliasses
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
-
-# various aliasses
 alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
 alias gitlog="git log --name-status"
 alias gitstat="git status"
 alias ranger="ranger-cd"
-
-# autojump
-source /etc/profile.d/autojump.bash

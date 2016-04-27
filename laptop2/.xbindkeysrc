@@ -4,7 +4,7 @@
 # INFO     uses the "vol" script (could be done by amixer commands
 #          directly
 #
-# DATE     20.03.2016
+# DATE     27.04.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -59,6 +59,9 @@
 	Mod2 + XF86MonBrightnessUp
 "xbacklight -dec 10"
 	Mod2 + XF86MonBrightnessDown
+"slock"
+  Mod2 + XF86Display
+
 
 #"xbindkeys_show" 
 #  control+shift + q
