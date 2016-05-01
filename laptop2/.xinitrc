@@ -4,7 +4,7 @@
 # MACHINE  laptop2
 # INFO     Executed by startx
 #
-# DATE     17.03.2016
+# DATE     28.04.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -20,10 +20,6 @@ fi
 setxkbmap -layout ch
 
 # ---------------everything from here belongs to the dwm setup---------------------
-
-# load terminus and custom fonts
-xset +fp /usr/share/fonts/local
-xset fp rehash
 
 # mute the stupid "Bing" sound
 xset b off
