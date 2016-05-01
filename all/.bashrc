@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     27.04.2016
+# DATE     28.04.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -84,4 +84,4 @@ alias grep="grep --color=auto"
 alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
 alias gitlog="git log --name-status"
 alias gitstat="git status"
-alias ranger="ranger-cd"
+alias ra="ranger-cd"
