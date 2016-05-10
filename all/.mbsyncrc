@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     21.04.2016
+# DATE     02.05.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -32,15 +32,7 @@ Flatten "_"
 Channel fastmail_in
 Master :fastmail-remote:
 Slave :fastmail-local:
-Patterns "INBOX"
-Sync All
-Create Slave
-SyncState *
-
-Channel fastmail_rest
-Master :fastmail-remote:
-Slave :fastmail-local:
-Patterns "Trash" "Drafts" "suckless-dev" "texhax" "LaTeX3"
+Patterns "INBOX" "Trash" "Drafts"
 Sync All
 Create Slave
 SyncState *
@@ -63,8 +55,16 @@ Expunge Both
 Create Slave
 SyncState *
 
+Channel fastmail_lists
+Master :fastmail-remote:
+Slave :fastmail-local:
+Patterns "suckless-dev" "texhax" "ConTeXt"
+Sync All
+Create Slave
+SyncState *
+
 Group fastmail
-Channels fastmail_in fastmail_rest fastmail_sent fastmail_uzh
+Channels fastmail_in fastmail_sent fastmail_uzh fastmail_lists 
 
 
 

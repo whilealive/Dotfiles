@@ -4,7 +4,7 @@
 # INFO     account bischofberger@fastmail.fm
 #          for use with mbsync
 #
-# DATE     21.04.2016
+# DATE     02.05.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -22,11 +22,14 @@ set folder        = "~/Maildir/fastmail"
 set postponed     = "~/Maildir/fastmail/Drafts/"
 set record        = "~/Maildir/fastmail/Sent\ Items/"
 
+# fastmail mailboxes
 mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Sent\ Items ~/Maildir/fastmail/Trash
+mailboxes ~/Maildir/local/archive
+
+# mailing lists
 mailboxes ~/Maildir/fastmail/suckless-dev
 mailboxes ~/Maildir/fastmail/texhax
-mailboxes ~/Maildir/fastmail/LaTeX3
-mailboxes ~/Maildir/local/archive
+mailboxes ~/Maildir/fastmail/ConTeXt
 
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
