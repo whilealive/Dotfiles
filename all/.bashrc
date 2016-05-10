@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     28.04.2016
+# DATE     08.05.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -85,3 +85,6 @@ alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
 alias gitlog="git log --name-status"
 alias gitstat="git status"
 alias ra="ranger-cd"
+
+# ConTeXt-minimals
+source /opt/context-minimals/setuptex
