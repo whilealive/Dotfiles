@@ -6,7 +6,7 @@
 "          - Mail writing settings for mutt
 "          - etc.
 "
-" DATE     08.04.2016
+" DATE     08.05.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -18,6 +18,4 @@ augroup filetypedetect
 	" markdown (GitHub)
 	autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} setfiletype markdown
 	autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}.{des3,des,bf,bfa,aes,idea,cast,rc2,rc4,rc5,desx} setfiletype markdown
-	" MediaWiki
-	autocmd BufNewFile,BufRead *.wiki,*.mw setfiletype markdown
 augroup END

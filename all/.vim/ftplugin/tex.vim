@@ -1,9 +1,9 @@
 " ==================================================================
 " FILE     .vim/ftplugin/tex.vim
 " MACHINE  all
-" INFO     Personal tex.vim config file, no plugin needed
+" INFO     Personal tex.vim config file
 "
-" DATE     26.04.2016
+" DATE     10.05.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -22,7 +22,3 @@ if filereadable('Makefile')
 else
   exec "setlocal makeprg=make\\ -f\\ ~/Developer/make/latex.mk\\ " . substitute(bufname("%"),"tex","pdf", "")
 endif
-
-function! Chomp(str)
-	return substitute(a:str, '\n$', '', '')
-endfunction
