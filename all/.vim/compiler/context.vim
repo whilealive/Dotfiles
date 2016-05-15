@@ -24,10 +24,11 @@ else
   CompilerSet makeprg=context\ --silent\ --nonstopmode\ --noconsole\ \"%\"
 endif
 
-" The following two functions remove duplicate entries in the quickfix list
-" which may occur if context is being run multiple times.
-" The function s:SortUniqQFlist() will automatically be invoked by the
-" QuickfixCmdPost event.
+" The following two functions are needed to remove duplicate entries in the
+" quickfix list which may occur if context is being run multiple times. The
+" function s:SortUniqQFlist() will automatically be invoked by the
+" QuickfixCmdPost event (see above).
+" Functions are taken from: http://vim.wikia.com/wiki/Automatically_sort_Quickfix_list
 function! s:CompareQuickfixEntries(i1, i2)
   if bufname(a:i1.bufnr) == bufname(a:i2.bufnr)
     return a:i1.lnum == a:i2.lnum ? 0 : (a:i1.lnum < a:i2.lnum ? -1 : 1)
