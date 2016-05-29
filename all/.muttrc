@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     17.05.2016
+# DATE     29.05.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -32,6 +32,7 @@ set pager_index_lines = "15"         # split screen to watch index and pager sim
 set mail_check = 60                  # How often to check for new mail (time in seconds).
 set pager_stop                       # Don't go to next message when at the end of message
 set mark_old = no                    # Don't mark messages as old
+set menu_scroll                      # scroll line-by-line (not page-by-page)
 
 # convert time to local timezone and print in pager
 set pager_format  = "%4C %Z %[!%e. %B %Y - %H:%M]  %.20n  %s%* -- (%P)"
