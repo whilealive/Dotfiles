@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     30.04.2016
+" DATE     16.06.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -30,6 +30,7 @@ set cpo+=$                  "shows the end of the text to be changed when pressi
 set whichwrap=""            "don't exceed the end of the line with the cursor
 set hlsearch                "highlight searching results
 set scrolloff=5							"keep some lines before and after cursor
+set display=lastline        "Show as much as possible of a wrapped last line, not just "@"
 
 " -------------------
 " spell checking

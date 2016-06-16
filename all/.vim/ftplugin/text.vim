@@ -3,12 +3,16 @@
 " MACHINE  all
 " INFO     
 "
-" DATE     05.09.2014
+" DATE     27.05.2016
 " OWNER    Bischofberger
 " ==================================================================
 
-setlocal tw=72  " limited textwidth for readability
-
 "behave like a word processor
-setlocal formatoptions+=atlw
-noremap Q :set fo-=w<Cr>gqap<Esc>:set fo+=w<CR>
+setlocal formatoptions=l  "see :help fo-table
+"setlocal formatoptions=tcroqawl  "see :help fo-table
+setlocal wrap
+setlocal linebreak
+
+map j gj
+map k gk
+
