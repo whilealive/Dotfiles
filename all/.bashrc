@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     08.05.2016
+# DATE     14.06.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -79,6 +79,7 @@ function ranger-cd {
 }
 
 # various aliasses
+alias susp="systemctl suspend"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
