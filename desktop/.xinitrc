@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     27.02.2016
+# DATE     01.07.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -33,6 +33,9 @@ dwmstatus &
 
 # background image
 sh ~/.fehbg &
+
+# keys
+xbindkeys
 
 # set NumLock
 numlockx &

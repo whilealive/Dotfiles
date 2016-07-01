@@ -1,10 +1,9 @@
 # ==================================================================
 # FILE     .xbindkeysrc
-# MACHINE  laptop2
-# INFO     uses the "vol" script (could be done by amixer commands
-#          directly
+# MACHINE  desktop
+# INFO     screenshot script on PrtSc-Key
 #
-# DATE     27.04.2016
+# DATE     01.07.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -49,19 +48,8 @@
 #keystate_scrolllock= enable
 
 # list of active commands:
-"vol +"
-  Mod2 + XF86AudioRaiseVolume
-"vol -"
-  Mod2 + XF86AudioLowerVolume
-"vol t"
-  Mod2 + XF86AudioMute
-"xbacklight -inc 10"
-	Mod2 + XF86MonBrightnessUp
-"xbacklight -dec 10"
-	Mod2 + XF86MonBrightnessDown
-"slock"
-  Mod2 + XF86Display
-
+"screenshot"
+  Print
 
 #"xbindkeys_show" 
 #  control+shift + q
