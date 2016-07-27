@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     16.06.2016
+" DATE     26.07.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -31,6 +31,7 @@ set whichwrap=""            "don't exceed the end of the line with the cursor
 set hlsearch                "highlight searching results
 set scrolloff=5							"keep some lines before and after cursor
 set display=lastline        "Show as much as possible of a wrapped last line, not just "@"
+set hidden                  "keep history when switching buffers
 
 " -------------------
 " spell checking
@@ -74,12 +75,10 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " ----------------
 "put date at current position
 nnoremap <F2> :set paste<CR>D"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
-"paste from paste buffer and indent
-nnoremap <F3> "+p=}
-" show all trailing spaces at end of line
-nnoremap <F4> /\s\+$<Cr>
-" toggle hlsearch
-nnoremap <F5> :set hlsearch!<CR>
+" copy to CLIPBOARD
+map <F3> "+y
+"paste from CLIPBOARD and indent
+map <F4> "+p=}
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
 " toggle auto formatting
