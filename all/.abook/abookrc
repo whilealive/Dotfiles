@@ -3,18 +3,18 @@
 # MACHINE  all
 # INFO     - 
 #
-# DATE     18.04.2016
+# DATE     14.07.2016
 # OWNER    Bischofberger
 # ==================================================================
 
-field group = Group
+field group = Group, list
 
 view CONTACT = name, email, group
-view ADDRESS = address, city, state, zip, country
+view ADDRESS = address, zip, city
 view PHONE = phone, workphone, mobile
-view OTHER = url, anniversary, notes
+view OTHER = anniversary, url, notes
 
-set index_format=" {name:22} {email:40} {group:10}"
+set index_format=" {name:25} {email:40} {group:20}"
 
 set sort_field = group
 set autosave=false
