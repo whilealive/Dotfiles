@@ -1,0 +1,25 @@
+#!/bin/sh
+# ==================================================================
+# FILE     key-handler
+# MACHINE  all
+# INFO     external keys for sxiv
+#
+# DATE     16.08.2016
+# OWNER    Bischofberger
+# ==================================================================
+
+while read file
+do
+  case "$1" in
+    "X")
+      mv "$file" ~/.trash
+      ;;
+    "R")
+      convert -rotate 90 "$file" "$file"
+      ;;
+    "C-c")
+      echo -n "$file" | xsel -b -i
+      echo -n "$file" | xsel -p -i
+      ;;
+  esac
+done

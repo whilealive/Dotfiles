@@ -4,7 +4,7 @@
 # MACHINE  laptop2
 # INFO     Executed by startx
 #
-# DATE     28.04.2016
+# DATE     16.08.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -26,9 +26,6 @@ xset b off
 
 # statusbar in C
 dwmstatus &
-
-# background image
-sh ~/.fehbg &
 
 # keys
 xbindkeys
