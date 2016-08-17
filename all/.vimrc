@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     26.07.2016
+" DATE     06.08.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -75,9 +75,8 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " ----------------
 "put date at current position
 nnoremap <F2> :set paste<CR>D"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
-" copy to CLIPBOARD
+" copy to CLIPBOARD, paste from CLIPBOARD and indent
 map <F3> "+y
-"paste from CLIPBOARD and indent
 map <F4> "+p=}
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
