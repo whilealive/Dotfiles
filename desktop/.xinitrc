@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     01.07.2016
+# DATE     19.08.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -32,7 +32,7 @@ xset b off
 dwmstatus &
 
 # background image
-sh ~/.fehbg &
+nitrogen --restore &
 
 # keys
 xbindkeys
