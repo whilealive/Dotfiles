@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     07.07.2016
+# DATE     23.08.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -83,6 +83,4 @@ alias susp="systemctl suspend"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias feh="feh --action7 'mv %F ~/.trash/' -d -S filename --keep-zoom-vp"
-alias gitlog="git log --name-status"
-alias gitstat="git status"
 alias ra="ranger-cd"
