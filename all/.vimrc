@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     02.11.2016
+" DATE     08.11.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -61,9 +61,6 @@ set shiftwidth=2    "autoindent indents 2 inits (= 1 tab)
 set expandtab       "fill up with spaces
 set tabstop=2       "tabstop length
 set softtabstop=2   "softtabstop length
-" add task environment to indentation rules
-let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|tasks'
-let g:tex_items = '\\bibitem\|\\item\|\\task' 
 
 " ------
 " layout
