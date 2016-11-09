@@ -74,16 +74,18 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " various mappings
 " ----------------
 "put date at current position
-nnoremap <F2> :set paste<CR>D"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
+nnoremap <F1> :set paste<CR>D"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
 " copy to CLIPBOARD, paste from CLIPBOARD and indent
-map <F3> "+y
-map <F4> "+p=}
+map <F2> "+y
+map <F3> "+p=}
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
 " toggle auto formatting
 nnoremap ,af :setlocal formatoptions+=a<CR>
 nnoremap ,mf :setlocal formatoptions-=a<CR>
-" make
-nnoremap <F12> :w<CR>:mak<CR><CR>
 " delete both enclosing parantheses
 nnoremap ,dp %x``x
+" make
+nnoremap <F11> :w<CR>:mak<CR><CR>
+" show next error
+nnoremap <F12> :cn<CR>
