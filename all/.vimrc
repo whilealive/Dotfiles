@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     08.11.2016
+" DATE     21.11.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -89,3 +89,6 @@ nnoremap ,dp %x``x
 nnoremap <F11> :w<CR>:mak<CR><CR>
 " show next error
 nnoremap <F12> :cn<CR>
+" space bar un-highlights search
+noremap <silent> <Space> :silent noh<Bar>echo<CR>
+
