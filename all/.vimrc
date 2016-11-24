@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     21.11.2016
+" DATE     24.11.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -21,13 +21,12 @@ set mouse=a                 "now works properly with st/tmux
 " -------------------
 " writing and reading
 " -------------------
-set showmode                "shows, in which mode you are currently in
 set showmatch               "shows the opening bracket when typing )}]
 set showcmd                 "for longer commands in command mode
 set ruler                   "shows row/column number of the cursor
 set nojoinspaces            "insert only one space after .,?!
 set cpo+=$                  "shows the end of the text to be changed when pressing c
-set whichwrap=""            "don't exceed the end of the line with the cursor
+set whichwrap=<,>,[,]       "exceed the end of the line with cursor keys only
 set hlsearch                "highlight searching results
 set scrolloff=5							"keep some lines before and after cursor
 set display=lastline        "Show as much as possible of a wrapped last line, not just "@"
@@ -36,17 +35,17 @@ set hidden                  "keep history when switching buffers
 " -------------------
 " spell checking
 " -------------------
-nnoremap ,sp :setlocal spell! spelllang=hun-de-CH-frami<CR>
 set complete+=kspell		    "auto completition with Ctrl-N, Ctrl-P
 set spellfile=~/.vim/spell/bischofberger.utf-8.add
+nnoremap ,sp :setlocal spell! spelllang=hun-de-CH-frami<CR>
 
 " ----------------------
 " file and path managing
 " ----------------------
-"go to current directory
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 "wildmenu activation (good for buffer switching)
 set wildchar=<Tab> wildmenu wildmode=full
+"go to current directory
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 "Allows writing to files with root priviledges
 cmap w!! w !sudo tee % > /dev/null
 "super fast buffer switching:
