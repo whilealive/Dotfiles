@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     25.11.2016
+" DATE     30.11.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -89,7 +89,7 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 " various mappings
 " ------------------------------------------------------------------
 "put date at current position
-nnoremap <F1> :set paste<CR>D"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
+nnoremap <F1> :set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
 
 " copy to CLIPBOARD, paste from CLIPBOARD and indent
 map <F2> "+y
