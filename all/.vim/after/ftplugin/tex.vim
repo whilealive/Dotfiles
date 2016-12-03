@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     25.11.2016
+" DATE     03.12.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -18,3 +18,15 @@ let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|tasks
 let g:tex_items = '\\bibitem\|\\item\|\\task' 
 
 compiler rubber
+
+" open corresponding pdf
+function! OpenPDF()
+  let b:bufname = expand('%:r') . '.pdf'
+  if filereadable(b:bufname)
+    execute '!zathuratab ' . b:bufname
+  else
+    echoerr "File \"" . b:bufname . "\" does not exist."
+  endif
+endfunction
+
+map <F4> :call OpenPDF()<cr><cr>
