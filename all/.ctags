@@ -1,3 +1,5 @@
+--guess-language-eagerly
+
 --langdef=latex
 --langmap=latex:.tex
 --regex-latex=/\\chapter[[:space:]]*(\[[^]]*\])?[[:space:]]*\{([^}]+)\}/\2/s,chapter/
@@ -20,3 +22,7 @@
 --exclude=*.bak
 --exclude=*.pyc
 --exclude=*.tar.*
+--exclude=*.aux
+--exclude=*.log
+--exclude=*.svg
+--exclude=Makefile
