@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     17.08.2016
+# DATE     22.12.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -48,6 +48,15 @@ set sort         = threads
 set sort_browser = reverse-date
 set sort_aux     = reverse-last-date-received
 set uncollapse_jump
+
+# sidebar
+# Ctrl-n, Ctrl-p to select next, previous folder.
+# Ctrl-o to open selected folder.
+set sidebar_visible = no
+bind index,pager B sidebar-toggle-visible
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
 
 # include attachments in forwarded messages
 set mime_forward = ask-yes
