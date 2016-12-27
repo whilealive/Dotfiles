@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     30.11.2016
+" DATE     22.12.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -103,8 +103,10 @@ nnoremap ,af :setlocal formatoptions+=a<CR>
 nnoremap ,mf :setlocal formatoptions-=a<CR>
 
 " delete both enclosing parantheses
-nnoremap ,dp %x``x
-"
+nnoremap ,dp{ di{v%p
+nnoremap ,dp( di(v%p
+nnoremap ,dp[ di[v%p
+
 " make
 nnoremap <F11> :w<CR>:mak<CR><CR>
 

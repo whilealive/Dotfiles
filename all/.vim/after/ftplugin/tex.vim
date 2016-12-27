@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     03.12.2016
+" DATE     27.12.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -23,7 +23,8 @@ compiler rubber
 function! OpenPDF()
   let b:bufname = expand('%:r') . '.pdf'
   if filereadable(b:bufname)
-    execute '!zathuratab ' . b:bufname
+    silent execute '!zathuratab ' . b:bufname
+    redraw!
   else
     echoerr "File \"" . b:bufname . "\" does not exist."
   endif
