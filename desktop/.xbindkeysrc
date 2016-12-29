@@ -3,7 +3,7 @@
 # MACHINE  desktop
 # INFO     screenshot script on PrtSc-Key
 #
-# DATE     01.07.2016
+# DATE     29.12.2016
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -50,6 +50,8 @@
 # list of active commands:
 "screenshot"
   Print
+"clipswap"
+  Mod4 + s
 
 #"xbindkeys_show" 
 #  control+shift + q
