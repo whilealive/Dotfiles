@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     22.12.2016
+" DATE     29.12.2016
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -52,6 +52,9 @@ nnoremap ,sp :setlocal spell! spelllang=hun-de-CH-frami<CR>
 "wildmenu activation (good for buffer switching)
 set wildchar=<Tab> wildmenu wildmode=full
 
+" Search down into subfolders
+set path+=**
+
 "go to current directory
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
@@ -91,28 +94,32 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 "put date at current position
 nnoremap <F1> :set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
 
-" copy to CLIPBOARD, paste from CLIPBOARD and indent
+"copy to CLIPBOARD, paste from CLIPBOARD and indent
 map <F2> "+y
 map <F3> "+p=}
 
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
 
-" toggle auto formatting
+"toggle auto formatting
 nnoremap ,af :setlocal formatoptions+=a<CR>
 nnoremap ,mf :setlocal formatoptions-=a<CR>
 
-" delete both enclosing parantheses
+"delete both enclosing parantheses
 nnoremap ,dp{ di{v%p
 nnoremap ,dp( di(v%p
 nnoremap ,dp[ di[v%p
 
-" make
+"make
 nnoremap <F11> :w<CR>:mak<CR><CR>
 
-" show next error
+"show next error
 nnoremap <F12> :cn<CR>
 
-" space bar un-highlights search
+"space bar un-highlights search
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
+
+"snippets handling
+nnoremap ,Sn :! snippy<CR>:new<CR>"+p}<CR>
+nnoremap ,sn :! snippy<CR>"+p=}<CR>}dd
 " ------------------------------------------------------------------
