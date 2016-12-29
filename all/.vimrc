@@ -120,6 +120,6 @@ nnoremap <F12> :cn<CR>
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
 
 "snippets handling
-nnoremap ,Sn :! snippy<CR>:new<CR>"+p}<CR>
+nnoremap ,S  :! snippy<CR>:new<CR>"+p}<CR>
 nnoremap ,sn :! snippy<CR>"+p=}<CR>}dd
 " ------------------------------------------------------------------
