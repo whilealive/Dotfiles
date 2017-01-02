@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     29.12.2016
+" DATE     02.01.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -89,6 +89,17 @@ if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
 
 
 " ------------------------------------------------------------------
+" netrw settings
+" ------------------------------------------------------------------
+let g:netrw_banner         = 0
+let g:netrw_keepdir        = 0
+let g:netrw_liststyle      = 2
+let g:netrw_retmap         = 1
+let g:netrw_special_syntax = 1
+" ------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------
 " various mappings
 " ------------------------------------------------------------------
 "put date at current position
@@ -117,9 +128,5 @@ nnoremap <F11> :w<CR>:mak<CR><CR>
 nnoremap <F12> :cn<CR>
 
 "space bar un-highlights search
-noremap <silent> <Space> :silent noh<Bar>echo<CR>
-
-"snippets handling
-nnoremap ,S  :! snippy<CR>:new<CR>"+p}<CR>
-nnoremap ,sn :! snippy<CR>"+p=}<CR>}dd
+noremap <silent> <Space> :set hlsearch!<CR>
 " ------------------------------------------------------------------
