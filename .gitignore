@@ -3,10 +3,11 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     07.10.2015
+# DATE     01.01.2017
 # OWNER    Bischofberger
 # ==================================================================
 
+*.swp
+
 # git shall ignore the following
 all/.vim/spell/
-all/.sdirs
