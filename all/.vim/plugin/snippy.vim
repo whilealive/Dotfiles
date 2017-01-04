@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     plugin: use snippy script as snippet manager for vim
 "
-" DATE     02.01.2017
+" DATE     04.01.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -14,7 +14,7 @@ if !exists("g:snippy_command")
   let g:snippy_command = "snippy"
 endif
 
-let b:place_holder = "<+++>"
+let g:snippy_placeholder = "<+++>"
 
 function! SnippyPreview()
   silent execute "!" . g:snippy_command
@@ -40,7 +40,7 @@ function! SnippyPaste()
     "delete blank line at the end (was needed for indenting)
     normal! }dd
     "search backward for placeholder
-    if search(b:place_holder, 'bW') != 0
+    if search(g:snippy_placeholder, 'bW') != 0
       call feedkeys('cw')
     endif
   endif
