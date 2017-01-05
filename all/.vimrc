@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     02.01.2017
+" DATE     05.01.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -105,9 +105,10 @@ let g:netrw_special_syntax = 1
 "put date at current position
 nnoremap <F1> :set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
 
-"copy to CLIPBOARD, paste from CLIPBOARD and indent
-map <F2> "+y
-map <F3> "+p=}
+"copy/paste to/from CLIPBOARD
+vnoremap <F2> "+y
+nnoremap <F3> :set paste<CR>"+p:set nopaste<CR>
+vnoremap <F3> <ESC>:set paste<CR>gv"+p:set nopaste<CR>
 
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
