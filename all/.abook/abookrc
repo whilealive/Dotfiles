@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     - 
 #
-# DATE     03.01.2017
+# DATE     06.01.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -14,7 +14,9 @@ view ADDRESS = address, zip, city
 view PHONE = phone, workphone, mobile
 view OTHER = anniversary, url, notes
 
-set index_format=" {name:25} {email:40} {group:20}"
+set index_format = " {name:25} {email:40} {group:20}"
 
 set sort_field = group
-set autosave=true
+set autosave = true
+
+set add_email_prevent_duplicates = true
