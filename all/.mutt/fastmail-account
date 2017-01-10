@@ -4,7 +4,7 @@
 # INFO     account bischofberger@fastmail.fm
 #          for use with mbsync
 #
-# DATE     02.05.2016
+# DATE     10.01.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -30,6 +30,7 @@ mailboxes ~/Maildir/local/archive
 mailboxes ~/Maildir/fastmail/suckless-dev
 mailboxes ~/Maildir/fastmail/texhax
 mailboxes ~/Maildir/fastmail/ConTeXt
+mailboxes ~/Maildir/fastmail/vim
 
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
