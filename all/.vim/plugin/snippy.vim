@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     plugin: use snippy script as snippet manager for vim
 "
-" DATE     04.01.2017
+" DATE     14.01.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -11,6 +11,8 @@ if !exists("g:snippy_command")
   let g:snippy_command = "snippy"
 endif
 
+" Note: Placeholder starts with < and ends with >. Otherwise replacing it
+" in SnippyPaste() could fail.
 if !exists("g:snippy_placeholder")
   let g:snippy_placeholder = "<+++>"
 endif
@@ -48,7 +50,7 @@ function! SnippyPaste()
     normal! }dd
     "search backward for placeholder
     if search(g:snippy_placeholder, 'bW') != 0
-      call feedkeys('cw')
+      call feedkeys('cf>')
     endif
   endif
 endfunction
