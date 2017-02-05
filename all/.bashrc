@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     01.11.2016
+# DATE     04.02.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -84,3 +84,7 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias ra="ranger-cd"
 alias backup="sudo rsnapshot -V beta"
+
+# context minimals
+source /opt/context-minimals/setuptex
+export OSFONTDIR="$HOME/texmf/fonts"
