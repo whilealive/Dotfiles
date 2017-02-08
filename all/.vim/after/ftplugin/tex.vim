@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     27.12.2016
+" DATE     08.02.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -19,15 +19,4 @@ let g:tex_items = '\\bibitem\|\\item\|\\task'
 
 compiler rubber
 
-" open corresponding pdf
-function! OpenPDF()
-  let b:bufname = expand('%:r') . '.pdf'
-  if filereadable(b:bufname)
-    silent execute '!zathuratab ' . b:bufname
-    redraw!
-  else
-    echoerr "File \"" . b:bufname . "\" does not exist."
-  endif
-endfunction
-
-map <F4> :call OpenPDF()<cr><cr>
+nnoremap <buffer> <silent> <F11> :<c-u>update<cr>:make<cr><cr>

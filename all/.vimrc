@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     05.01.2017
+" DATE     08.02.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -121,12 +121,6 @@ nnoremap ,mf :setlocal formatoptions-=a<CR>
 nnoremap ,dp{ di{v%p
 nnoremap ,dp( di(v%p
 nnoremap ,dp[ di[v%p
-
-"make
-nnoremap <F11> :w<CR>:mak<CR><CR>
-
-"show next error
-nnoremap <F12> :cn<CR>
 
 "space bar un-highlights search
 noremap <silent> <Space> :set hlsearch!<CR>
