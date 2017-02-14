@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     04.02.2017
+# DATE     14.02.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -84,6 +84,7 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias ra="ranger-cd"
 alias backup="sudo rsnapshot -V beta"
+alias abook="abook --config $HOME/.abookrc"
 
 # context minimals
 source /opt/context-minimals/setuptex
