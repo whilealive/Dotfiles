@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     08.02.2017
+" DATE     15.02.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -19,4 +19,4 @@ let g:tex_items = '\\bibitem\|\\item\|\\task'
 
 compiler rubber
 
-nnoremap <buffer> <silent> <F11> :<c-u>update<cr>:make<cr><cr>
+nnoremap <buffer> <silent> <F11> :wa<cr>:make<cr><cr>
