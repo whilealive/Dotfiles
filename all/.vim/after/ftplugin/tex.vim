@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     15.02.2017
+" DATE     17.02.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -17,6 +17,7 @@ setlocal formatoptions=tcroqawl  " see :help fo-table
 let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|tasks\|Tasks'
 let g:tex_items = '\\bibitem\|\\item\|\\task' 
 
-compiler rubber
+compiler latexmk
+"compiler rubber
 
 nnoremap <buffer> <silent> <F11> :wa<cr>:make<cr><cr>
