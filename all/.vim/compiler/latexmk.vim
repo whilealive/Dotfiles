@@ -1,7 +1,7 @@
 " Vim compiler file
 " Compiler:     latexmk (LuaLaTex)
 " Maintainer:   Bruno Bischofberger <bischofberger [at] fastmail [dot] fm>
-" Last Change:  2017 Feb 17
+" Last Change:  2017 Feb 18
 
 if exists("current_compiler")
   finish
@@ -20,7 +20,7 @@ if filereadable('Makefile')
   let current_compiler = "make"
 else
   let current_compiler = "latexmk"
-  CompilerSet makeprg=latexmk\ --lualatex\ --interaction=nonstopmode\ --file-line-error
+  CompilerSet makeprg=latexmk\ --lualatex\ --interaction=nonstopmode\ --file-line-error\ \"%\"
 endif
 
 CompilerSet errorformat=
