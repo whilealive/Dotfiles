@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     16.02.2017
+# DATE     23.02.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -85,4 +85,4 @@ alias grep="grep --color=auto"
 alias ra="ranger-cd"
 alias backup="sudo rsnapshot -V beta"
 alias abook="abook --config $HOME/.abookrc"
-alias latexmkbatch="latexmk -pvc -interaction=nonstopmode -lualatex"
+alias latexmk="latexmk -lualatex -interaction=nonstopmode -file-line-error"
