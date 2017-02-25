@@ -4,7 +4,7 @@
 # INFO     account bischofberger@fastmail.fm
 #          for use with mbsync
 #
-# DATE     31.01.2017
+# DATE     25.02.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -27,7 +27,7 @@ mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Sent\ Items ~/Maildir/fast
 
 # mailing lists
 mailboxes ~/Maildir/fastmail/suckless-dev
-mailboxes ~/Maildir/fastmail/texhax
+mailboxes ~/Maildir/fastmail/tug
 mailboxes ~/Maildir/fastmail/ConTeXt
 mailboxes ~/Maildir/fastmail/vim
 

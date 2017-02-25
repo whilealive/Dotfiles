@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     31.01.2017
+# DATE     25.02.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -58,7 +58,7 @@ SyncState *
 Channel fastmail_lists
 Master :fastmail-remote:
 Slave :fastmail-local:
-Patterns "suckless-dev" "texhax" "ConTeXt" "vim"
+Patterns "suckless-dev" "tug" "ConTeXt" "vim"
 Sync All
 Create Slave
 SyncState *
