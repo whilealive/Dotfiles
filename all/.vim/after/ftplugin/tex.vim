@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     17.02.2017
+" DATE     17.03.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -13,11 +13,9 @@ setlocal expandtab   " tex intendation works better with spaces
 
 setlocal formatoptions=tcroqawl  " see :help fo-table
 
-" add task environment to indentation rules (see indent/tex.vim)
-let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|tasks\|Tasks'
-let g:tex_items = '\\bibitem\|\\item\|\\task' 
+" add compactitem (paralist package) environment to indentation rules (see indent/tex.vim)
+let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|myenum\|myitem\|alphenum\|tabbedenum'
 
 compiler latexmk
-"compiler rubber
 
 nnoremap <buffer> <silent> <F11> :wa<cr>:make<cr><cr>
