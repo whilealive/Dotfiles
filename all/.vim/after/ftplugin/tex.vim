@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     17.03.2017
+" DATE     20.03.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -18,4 +18,4 @@ let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|myenu
 
 compiler latexmk
 
-nnoremap <buffer> <silent> <F11> :wa<cr>:make<cr><cr>
+nnoremap <buffer> <silent> <F11> :w<cr>:wa<cr>:make<cr><cr>
