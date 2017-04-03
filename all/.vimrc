@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     08.02.2017
+" DATE     03.04.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -13,6 +13,7 @@
 set ttyfast                 "fast terminal connection
 set nocompatible            "no vi-compatible modus
 set autowrite               "automatically writes when switching buffers, :wnext not necessary
+set autoread                "automatically re-read file if modified outside of vim
 filetype plugin indent on
 syntax enable
 set ttymouse=xterm          "vim doesn't know st
