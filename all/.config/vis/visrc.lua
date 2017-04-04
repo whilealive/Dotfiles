@@ -2,7 +2,7 @@
 -- FILE     .visrc.lua
 -- INFO     vis configuration file
 --
--- DATE     30.03.2017
+-- DATE     04.04.2017
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -17,5 +17,4 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win)
 	-- per window configuration options
   vis:command('set number')
   vis:command('set cursorline')
-  vis:command('set escdelay 0')
 end)
