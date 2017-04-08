@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     23.02.2017
+# DATE     06.04.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -77,6 +77,9 @@ function ranger-cd {
 		fi
 	rm -f -- "$tempfile"
 }
+
+# tmux-helpers
+source "$HOME/Scripts/tmuxHelpers"
 
 # various aliasses
 alias susp="systemctl suspend"
