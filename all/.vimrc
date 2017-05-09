@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     minimalistic
 "
-" DATE     03.04.2017
+" DATE     08.05.2017
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -86,6 +86,11 @@ colorscheme bruno-custom         "my personal color scheme
 set cursorline                   "cursorline, sometimes pretty slow...
 set number                       "show line numbers
 if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
+set wrap                         "wrap long lines visually (soft-wrap)
+set nolist                       "make sure wrap option won't be disabled
+set linebreak                    "wrap between words only
+set breakindent                  "keep indentation when soft-wrapping
+set showbreak=>\ 
 " ------------------------------------------------------------------
 
 
