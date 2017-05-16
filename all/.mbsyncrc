@@ -10,11 +10,11 @@
 
 # Account fastmail.fm ------------------------------------------------------------------------------------
 IMAPAccount fastmail
-Host mail.messagingengine.com
-Port 992
+Host imap.fastmail.com
+Port 993
 User bischofberger@fastmail.fm
-#Pass1
-UseIMAPS yes
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.my-pwds.gpg | cut -c 40- | sed -n 1p"
+SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore fastmail-remote
@@ -73,8 +73,8 @@ IMAPAccount bmz
 Host tcs.tam.ch
 Port 993
 User bruno.bischofberger@bms-zuerich.ch
-#Pass2
-UseIMAPS yes
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.my-pwds.gpg | cut -c 40- | sed -n 2p"
+SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore bmz-remote
@@ -87,15 +87,7 @@ Inbox ~/Maildir/bmz/INBOX
 Channel bmz_in
 Master :bmz-remote:
 Slave :bmz-local:
-Patterns "INBOX"
-Sync All
-Create Slave
-SyncState *
-
-Channel bmz_rest
-Master :bmz-remote:
-Slave :bmz-local:
-Patterns "Trash" "Drafts"
+Patterns "INBOX" "Trash" "Drafts"
 Sync All
 Create Slave
 SyncState *
@@ -110,4 +102,4 @@ Create Slave
 SyncState *
 
 Group bmz
-Channels bmz_in bmz_rest bmz_sent
+Channels bmz_in bmz_sent
