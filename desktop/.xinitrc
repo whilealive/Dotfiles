@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     19.08.2016
+# DATE     16.05.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -42,9 +42,6 @@ numlockx &
 
 # start conky
 conky &
-
-# start gpg agent
-eval $(gpg-agent --daemon)
 
 # for geogebra
 wmname LG3D
