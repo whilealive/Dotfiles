@@ -4,14 +4,14 @@
 # INFO     account bischofberger@fastmail.fm
 #          for use with mbsync
 #
-# DATE     25.02.2017
+# DATE     19.05.2017
 # OWNER    Bischofberger
 # ==================================================================
 
 
 # Basic stuff
 set realname      = "Bruno Bischofberger"
-set from          = "bischofberger@fastmail.fm"
+set from          = "bischofberger@fastmail.com"
 set use_from      = yes
 set envelope_from = yes
 
@@ -34,7 +34,7 @@ mailboxes ~/Maildir/fastmail/vim
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
 set smtp_pass	  = $my_pw_fastmail
-set smtp_url    = smtps://bischofberger@fastmail.fm@mail.messagingengine.com:465
+set smtp_url    = smtps://bischofberger@fastmail.com@mail.messagingengine.com:465
 
 # trash
 macro index,pager d "<save-message>=Trash/<enter>" "move message to trash"

@@ -4,7 +4,7 @@
 # INFO     account: bischofberger@fastmail.fm, uzh folder
 #          for use with mbsync
 #
-# DATE     11.04.2017
+# DATE     19.05.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -22,7 +22,6 @@ set mbox_type     = Maildir
 set folder        = "~/Maildir/uzh-pseudo"
 set record        = "~/Maildir/fastmail/Sent\ Items/"
 set postponed     = "~/Maildir/fastmail/Drafts/"
-#set trash         = "~/Maildir/fastmail/Trash"
 
 #mailboxes ~/Maildir/uzh-pseudo/INBOX_uzh
 mailboxes ~/Maildir/uzh-pseudo/uzh
@@ -30,7 +29,7 @@ mailboxes ~/Maildir/uzh-pseudo/uzh
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
 set smtp_pass	  = $my_pw_fastmail
-set smtp_url    = smtps://bischofberger@fastmail.fm@mail.messagingengine.com:465
+set smtp_url    = smtps://bischofberger@fastmail.com@mail.messagingengine.com:465
 
 # trash
 macro index,pager d "<save-message>~/Maildir/fastmail/Trash/<enter>" "move message to trash"

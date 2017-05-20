@@ -12,7 +12,7 @@
 IMAPAccount fastmail
 Host imap.fastmail.com
 Port 993
-User bischofberger@fastmail.fm
+User bischofberger@fastmail.com
 PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.my-pwds.gpg | cut -c 40- | sed -n 1p"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
