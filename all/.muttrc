@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     17.05.2017
+# DATE     23.05.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -125,6 +125,6 @@ set mailcap_path = "~/.mutt/mailcap"
 auto_view text/html
 
 # pymuttprint
-set print_command="~/Build/$(hostname)/pymuttprint/pymuttprint.py && zathuratab /tmp/texput.pdf"
+set print_command="~/Build/packages/generic/install/pymuttprint/pymuttprint.py && zathuratab /tmp/texput.pdf"
 set print_decode="yes"
 set print_split="no"
