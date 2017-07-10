@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     02.07.2017
+# DATE     06.07.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -42,7 +42,7 @@ Patterns "uzh"
 Channel fastmail_lists
 Master :fastmail-remote:
 Slave :fastmail-local:
-Patterns "suckless-dev" "tug" "ConTeXt" "vim"
+Patterns "suckless-dev" "tug"
 
 # options for all channels
 Sync All

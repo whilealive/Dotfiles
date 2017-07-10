@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     02.07.2017
+# DATE     06.07.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -76,7 +76,7 @@ set confirmappend = no
 set abort_nosubject = no
 
 # Mailing lists
-subscribe dev@suckless.org texhax@tug.org lucida@tug.org ntg-context@ntg.nl vim@vim.org vim_dev@vim.org
+subscribe dev@suckless.org texhax@tug.org lucida@tug.org
 
 # bindings
 bind pager q            exit
@@ -106,14 +106,9 @@ macro index,pager ge "<sync-mailbox><change-folder> ~/Maildir/bmz/Erstellungstea
 macro index,pager gu "<sync-mailbox><change-folder> ~/Maildir/uzh-pseudo/uzh<enter>" "go to pseudo-uzh INBOX"
 macro index,pager gs "<sync-mailbox><change-folder> ~/Maildir/fastmail/suckless-dev<enter>" "go to suckless-dev INBOX"
 macro index,pager gt "<sync-mailbox><change-folder> ~/Maildir/fastmail/tug<enter>" "go to tug INBOX"
-macro index,pager gc "<sync-mailbox><change-folder> ~/Maildir/fastmail/ConTeXt<enter>" "go to ConTeXt INBOX"
-macro index,pager gv "<sync-mailbox><change-folder> ~/Maildir/fastmail/vim<enter>" "go to vim INBOX"
 
 # change folders quickly
 set sleep_time = 0
-
-# mark all new messages as read (for trash folder)
-macro index .n "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<clear-flag>*" "mark all new messages as read"
 
 
 ## ===================== extensions =====================
