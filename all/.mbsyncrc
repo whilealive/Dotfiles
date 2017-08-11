@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     06.07.2017
+# DATE     08.08.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -32,7 +32,7 @@ Flatten "_"
 Channel fastmail_in
 Master :fastmail-remote:
 Slave :fastmail-local:
-Patterns "INBOX" "Sent Items" "Trash" "Drafts" "Archive"
+Patterns "INBOX" "Sent Items" "Trash" "Drafts" "Archive" "Bandcamp"
 
 Channel fastmail_uzh
 Master :fastmail-remote:

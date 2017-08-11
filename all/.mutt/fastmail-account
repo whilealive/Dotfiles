@@ -4,7 +4,7 @@
 # INFO     account bischofberger@fastmail.fm
 #          for use with mbsync
 #
-# DATE     06.07.2017
+# DATE     08.08.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -23,7 +23,7 @@ set postponed     = "~/Maildir/fastmail/Drafts/"
 set record        = "~/Maildir/fastmail/Sent\ Items/"
 
 # fastmail mailboxes
-mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Sent\ Items ~/Maildir/fastmail/Trash ~/Maildir/fastmail/Archive
+mailboxes ~/Maildir/fastmail/INBOX ~/Maildir/fastmail/Sent\ Items ~/Maildir/fastmail/Trash ~/Maildir/fastmail/Archive ~/Maildir/fastmail/Bandcamp
 
 # mailing lists
 mailboxes ~/Maildir/fastmail/suckless-dev
