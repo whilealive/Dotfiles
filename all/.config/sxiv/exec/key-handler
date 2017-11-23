@@ -4,7 +4,7 @@
 # MACHINE  all
 # INFO     external keys for sxiv
 #
-# DATE     16.08.2016
+# DATE     10.09.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -12,6 +12,7 @@ while read file
 do
   case "$1" in
     "X")
+      #trash "$file"
       mv "$file" ~/.trash
       ;;
     "R")
