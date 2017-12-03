@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     08.08.2017
+# DATE     28.11.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -43,6 +43,9 @@ unignore User-Agent:
 
 # order of prefered mime types
 alternative_order text/html text/enriched text/plain
+
+# encode filenames with deprecated rfc2047 (see: https://dev.mutt.org/trac/wiki/MuttFaq/Charset)
+set rfc2047_parameters
 
 # sort threads from newest to oldest (top to bottom)
 set sort         = threads
@@ -125,3 +128,4 @@ auto_view text/html
 set print_command="~/Build/packages/generic/install/pymuttprint/pymuttprint.py && zathuratab /tmp/texput.pdf"
 set print_decode="yes"
 set print_split="no"
+
