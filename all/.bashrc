@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     23.07.2017
+# DATE     07.12.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -86,6 +86,7 @@ alias susp="systemctl suspend"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias ra="ranger-cd"
-alias backup="sudo rsnapshot -V beta"
 alias abook="abook --config $HOME/.abookrc"
 alias llmk="latexmk -lualatex -interaction=nonstopmode -file-line-error"
+alias volumiosync="rsync -avu --delete --exclude=to-be-converted --exclude=ogg Music/ --rsh=ssh volumio@192.168.178.29:/mnt/USB/Music/"
+alias hdsleep="sudo hd-idle -a sdb -i 120"
