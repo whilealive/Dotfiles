@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     09.12.2017
+# DATE     19.12.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -90,4 +90,3 @@ alias abook="abook --config $HOME/.abookrc"
 alias llmk="latexmk -lualatex -interaction=nonstopmode -file-line-error"
 alias volumiosync="rsync -avu --delete --exclude=to-be-converted --exclude=ogg Music/ --rsh=ssh volumio@192.168.178.29:/mnt/USB/Music/"
 alias hdsleep="sudo hd-idle -a sdb -i 120"
-alias backup="sudo rsnapshot alpha"
