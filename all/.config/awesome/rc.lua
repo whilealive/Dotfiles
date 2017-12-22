@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     21.12.2017
+-- DATE     22.12.2017
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -53,7 +53,7 @@ beautiful.init("~/.config/awesome/themes/myTheme/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
-tmuxterminal = "st -e tmux"
+tmuxterminal = "st -t mytmux -e tmux"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -110,9 +110,6 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 app_folders = { "/usr/share/applications/", "~/.local/share/applications/" }
 -- }}}
-
--- Keyboard map indicator and switcher
---mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -382,7 +379,7 @@ clientkeys = gears.table.join(
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
-        awful.key({ modkey, "Control" }, "#" .. i + 9,
+        awful.key({ modkey }, "#" .. i + 9,
                   function ()
                         local screen = awful.screen.focused()
                         local tag = screen.tags[i]
@@ -392,7 +389,7 @@ for i = 1, 9 do
                   end,
                   {description = "view tag #"..i, group = "tag"}),
         -- Toggle tag display.
-        awful.key({ modkey }, "#" .. i + 9,
+        awful.key({ modkey, "Control" }, "#" .. i + 9,
                   function ()
                       local screen = awful.screen.focused()
                       local tag = screen.tags[i]
@@ -474,6 +471,8 @@ awful.rules.rules = {
     { rule_any = {type = { "normal", "dialog" }}, properties = { titlebars_enabled = false } },
 
     -- asign tags to specific programs
+    -- 1:term
+    { rule= { name = "mytmux" },          properties = { screen = 1, tags = { "1:term", "4:doc" } } },  -- TODO: asign 4
     -- 2:web
     { rule= { class = "Firefox" },        properties = { screen = 1, tag = "2:web" } },
     -- 3:mail
