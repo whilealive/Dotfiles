@@ -471,30 +471,31 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = false }
-    },
+    { rule_any = {type = { "normal", "dialog" }}, properties = { titlebars_enabled = false } },
 
+    -- asign tags to specific programs
     -- 2:web
-    { rule= { class = "Firefox" }, properties = { screen = 1, tag = "2:web" } },
+    { rule= { class = "Firefox" },        properties = { screen = 1, tag = "2:web" } },
+    -- 3:mail
+    { rule= { name = "mail" },            properties = { screen = 1, tag = "3:mail" } },
     -- 4:doc
-    { rule= { class = "Gnumeric" }, properties = { screen = 1, tag = "4:doc" } },
-    { rule = { class = "tabbed" }, properties = { screen = 1, tag = "4:doc" } },
+    { rule= { class = "Gnumeric" },       properties = { screen = 1, tag = "4:doc" } },
+    { rule = { class = "tabbed" },        properties = { screen = 1, tag = "4:doc" } },
     -- 5:pic
-    { rule_any = { class = "Sxiv" }, properties = { screen = 1, tag = "5:pic" } },
+    { rule_any = { class = "Sxiv" },      properties = { screen = 1, tag = "5:pic" } },
     -- 6:dtp
-    { rule = { class = "Gimp" }, properties = { screen = 1, tag = "6:dtp", floating = true } },
-    { rule = { class = "Inkscape" }, properties = { screen = 1, tag = "6:dtp", floating = true } },
-    { rule = { class = "Scribus" }, properties = { screen = 1, tag = "6:dtp", floating = true } },
+    { rule = { class = "Gimp" },          properties = { screen = 1, tag = "6:dtp", floating = true } },
+    { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "6:dtp", floating = true } },
+    { rule = { class = "Scribus" },       properties = { screen = 1, tag = "6:dtp", floating = true } },
     -- 7:gui
     { rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "Deadbeef" }, properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "Galculator" }, properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "Easytag" }, properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "geogebra" }, properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "JDownloader" }, properties = { screen = 1, tag = "7:gui", floating = true } },
-
-    { rule = { class = "VirtualBox" }, properties = { screen = 1, tag = "8:virt", floating = true } },
+    { rule = { class = "Deadbeef" },      properties = { screen = 1, tag = "7:gui", floating = true } },
+    { rule = { class = "Galculator" },    properties = { screen = 1, tag = "7:gui", floating = true } },
+    { rule = { class = "Easytag" },       properties = { screen = 1, tag = "7:gui", floating = true } },
+    { rule = { class = "geogebra" },      properties = { screen = 1, tag = "7:gui", floating = true } },
+    { rule = { class = "JDownloader" },   properties = { screen = 1, tag = "7:gui", floating = true } },
+    -- 8:virt
+    { rule = { class = "VirtualBox" },    properties = { screen = 1, tag = "8:virt", floating = true } },
 }
 -- }}}
 
