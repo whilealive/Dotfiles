@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=email
+Comment=mutt and mbsync
+Exec=email %f &
+Icon=fastmail-icon.png
+Terminal=false
+Categories=Network;Email;
