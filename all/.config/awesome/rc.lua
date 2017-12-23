@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     22.12.2017
+-- DATE     23.12.2017
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -178,7 +178,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1:term", "2:web", "3:mail", "4:doc", "5:pic", "6:dtp", "7:gui", "8:virt", "9:spare" }, s, awful.layout.layouts[1])
+    awful.tag({ "1:term", "2:web", "3:mail", "4:tex", "5:doc", "6:dtp", "7:gui", "8:virt", "9:spare" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -450,38 +450,22 @@ awful.rules.rules = {
     },
 
     -- Floating clients.
-    { rule_any = {
-        instance = {
-          "DTA",  -- Firefox addon DownThemAll.
-          "copyq",  -- Includes session name in class.
-        },
-        class = {
-          "pinentry", 
-        },
-        name = {
-          "Event Tester",  -- xev.
-        },
-        role = {
-          "AlarmWindow",  -- Thunderbird's calendar.
-          "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
-        }
-      }, properties = { floating = true }},
+    { rule_any = { class = { "pinentry" } },        properties = { floating = true } },
 
-    -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }}, properties = { titlebars_enabled = false } },
+    -- No titlebars
+    { rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
 
-    -- asign tags to specific programs
+    -- Assign tags to specific programs
     -- 1:term
-    { rule= { name = "mytmux" },          properties = { screen = 1, tags = { "1:term", "4:doc" } } },  -- TODO: asign 4
+    { rule = { name = "mytmux" },         properties = { screen = 1, tags = { "1:term", "4:tex" } } },
     -- 2:web
-    { rule= { class = "Firefox" },        properties = { screen = 1, tag = "2:web" } },
+    { rule = { class = "Firefox" },       properties = { screen = 1, tag = "2:web" } },
     -- 3:mail
-    { rule= { name = "mail" },            properties = { screen = 1, tag = "3:mail" } },
-    -- 4:doc
-    { rule= { class = "Gnumeric" },       properties = { screen = 1, tag = "4:doc" } },
-    { rule = { class = "tabbed" },        properties = { screen = 1, tag = "4:doc" } },
-    -- 5:pic
-    { rule_any = { class = "Sxiv" },      properties = { screen = 1, tag = "5:pic" } },
+    { rule = { name = "mail" },           properties = { screen = 1, tag = "3:mail" } },
+    -- 4:tex / 5:doc
+    { rule = { class = "tabbed" },        properties = { screen = 1, tags = { "4:tex", "5:doc" } } },
+    { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "5:doc" } },
+    { rule_any = { class = "Sxiv" },      properties = { screen = 1, tag = "5:doc" } },
     -- 6:dtp
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "6:dtp", floating = true } },
     { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "6:dtp", floating = true } },
