@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     16.05.2017
+# DATE     23.12.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -29,10 +29,10 @@ xset fp rehash
 xset b off
 
 # statusbar
-dwmstatus &
+#dwmstatus &
 
 # background image
-nitrogen --restore &
+#nitrogen --restore &
 
 # keys
 xbindkeys
@@ -44,6 +44,7 @@ numlockx &
 conky &
 
 # for geogebra
-wmname LG3D
+#wmname LG3D
 
-exec dwm
+#exec dwm
+exec awesome

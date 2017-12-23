@@ -4,7 +4,7 @@
 # MACHINE  laptop2
 # INFO     Executed by startx
 #
-# DATE     16.05.2017
+# DATE     21.12.2017
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -25,12 +25,19 @@ setxkbmap -layout ch
 xset b off
 
 # statusbar in C
-dwmstatus &
+#dwmstatus &
 
 # keys
 xbindkeys
 
-# for geogebra
-wmname LG3D
+# nm-applet
+nm-applet --sm-disable &
 
-exec dwm
+# battery state
+cbatticon --update-interval 30 &
+
+# for geogebra
+#wmname LG3D
+
+#exec dwm
+exec awesome
