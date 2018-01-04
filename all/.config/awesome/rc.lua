@@ -192,7 +192,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1:term", "2:web", "3:mail", "4:tex", "5:doc", "6:dtp", "7:gui", "8:virt", "9:spare" }, s, awful.layout.layouts[1])
+    awful.tag({ "1:term", "2:tex", "3:doc", "4:dtp", "5:gui", "6:web", "7:virt", "8:spare", "9:spare" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -452,6 +452,21 @@ for i = 1, 9 do
     )
 end
 
+-- View all tags
+globalkeys = gears.table.join(globalkeys,
+    -- View tag only.
+    awful.key({ modkey,           }, "0",
+    function ()
+      local screen = awful.screen.focused()
+      local tags = root.tags()
+      if tags then
+        awful.tag.viewmore(tags,screen)
+        focus_master()
+      end
+    end,
+    {description = "view all tags", group = "tag"})
+)
+
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
     awful.button({ modkey }, 1, awful.mouse.client.move),
@@ -486,28 +501,27 @@ awful.rules.rules = {
 
     -- Assign tags to specific programs
     -- 1:term
-    { rule = { name = "mytmux" },         properties = { screen = 1, tags = { "1:term", "4:tex" } } },
-    -- 2:web
-    { rule = { class = "Firefox" },       properties = { screen = 1, tag = "2:web" } },
-    -- 3:mail
-    { rule = { name = "mail" },           properties = { screen = 1, tag = "3:mail" } },
-    -- 4:tex / 5:doc
-    { rule = { class = "Zathura" },       properties = { screen = 1, tag = "5:doc" } },
-    { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "5:doc" } },
-    { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "5:doc" } },
-    -- 6:dtp
-    { rule = { class = "Gimp" },          properties = { screen = 1, tag = "6:dtp", floating = true } },
-    { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "6:dtp", floating = true } },
-    { rule = { class = "Scribus" },       properties = { screen = 1, tag = "6:dtp", floating = true } },
-    -- 7:gui
-    { rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "Deadbeef" },      properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "Galculator" },    properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "Easytag" },       properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "geogebra" },      properties = { screen = 1, tag = "7:gui", floating = true } },
-    { rule = { class = "JDownloader" },   properties = { screen = 1, tag = "7:gui", floating = true } },
-    -- 8:virt
-    { rule = { class = "VirtualBox" },    properties = { screen = 1, tag = "8:virt", floating = true } },
+    { rule = { name = "mytmux" },         properties = { screen = 1, tag = "1:term" } }, -- tags = { "1:term", "2:tex" }
+    -- 3:doc
+    { rule = { class = "Zathura" },       properties = { screen = 1, tag = "3:doc" } },
+    { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "3:doc" } },
+    { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "3:doc" } },
+    -- 4:dtp
+    { rule = { class = "Gimp" },          properties = { screen = 1, tag = "4:dtp", floating = true } },
+    { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "4:dtp", floating = true } },
+    { rule = { class = "Scribus" },       properties = { screen = 1, tag = "4:dtp", floating = true } },
+    -- 5:gui
+    { rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "5:gui", floating = true } },
+    { rule = { class = "Deadbeef" },      properties = { screen = 1, tag = "5:gui", floating = true } },
+    { rule = { class = "Galculator" },    properties = { screen = 1, tag = "5:gui", floating = true } },
+    { rule = { class = "Easytag" },       properties = { screen = 1, tag = "5:gui", floating = true } },
+    { rule = { class = "geogebra" },      properties = { screen = 1, tag = "5:gui", floating = true } },
+    { rule = { class = "JDownloader" },   properties = { screen = 1, tag = "5:gui", floating = true } },
+    -- 6:web
+    { rule = { class = "Firefox" },       properties = { screen = 1, tag = "6:web" } },
+    { rule = { name = "mail" },           properties = { screen = 1, tag = "6:web" } },
+    -- 7:virt
+    { rule = { class = "VirtualBox" },    properties = { screen = 1, tag = "7:virt", floating = true } },
 }
 -- }}}
 
