@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     plugin: open corresponding pdf (e.g. to .tex files)
 "
-" DATE     08.02.2017
+" DATE     04.01.2018
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -12,7 +12,7 @@
 function! OpenPDF()
   let b:bufname = expand('%:r') . '.pdf'
   if filereadable(b:bufname)
-    silent execute '!zathuratab ' . b:bufname
+    silent execute '!zathura ' . b:bufname . '&'
     redraw!
   else
     echoerr "File \"" . b:bufname . "\" does not exist."

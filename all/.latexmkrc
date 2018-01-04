@@ -3,11 +3,11 @@
 # INFO     latexmk rc file
 #          runs --lualatex by default
 #
-# DATE     23.02.2017
+# DATE     04.01.2018
 # OWNER    Bischofberger
 # ==================================================================
 
-$pdf_previewer = "start zathuratab";
+$pdf_previewer = "start zathura";
 $pdf_update_method = 0;
 
 # after version 4.51...

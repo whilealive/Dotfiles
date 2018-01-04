@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     02.01.2018
+-- DATE     03.01.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -116,6 +116,8 @@ app_folders = { "/usr/share/applications/", "~/.local/share/applications/" }
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+
+-- email widget; info from mbsyncsecure-script via awesome-client
 myemailwidget = wibox.widget.textbox()
 myemailwidget.text = " [email] "
 
@@ -467,9 +469,9 @@ awful.rules.rules = {
     -- 3:mail
     { rule = { name = "mail" },           properties = { screen = 1, tag = "3:mail" } },
     -- 4:tex / 5:doc
-    { rule = { class = "tabbed" },        properties = { screen = 1, tags = { "4:tex", "5:doc" } } },
+    { rule = { class = "Zathura" },       properties = { screen = 1, tag = "5:doc" } },
     { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "5:doc" } },
-    { rule_any = { class = "Sxiv" },      properties = { screen = 1, tag = "5:doc" } },
+    { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "5:doc" } },
     -- 6:dtp
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "6:dtp", floating = true } },
     { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "6:dtp", floating = true } },

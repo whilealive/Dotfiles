@@ -3,8 +3,9 @@
 # MACHINE  all
 # INFO     - 
 #
-# DATE     13.04.2016
+# DATE     02.01.2018
 # OWNER    Bischofberger
 # ==================================================================
 set adjust-open "width"
 set selection-clipboard "clipboard"
+set window-title-basename true
