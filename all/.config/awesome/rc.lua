@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     04.01.2018
+-- DATE     09.01.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -192,7 +192,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1:term", "2:tex", "3:doc", "4:dtp", "5:gui", "6:web", "7:virt", "8:spare", "9:spare" }, s, awful.layout.layouts[1])
+    awful.tag({ "1:term", "2:doc", "3:tex", "4:dtp", "5:gui", "6:web", "7:virt", "8:spare", "9:spare" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -501,11 +501,11 @@ awful.rules.rules = {
 
     -- Assign tags to specific programs
     -- 1:term
-    { rule = { name = "mytmux" },         properties = { screen = 1, tag = "1:term" } }, -- tags = { "1:term", "2:tex" }
-    -- 3:doc
-    { rule = { class = "Zathura" },       properties = { screen = 1, tag = "3:doc" } },
-    { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "3:doc" } },
-    { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "3:doc" } },
+    { rule = { name = "mytmux" },         properties = { screen = 1, tag = "1:term" } }, -- tags = { "1:term", "3:tex" }
+    -- 2:doc
+    { rule = { class = "Zathura" },       properties = { screen = 1, tag = "2:doc" } },
+    { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "2:doc" } },
+    { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
     -- 4:dtp
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "4:dtp", floating = true } },
     { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "4:dtp", floating = true } },
