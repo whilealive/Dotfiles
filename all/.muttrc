@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     28.11.2017
+# DATE     16.01.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -34,6 +34,7 @@ set mail_check = 60                  # How often to check for new mail (time in 
 set pager_stop                       # Don't go to next message when at the end of message
 set mark_old = no                    # Don't mark messages as old
 set menu_scroll                      # scroll line-by-line (not page-by-page)
+set markers = no                     # no "+" in wrapped lines
 
 # convert time to local timezone and print in pager
 set pager_format  = "%4C %Z %[!%e. %B %Y - %H:%M]  %.20n  %s%* -- (%P)"
