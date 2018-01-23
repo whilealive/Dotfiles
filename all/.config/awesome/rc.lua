@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     09.01.2018
+-- DATE     21.01.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -244,7 +244,7 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey, "Shift"   }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",
         function ()
@@ -304,7 +304,7 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn(tmuxterminal) end,
-              {description = "open a terminal", group = "launcher"}),
+              {description = "open a tmux terminal session", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -338,6 +338,14 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
+    -- Extended program (shortcuts for various scripts, see Scripts/ folder)
+    awful.key({ modkey, "Shift"   }, "t",      function () awful.spawn("st -t tex -e texsessioninit") end,
+              {description = "open a tmux session named tex", group = "own"}),
+    awful.key({ modkey,           }, "s",      function () awful.spawn("clipswap") end,
+              {description = "swap clipboard contents", group = "own"}),
+    awful.key({                   }, "Print",  function () awful.spawn("screenshot") end,
+              {description = "swap clipboard contents", group = "own"}),
+    
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
@@ -506,6 +514,8 @@ awful.rules.rules = {
     { rule = { class = "Zathura" },       properties = { screen = 1, tag = "2:doc" } },
     { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "2:doc" } },
     { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
+    -- 3:tex
+    { rule = { name = "tex" },            properties = { screen = 1, tag = "3:tex" } },
     -- 4:dtp
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "4:dtp", floating = true } },
     { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "4:dtp", floating = true } },
