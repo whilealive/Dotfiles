@@ -4,7 +4,7 @@
 # INFO     uses the "vol" script (could be done by amixer commands
 #          directly
 #
-# DATE     29.12.2016
+# DATE     23.01.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -61,8 +61,6 @@
 	Mod2 + XF86MonBrightnessDown
 "slock"
   Mod2 + XF86Display
-"clipswap"
-  Mod4 + s
 
 
 #"xbindkeys_show" 
