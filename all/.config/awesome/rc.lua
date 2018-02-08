@@ -65,6 +65,7 @@ editor_cmd = terminal .. " -e " .. editor
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
+fnkey  = "Mod2"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -320,13 +321,25 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
-    -- Extended program (shortcuts for various scripts, see Scripts/ folder)
+    -- Extended program (shortcuts for various scripts, XF86 special keys etc.)
     awful.key({ modkey, "Shift"   }, "t",      function () awful.spawn("st -t tex -e texsessioninit") end,
               {description = "open a tmux session named tex", group = "own"}),
     awful.key({ modkey,           }, "s",      function () awful.spawn("clipswap") end,
               {description = "swap clipboard contents", group = "own"}),
     awful.key({                   }, "Print",  function () awful.spawn("screenshot") end,
-              {description = "swap clipboard contents", group = "own"}),
+              {description = "make a screenshot", group = "own"}),
+    awful.key({                   }, "XF86AudioRaiseVolume",  function () awful.spawn("vol +") end,
+              {description = "raise volume", group = "own"}),
+    awful.key({                   }, "XF86AudioLowerVolume",  function () awful.spawn("vol -") end,
+              {description = "lower volume", group = "own"}),
+    awful.key({                   }, "XF86AudioMute",  function () awful.spawn("vol t") end,
+              {description = "toggle mute", group = "own"}),
+    awful.key({                   }, "XF86MonBrightnessUp",  function () awful.spawn("xbacklight -inc 10") end,
+              {description = "increase backlight", group = "own"}),
+    awful.key({                   }, "XF86MonBrightnessDown",  function () awful.spawn("xbacklight -dec 10") end,
+              {description = "decrease backlight", group = "own"}),
+    awful.key({                   }, "XF86Display",  function () awful.spawn("slock") end,
+              {description = "lock display by slock", group = "own"}),
     
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,

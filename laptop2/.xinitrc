@@ -4,7 +4,7 @@
 # MACHINE  laptop2
 # INFO     Executed by startx
 #
-# DATE     21.12.2017
+# DATE     08.02.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -19,16 +19,10 @@ fi
 # set x11 keymap
 setxkbmap -layout ch
 
-# ---------------everything from here belongs to the dwm setup---------------------
+# -----------everything from here belongs to the awesome setup-----------------
 
 # mute the stupid "Bing" sound
 xset b off
-
-# statusbar in C
-#dwmstatus &
-
-# keys
-xbindkeys
 
 # nm-applet
 nm-applet --sm-disable &
@@ -36,8 +30,5 @@ nm-applet --sm-disable &
 # battery state
 cbatticon --update-interval 30 &
 
-# for geogebra
-#wmname LG3D
-
-#exec dwm
+# exec awesome WM
 exec awesome

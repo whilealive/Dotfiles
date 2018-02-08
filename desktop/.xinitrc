@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     23.12.2017
+# DATE     08.02.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -19,23 +19,10 @@ fi
 # set X11 keymap
 setxkbmap -layout ch
 
-# ---------------everything from here belongs to the dwm setup---------------------
-
-# load terminus and custom fonts
-xset +fp /usr/share/fonts/local
-xset fp rehash
+# -----------everything from here belongs to the awesome setup-----------------
 
 # mute the stupid "Bing" sound
 xset b off
-
-# statusbar
-#dwmstatus &
-
-# background image
-#nitrogen --restore &
-
-# keys
-xbindkeys
 
 # set NumLock
 numlockx &
@@ -43,8 +30,5 @@ numlockx &
 # start conky
 conky &
 
-# for geogebra
-#wmname LG3D
-
-#exec dwm
+# exec awesome WM
 exec awesome
