@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Notesd
+Comment=notesd for taking notes
+Exec=notesd %f &
+Icon=notesd-icon.png
+Terminal=false
+Categories=Utility;

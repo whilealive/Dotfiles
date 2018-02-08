@@ -497,7 +497,7 @@ awful.rules.rules = {
     },
 
     -- Floating clients.
-    { rule_any = { class = { "pinentry" } },        properties = { floating = true } },
+    { rule_any = { class = { "pinentry", "notesd" } }, properties = { floating = true } },
 
     -- No titlebars
     { rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
