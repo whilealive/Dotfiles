@@ -2,7 +2,7 @@
 -- FILE     theme.lua
 -- INFO     my awesome theme
 --
--- DATE     21.12.2017
+-- DATE     08.02.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -102,8 +102,6 @@ theme.titlebar_maximized_button_normal_inactive = themes_path.."myTheme/titlebar
 theme.titlebar_maximized_button_focus_inactive  = themes_path.."myTheme/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_active = themes_path.."myTheme/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."myTheme/titlebar/maximized_focus_active.png"
-
-theme.wallpaper = themes_path.."myTheme/CharizmaWallpaper.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."myTheme/layouts/fairhw.png"
