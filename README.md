@@ -4,45 +4,45 @@ configuration files for my linux machines (desktop/laptop)
 
 ## current setup
 
-### linux distro
+#### linux distro
 - Arch Linux
 
-### window manager
+#### window manager
 - awesome wm
 
-### terminal
+#### terminal
 - tmux
 - st
 - bash
 
-### editor
+#### editor
 - vim
 
-### file manager
+#### file manager
 - ranger
 
-### image viewer
+#### image viewer
 - sxiv
 
-### email
+#### email
 - mutt
 - mbsync
 
-### contacts/calendar
+#### contacts/calendar
 - vdirsyncer
 - khard
 - khal
 
-### pdf viewer
+#### pdf viewer
 - zathura
 
-### latex
+#### latex
 - lualatex
 - latexmk
 - vim
 - zathura
 
-###  miscellaneous
+####  miscellaneous
 - conky
 - git
 - gnupg
