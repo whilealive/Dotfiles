@@ -1,0 +1,24 @@
+# ==================================================================
+# FILE     .config/khal/config
+# INFO     khal configuration file
+#
+# DATE     08.02.2018
+# OWNER    Bischofberger
+# ==================================================================
+
+[calendars]
+
+[[private_calendar_local]]
+path = ~/.calendars/*
+type = discover
+
+[[private_contacts_local]]
+path = ~/.contacts/Privat/*
+type = discover
+
+[locale]
+timeformat = %H:%M
+dateformat = %d/%m/%Y
+longdateformat = %d/%m/%Y
+datetimeformat = %d/%m/%Y %H:%M
+longdatetimeformat = %d/%m/%Y %H:%M

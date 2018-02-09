@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     16.01.2018
+# DATE     08.02.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -117,9 +117,10 @@ set sleep_time = 0
 
 
 ## ===================== extensions =====================
-set query_command= "abook --mutt-query '%s'" 
-macro index,pager A "<pipe-message>abook --add-email-quiet<return>" "add the sender address to abook"
+set query_command= "khard email --parsable '%s'"
 bind editor <Tab> complete-query
+bind editor ^T    complete
+macro index,pager A "<pipe-message>khard add-email<return>" "add the sender email address to khard"
 
 # html view in w3m
 set mailcap_path = "~/.mutt/mailcap"

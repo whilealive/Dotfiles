@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     08.08.2017
+# DATE     08.02.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -13,7 +13,7 @@ IMAPAccount fastmail
 Host imap.fastmail.com
 Port 993
 User bischofberger@fastmail.com
-PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.my-pwds.gpg | cut -c 40- | sed -n 1p"
+PassCmd "pwdFetch 1"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
@@ -60,7 +60,7 @@ IMAPAccount bmz
 Host tcs.tam.ch
 Port 993
 User bruno.bischofberger@bms-zuerich.ch
-PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.my-pwds.gpg | cut -c 40- | sed -n 2p"
+PassCmd "pwdFetch 2"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
