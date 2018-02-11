@@ -11,9 +11,9 @@ configuration files for my linux machines (desktop/laptop)
 - awesome wm
 
 #### terminal
-- tmux
 - st
-- bash
+- zsh
+- tmux
 
 #### editor
 - vim

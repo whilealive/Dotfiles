@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     16.05.2017
+# DATE     11.02.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -11,5 +11,5 @@
 
 # git shall ignore the following
 all/.vim/spell/
-
 all/.my-pwds.gpg
+all/.zshhistfile
