@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     as usual: mostly stolen from Jason Ryan, bitbucket
 #
-# DATE     11.02.2018
+# DATE     12.02.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -10,7 +10,7 @@ autoload -U colors && colors
 
 # prompts
 LPROMPT () {
-PS1="┌─[%{$fg[red]%}%m%{$fg_bold[green]%} %~%{$fg_no_bold[yellow]%}%(0?.. %?)%{$reset_color%}]
+PS1="┌─[%{$fg[red]%}%m%{$fg[green]%} %~%{$fg_no_bold[yellow]%}%(0?.. %?)%{$reset_color%}]
 └─╼ "
 }
 
@@ -54,9 +54,8 @@ setopt correct          # try to correct spelling
 setopt no_correctall    # …only for commands, not filenames
 
 
-# udisks_functions to automount devices
-# (from the AUR)
-source /etc/udisks_functions/udisks_functions
+# syntax highlighting (load package "zsh-syntax-highlighting")
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # history search
@@ -105,6 +104,12 @@ ranger-cd() {
 		fi
 	rm -f -- "$tempfile"
 }
+
+
+# mount media (using udiskie)
+alias sdbm="udiskie-mount /dev/sdb"
+alias sdbu="udiskie-umount --detach /dev/sdb"
+alias udiskied="udiskie --no-automount --no-file-manager --smart-tray --use-udisks2 &"
 
 
 # various aliasses
@@ -225,8 +230,6 @@ alias hdsleep="sudo hd-idle -a sdb -i 120"
 #autoload bashcompinit
 #bashcompinit
 #
-## command not found hook
-#source "/usr/share/doc/pkgfile/command-not-found.zsh"
 #
 ## source highlighting
 #source "$ZDOTDIR"/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
