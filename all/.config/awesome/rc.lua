@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     08.02.2018
+-- DATE     11.02.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -520,7 +520,7 @@ awful.rules.rules = {
     { rule = { class = "Deadbeef" },      properties = { screen = 1, tag = "5:gui", floating = true } },
     { rule = { class = "Galculator" },    properties = { screen = 1, tag = "5:gui", floating = true } },
     { rule = { class = "Easytag" },       properties = { screen = 1, tag = "5:gui", floating = true } },
-    { rule = { class = "geogebra" },      properties = { screen = 1, tag = "5:gui", floating = true } },
+    { rule = { class = "GeoGebra" },      properties = { screen = 1, tag = "5:gui", floating = true } },
     { rule = { class = "JDownloader" },   properties = { screen = 1, tag = "5:gui", floating = true } },
     -- 6:web
     { rule = { class = "Firefox" },       properties = { screen = 1, tag = "6:web" } },
