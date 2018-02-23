@@ -2,19 +2,49 @@
 # FILE     .config/khal/config
 # INFO     khal configuration file
 #
-# DATE     08.02.2018
+# DATE     23.02.2018
 # OWNER    Bischofberger
 # ==================================================================
 
 [calendars]
 
-[[private_calendar_local]]
-path = ~/.calendars/*
-type = discover
+#[[private_calendar_local]]
+#path = ~/.calendars/*
+#type = discover
+
+[[Privat]]
+path = ~/.calendars/64751eb1-c207-43c8-8cf0-68c49816c8b0/
+color = dark red
+
+[[BMZ-Unterricht]]
+path = ~/.calendars/f493bf11-55e8-4c0c-bbf6-fa0d59950083/
+color = yellow
+
+[[BMZ-Spezial]]
+path = ~/.calendars/46d9e6ec-ccc8-4a7d-ae4e-e3c021b32a6e/
+color = light red
+
+[[BMZ-Schulferien]]
+path = ~/.calendars/79c98245-5abd-47e0-b425-a9e185acf6ac/
+color = yellow
+
+[[Erstellungsteam]]
+path = ~/.calendars/597811e1-5a14-45d7-9b73-0d65efe3f45a/
+color = dark blue
+
+[[CH-Holidays]]
+path = ~/.calendars/c98d0768-c8fe-4d36-8c42-488314954f67/
+color = dark green
+
+[[Gemeinsam]]
+path = ~/.calendars/cd9606bf-2bc1-4c87-bea9-e1309f1c87b1/
+color = dark magenta
 
 [[private_contacts_local]]
 path = ~/.contacts/Privat/*
 type = discover
+
+
 
 [locale]
 timeformat = %H:%M
