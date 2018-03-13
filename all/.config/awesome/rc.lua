@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     11.02.2018
+-- DATE     06.03.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -87,14 +87,6 @@ local function client_menu_toggle_fn()
         end
     end
 end
-
-local function focus_master()
-    local c = awful.client.getmaster()
-    if c then
-      client.focus = c
-      c:raise()
-    end
-end
 -- }}}
 
 -- {{{ Menu
@@ -129,10 +121,7 @@ myemailwidget.text = " [email] "
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
-                    awful.button({ }, 1, function(t) 
-                                              t:view_only() 
-                                              focus_master()
-                                          end),
+                    awful.button({ }, 1, function(t) t:view_only() end),
                     awful.button({ modkey }, 1, function(t)
                                               if client.focus then
                                                   client.focus:move_to_tag(t)
@@ -229,27 +218,13 @@ root.buttons(gears.table.join(
 globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",
-        function ()
-            awful.tag.viewprev()
-            focus_master()
-        end,
-        {description = "view previous", group = "tag"}
-    ),
-    awful.key({ modkey,           }, "Right",  
-        function ()
-            awful.tag.viewnext()
-            focus_master()
-        end,
-        {description = "view next", group = "tag"}
-    ),
-    awful.key({ modkey,           }, "Tab", 
-        function ()
-          awful.tag.history.restore()
-          focus_master()
-        end,
-        {description = "go back", group = "tag"}
-    ),
+    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+              {description = "view previous", group = "tag"}),
+    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+              {description = "view next", group = "tag"}),
+    awful.key({ modkey,           }, "Tab", awful.tag.history.restore,
+              {description = "go back", group = "tag"}),
+
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -416,7 +391,6 @@ for i = 1, 9 do
                         local tag = screen.tags[i]
                         if tag then
                            tag:view_only()
-                           focus_master()
                         end
                   end,
                   {description = "view tag #"..i, group = "tag"}),
@@ -464,7 +438,6 @@ globalkeys = gears.table.join(globalkeys,
       local tags = root.tags()
       if tags then
         awful.tag.viewmore(tags,screen)
-        focus_master()
       end
     end,
     {description = "view all tags", group = "tag"})
