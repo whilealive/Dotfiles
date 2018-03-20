@@ -2,7 +2,7 @@
 # FILE     .config/khal/config
 # INFO     khal configuration file
 #
-# DATE     23.02.2018
+# DATE     20.03.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -52,3 +52,4 @@ dateformat = %d/%m/%Y
 longdateformat = %d/%m/%Y
 datetimeformat = %d/%m/%Y %H:%M
 longdatetimeformat = %d/%m/%Y %H:%M
+weeknumbers = left
