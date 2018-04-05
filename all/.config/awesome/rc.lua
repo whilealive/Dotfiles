@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     06.03.2018
+-- DATE     05.04.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -85,6 +85,14 @@ local function client_menu_toggle_fn()
         else
             instance = awful.menu.clients({ theme = { width = 250 } })
         end
+    end
+end
+
+local function focus_master()
+    local c = awful.client.getmaster()
+    if c then
+      client.focus = c
+      c:raise()
     end
 end
 -- }}}
@@ -297,6 +305,8 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Extended program (shortcuts for various scripts, XF86 special keys etc.)
+    awful.key({modkey             }, "e",      function () focus_master() end,
+              {description = "focus master", group = "own"}),
     awful.key({ modkey, "Shift"   }, "t",      function () awful.spawn("st -t tex -e texsessioninit") end,
               {description = "open a tmux session named tex", group = "own"}),
     awful.key({ modkey,           }, "s",      function () awful.spawn("clipswap") end,
