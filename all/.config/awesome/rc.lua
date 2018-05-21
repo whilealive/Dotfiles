@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     05.04.2018
+-- DATE     21.05.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -487,9 +487,10 @@ awful.rules.rules = {
 
     -- Assign tags to specific programs
     -- 1:term
-    { rule = { name = "mytmux" },         properties = { screen = 1, tag = "1:term" } }, -- tags = { "1:term", "3:tex" }
+    { rule = { name = "mytmux" },         properties = { screen = 1, tag = "1:term" } },
     -- 2:doc
     { rule = { class = "Zathura" },       properties = { screen = 1, tag = "2:doc" } },
+    { rule = { name = "Print" },          properties = { screen = 1, tags = { "1:term", "2:doc", "3:tex", "4:dtp", "5:gui", "6:web", "7:virt"," 8:spare", "9:spare" } } },
     { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "2:doc" } },
     { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
     -- 3:tex
