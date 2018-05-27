@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     21.05.2018
+-- DATE     22.05.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -371,6 +371,8 @@ clientkeys = gears.table.join(
         {description = "minimize", group = "client"}),
     awful.key({ modkey,           }, "m",
         function (c)
+            c.maximized_horizontal = false  -- fix LibreOffice tiling windows
+            c.maximized_vertical = false    -- fix LibreOffice tiling windows
             c.maximized = not c.maximized
             c:raise()
         end ,
@@ -492,6 +494,7 @@ awful.rules.rules = {
     { rule = { class = "Zathura" },       properties = { screen = 1, tag = "2:doc" } },
     { rule = { name = "Print" },          properties = { screen = 1, tags = { "1:term", "2:doc", "3:tex", "4:dtp", "5:gui", "6:web", "7:virt"," 8:spare", "9:spare" } } },
     { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "2:doc" } },
+    { rule = { name = "LibreOffice" },    properties = { screen = 1, tag = "2:doc" } },
     { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
     -- 3:tex
     { rule = { name = "tex" },            properties = { screen = 1, tag = "3:tex" } },
