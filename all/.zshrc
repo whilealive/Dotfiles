@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     as usual: mostly stolen from Jason Ryan, bitbucket
 #
-# DATE     15.04.2018
+# DATE     27.05.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -43,6 +43,7 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
 setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 setopt EXTENDED_HISTORY
 bindkey -v
 KEYTIMEOUT=1
@@ -58,13 +59,9 @@ setopt no_correctall    # …only for commands, not filenames
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-# history search
-autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-
-[[ -n "$key[Up]"   ]] && bindkey -- "$key[Up]"   up-line-or-beginning-search
-[[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-beginning-search
+# history traveling
+[[ -n "$key[Up]"   ]] && bindkey -- "$key[Up]"   up-line-or-history
+[[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-history
 
 
 # tmux-helpers
