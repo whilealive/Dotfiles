@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     as usual: mostly stolen from Jason Ryan, bitbucket
 #
-# DATE     27.05.2018
+# DATE     08.06.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -105,7 +105,7 @@ ranger-cd() {
 
 # mount media (using udiskie)
 alias sdm="udiskie-mount -a"
-alias sdu="udiskie-umount --detach -a"
+alias sdu="udiskie-umount -a ; udiskie-umount --detach -a"
 alias udiskied="udiskie --no-automount --no-file-manager --smart-tray --use-udisks2 &"
 
 
