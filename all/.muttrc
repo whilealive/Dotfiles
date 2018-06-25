@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     22.02.2018
+# DATE     14.06.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -17,10 +17,6 @@ source "gpg2 -dq ~/.my-pwds.gpg |"
 # bruno.bischofberger@bms-zuerich.ch
 source "~/.mutt/bmz-account"
 folder-hook bmz 'source ~/.mutt/bmz-account'
-
-# pseudo-uzh account
-source "~/.mutt/uzh-pseudo-account"
-folder-hook uzh-pseudo 'source ~/.mutt/uzh-pseudo-account'
 
 # bischofberger@fastmail.fm
 source "~/.mutt/fastmail-account"
@@ -108,7 +104,6 @@ macro index,pager gf "<sync-mailbox><change-folder> ~/Maildir/fastmail/INBOX<ent
 macro index,pager gbm "<sync-mailbox><change-folder> ~/Maildir/bmz/INBOX<enter>" "go to bmz INBOX"
 macro index,pager gbc "<sync-mailbox><change-folder> ~/Maildir/fastmail/Bandcamp<enter>" "go to fastmail Bandcamp"
 macro index,pager ge "<sync-mailbox><change-folder> ~/Maildir/bmz/Erstellungsteam<enter>" "go to bmz Erstellungsteam"
-macro index,pager gu "<sync-mailbox><change-folder> ~/Maildir/uzh-pseudo/uzh<enter>" "go to pseudo-uzh INBOX"
 macro index,pager gs "<sync-mailbox><change-folder> ~/Maildir/fastmail/suckless-dev<enter>" "go to suckless-dev INBOX"
 macro index,pager gt "<sync-mailbox><change-folder> ~/Maildir/fastmail/tug<enter>" "go to tug INBOX"
 
