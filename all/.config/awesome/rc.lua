@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     22.05.2018
+-- DATE     12.08.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -493,6 +493,7 @@ awful.rules.rules = {
     -- 2:doc
     { rule = { class = "Zathura" },       properties = { screen = 1, tag = "2:doc" } },
     { rule = { name = "Print" },          properties = { screen = 1, tags = { "1:term", "2:doc", "3:tex", "4:dtp", "5:gui", "6:web", "7:virt"," 8:spare", "9:spare" } } },
+    { rule = { class = "Thunar" },        properties = { screen = 1, tags = { "1:term", "5:gui" }, floating = true } },
     { rule = { class = "Gnumeric" },      properties = { screen = 1, tag = "2:doc" } },
     { rule = { name = "LibreOffice" },    properties = { screen = 1, tag = "2:doc" } },
     { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
