@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     08.06.2017
+" DATE     11.09.2018
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -11,7 +11,7 @@ setlocal sw=2        " little indentation
 setlocal expandtab   " tex intendation works better with spaces
 
 " add myitem etc. (itemize package) environment to indentation rules (see indent/tex.vim)
-let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|myenum\|myitem\|alphenum\|tabbedenum'
+let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|myenum\|myitem\|alphenum\|tabbedenum\|checklist'
 
 compiler latexmk
 
