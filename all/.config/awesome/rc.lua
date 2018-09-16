@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     15.08.2018
+-- DATE     16.09.2018
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -501,7 +501,7 @@ awful.rules.rules = {
     -- 4:dtp
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "4:dtp", floating = true } },
     { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "4:dtp", floating = true } },
-    { rule = { class = "Scribus" },       properties = { screen = 1, tag = "4:dtp", floating = true } },
+    { rule = { class = "scribus" },       properties = { screen = 1, tag = "4:dtp", floating = true } },
     -- 5:gui
     { rule = { class = "Thunar" },        properties = { screen = 1, tag = "5:gui", floating = true } },
     { rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "5:gui", floating = true } },
