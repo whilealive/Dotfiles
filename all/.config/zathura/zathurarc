@@ -3,12 +3,12 @@
 # MACHINE  all
 # INFO     - 
 #
-# DATE     12.02.2018
+# DATE     11.11.2018
 # OWNER    Bischofberger
 # ==================================================================
 
 set adjust-open "width"
-set vertical-center true
+set vertical-center false
 set selection-clipboard "clipboard"
 set window-title-basename true
 set synctex false
