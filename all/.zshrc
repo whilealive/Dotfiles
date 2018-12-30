@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     as usual: mostly stolen from Jason Ryan, bitbucket
 #
-# DATE     08.06.2018
+# DATE     26.12.2018
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -116,5 +116,4 @@ export GREP_COLOR="1;31"
 alias grep="grep --color=auto"
 alias ra="ranger-cd"
 alias llmk="latexmk -lualatex -interaction=nonstopmode -file-line-error"
-alias volumiosync="rsync -avu --delete --exclude=to-be-converted --exclude=ogg Music/ --rsh=ssh volumio@192.168.178.29:/mnt/USB/Music/"
 
