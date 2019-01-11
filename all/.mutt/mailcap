@@ -3,12 +3,11 @@
 # MACHINE  all
 # INFO     -
 #
-# DATE     03.12.2017
+# DATE     07.01.2019
 # OWNER    Bischofberger
 # ==================================================================
 
-
-#text/html; firefox %s &; test=test -n "$DISPLAY"; needsterminal;
 text/html; firefox %s &; test=test -n "$DISPLAY"; needsterminal;
+text/plain; firefox %s &; test=test -n "$DISPLAY"; needsterminal;
 text/html; w3m -I %{charset} -T text/html; -dump %s; copiousoutput;
 
