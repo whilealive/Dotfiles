@@ -48,6 +48,8 @@ set rfc2047_parameters
 set sort         = threads
 set sort_aux     = reverse-last-date-received
 set uncollapse_jump
+set sort_re
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
 # sidebar
 # Ctrl-n, Ctrl-p to select next, previous folder.
