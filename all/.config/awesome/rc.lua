@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     20.09.2018
+-- DATE     15.01.2019
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -325,6 +325,13 @@ globalkeys = gears.table.join(
               {description = "decrease backlight", group = "own"}),
     awful.key({                   }, "XF86Display",  function () awful.spawn("slock") end,
               {description = "lock display by slock", group = "own"}),
+
+    -- application switcher
+    awful.key({modkey             }, "Escape",
+              function ()
+                awful.menu.clients({theme = { width = 500 }}, { keygrabber=true, coords={x=200, y=200} })
+              end,
+              {description = "switch clients quickly", group = "own"}),
     
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
