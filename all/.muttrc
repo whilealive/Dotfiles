@@ -4,7 +4,7 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     14.06.2018
+# DATE     18.01.2019
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -46,7 +46,6 @@ set rfc2047_parameters
 
 # sort threads from newest to oldest (top to bottom)
 set sort         = threads
-set sort_browser = reverse-date
 set sort_aux     = reverse-last-date-received
 set uncollapse_jump
 
