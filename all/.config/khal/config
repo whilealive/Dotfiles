@@ -2,7 +2,7 @@
 # FILE     .config/khal/config
 # INFO     khal configuration file
 #
-# DATE     30.10.2018
+# DATE     29.01.2019
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -32,9 +32,13 @@ color = 57
 path = ~/.calendars/c98d0768-c8fe-4d36-8c42-488314954f67/
 color = 34
 
-[[Gemeinsam]]
+[[Gemeinsame Termine]]
 path = ~/.calendars/cd9606bf-2bc1-4c87-bea9-e1309f1c87b1/
 color = 176
+
+#[[Triemli]]
+#path = ~/.calendars/b3626d87-82d8-4e6a-bdc6-e214dff9da30/
+#color = 176
 
 [[private_contacts_local]]
 path = ~/.contacts/Privat/*
