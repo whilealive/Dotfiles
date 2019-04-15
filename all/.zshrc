@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     as usual: mostly stolen from Jason Ryan, bitbucket
 #
-# DATE     26.12.2018
+# DATE     12.04.2019
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -65,7 +65,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 
 # tmux-helpers
-source "$HOME/Scripts/tmuxHelpers"
+source "$HOME/Scripts/f_tmuxHelpers"
 
 # functions
 extract() {
