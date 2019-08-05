@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     plugin: open corresponding pdf (e.g. to .tex files)
 "
-" DATE     04.01.2018
+" DATE     11.07.2019
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -20,4 +20,4 @@ function! OpenPDF()
 endfunction
 " }}}
 
-map <F4> :call OpenPDF()<cr><cr>
+map <F5> :call OpenPDF()<cr><cr>

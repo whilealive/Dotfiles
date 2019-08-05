@@ -2,8 +2,20 @@
 " FILE     .vimrc
 " MACHINE  all
 " INFO     minimalistic
+"          <F1> : save file
+"          <F2> : copy to CLIPBOARD
+"          <F3> : paste from CLIPBOARD
+"          <F4> : set date
+"          <F5> : (openPDF.vim) open *filename*.pdf
+"          <F6> : (tex.vim)     compile .tex-file
+"          <F7> : 
+"          <F8> : 
+"          <F9> : 
+"          <F10> : 
+"          <F11> : 
+"          <F12> : 
 "
-" DATE     08.05.2017
+" DATE     11.07.2019
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -108,13 +120,17 @@ let g:netrw_special_syntax = 1
 " ------------------------------------------------------------------
 " various mappings
 " ------------------------------------------------------------------
-"put date at current position
-nnoremap <F1> :set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
+" save shortcut
+imap <F1> <ESC>:w<CR>a
+nnoremap <F1> :w<CR>
 
 "copy/paste to/from CLIPBOARD
 vnoremap <F2> "+y
 nnoremap <F3> :set paste<CR>"+p:set nopaste<CR>
 vnoremap <F3> <ESC>:set paste<CR>gv"+p:set nopaste<CR>
+
+"put date at current position
+nnoremap <F4> :set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
 
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
@@ -130,4 +146,5 @@ nnoremap ,dp[ di[v%p
 
 "space bar un-highlights search
 noremap <silent> <Space> :set hlsearch!<CR>
+
 " ------------------------------------------------------------------

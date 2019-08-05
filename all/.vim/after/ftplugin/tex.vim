@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     02.04.2019
+" DATE     11.07.2019
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -15,7 +15,8 @@ let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|myenu
 
 compiler latexmk
 
-nnoremap <buffer> <silent> <F11> :w<cr>:wa<cr>:make<cr><cr><cr>:cw<cr>
+" compile .tex-file with make (using llmk if no MAKEFILE is existent)
+nnoremap <buffer> <silent> <F6> :w<cr>:wa<cr>:make<cr><cr><cr>:cw<cr>
 
 " soft-wrap
 set formatoptions=l
