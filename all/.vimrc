@@ -15,7 +15,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     11.07.2019
+" DATE     27.08.2019
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -130,7 +130,7 @@ nnoremap <F3> :set paste<CR>"+p:set nopaste<CR>
 vnoremap <F3> <ESC>:set paste<CR>gv"+p:set nopaste<CR>
 
 "put date at current position
-nnoremap <F4> :set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
+nnoremap <F4> /DATE<CR>W:set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>:set nohlsearch<CR>
 
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
