@@ -4,7 +4,7 @@
 # MACHINE  laptop2
 # INFO     Executed by startx
 #
-# DATE     14.01.2019
+# DATE     23.10.2019
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -23,8 +23,8 @@ setxkbmap -layout ch
 # mute the stupid "Bing" sound
 xset b off
 
-# wicd (networking)
-wicd-client --tray &
+# NetworkManager applet
+nm-applet &
 
 # battery state
 cbatticon --update-interval 30 &
