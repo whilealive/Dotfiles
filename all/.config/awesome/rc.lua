@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     05.08.2019
+-- DATE     15.12.2019
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -332,6 +332,16 @@ globalkeys = gears.table.join(
                 awful.menu.clients({theme = { width = 500 }}, { keygrabber=true, coords={x=200, y=200} })
               end,
               {description = "switch clients quickly", group = "own"}),
+
+    -- show name of focused window
+    awful.key({modkey             }, "i",
+              function ()
+                local c = client.focus
+                if c then
+                  naughty.notify({icon=c.icon, text = c.name, bg="#636363", fg="#FFFFFF"})
+                end
+              end,
+              {description = "show full name of focused client", group = "own"}),
     
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
@@ -513,7 +523,7 @@ awful.rules.rules = {
     -- 5:gui
     { rule = { class = "Thunar" },        properties = { screen = 1, tag = "5:gui", floating = true } },
     { rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "5:gui", floating = true } },
-    { rule = { class = "Deadbeef" },      properties = { screen = 1, tag = "5:gui", floating = true } },
+    { rule = { class = "Rhythmbox" },     properties = { screen = 1, tag = "5:gui", floating = true } },
     { rule = { class = "Galculator" },    properties = { screen = 1, tag = "5:gui", floating = true } },
     { rule = { class = "Easytag" },       properties = { screen = 1, tag = "5:gui", floating = true } },
     { rule = { class = "GeoGebra" },      properties = { screen = 1, tag = "5:gui", floating = true } },
