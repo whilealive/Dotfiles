@@ -4,13 +4,13 @@
 # INFO     for use with mbsync,
 #          additional account files to be found in ~/.mutt/
 #
-# DATE     18.01.2019
+# DATE     26.03.2020
 # OWNER    Bischofberger
 # ==================================================================
 
 
 ## ===================== global password management =====================
-source "gpg2 -dq ~/.my-pwds.gpg |"
+source "gpg2 -dq ~/Scripts/data/my-pwds.gpg |"
 
 
 ## ===================== ACCOUNTS =====================
