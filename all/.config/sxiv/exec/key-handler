@@ -4,7 +4,7 @@
 # MACHINE  all
 # INFO     external keys for sxiv
 #
-# DATE     06.03.2020
+# DATE     09.05.2020
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -13,7 +13,10 @@ do
   case "$1" in
     "X")
       #trash "$file"
-      mv "$file" ~/.trash
+      mv -f "$file" ~/.trash
+      mv -f "${file%.*}.RAF" ~/.trash
+      mv -f "${file%.*}.NEF" ~/.trash
+      mv -f "${file%.*}.DNG" ~/.trash
       ;;
     "R")
       convert -rotate 90 "$file" "$file"
