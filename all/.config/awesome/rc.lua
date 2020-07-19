@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     29.04.2020
+-- DATE     14.07.2020
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -512,6 +512,7 @@ awful.rules.rules = {
     -- 2:doc
     { rule = { class = "Zathura" },       properties = { screen = 1, tag = "2:doc" } },
     { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
+    { rule = { class = "Xournalpp" },     properties = { screen = 1, tag = "2:doc", floating = true } },
     -- 3:tex
     { rule = { name = "tex" },            properties = { screen = 1, tag = "3:tex" } },
     -- 4:office
@@ -531,7 +532,9 @@ awful.rules.rules = {
     { rule = { class = "Easytag" },       properties = { screen = 1, tag = "6:gui", floating = true } },
     { rule = { class = "GeoGebra" },      properties = { screen = 1, tag = "6:gui", floating = true } },
     { rule = { class = "Ghb" },           properties = { screen = 1, tag = "6:gui", floating = true } },
-    { rule = { class = "Io.elementary.photos" }, properties = { screen = 1, tag = "6:gui", floating = true } },
+    { rule = { class = "Io.elementary.photos" },      properties = { screen = 1, tag = "6:gui", floating = true } },
+    { rule = { class = "Microsoft Teams - Preview" }, properties = { screen = 1, tag = "6:gui", floating = true, maximized = false } },
+    { rule = { class = "SimpleScreenRecorder" },      properties = { screen = 1, tag = "6:gui", floating = true } },
     -- 7:web
     { rule = { class = "firefox" },       properties = { screen = 1, tag = "7:web" } },
     { rule = { class = "Chromium" },      properties = { screen = 1, tag = "7:web" } },
