@@ -512,11 +512,11 @@ awful.rules.rules = {
     -- 2:doc
     { rule = { class = "Zathura" },       properties = { screen = 1, tag = "2:doc" } },
     { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
-    { rule = { class = "Xournalpp" },     properties = { screen = 1, tag = "2:doc", floating = true } },
     -- 3:tex
     { rule = { name = "tex" },            properties = { screen = 1, tag = "3:tex" } },
     -- 4:office
     { rule = { name = "LibreOffice" },    properties = { screen = 1, tag = "4:office" } },
+    { rule = { class = "Xournalpp" },     properties = { screen = 1, tag = "4:office", floating = true } },
     { rule = { class = "Microsoft Teams - Preview" }, properties = { screen = 1, tag = "4:office", floating = true, maximized = false } },
     -- 5:dtp
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "5:dtp", floating = true } },
