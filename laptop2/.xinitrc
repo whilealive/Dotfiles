@@ -4,7 +4,7 @@
 # MACHINE  laptop2
 # INFO     Executed by startx
 #
-# DATE     23.10.2019
+# DATE     17.08.2020
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -22,6 +22,9 @@ setxkbmap -layout ch
 
 # mute the stupid "Bing" sound
 xset b off
+
+# set Wacom tablet to mode "Relative" (requires "xf86-input-wacom" package)
+xsetwacom set 9 mode Relative
 
 # NetworkManager applet
 nm-applet &
