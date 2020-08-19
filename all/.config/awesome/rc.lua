@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     24.07.2020
+-- DATE     02.08.2020
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -516,7 +516,8 @@ awful.rules.rules = {
     { rule = { name = "tex" },            properties = { screen = 1, tag = "3:tex" } },
     -- 4:office
     { rule = { name = "LibreOffice" },    properties = { screen = 1, tag = "4:office" } },
-    { rule = { class = "Xournalpp" },     properties = { screen = 1, tag = "4:office", floating = true } },
+    { rule = { class = "Xournalpp" },     properties = { screen = 1, tag = "4:office" } },
+    { rule = { class = "Pdfshuffler" },   properties = { screen = 1, tag = "4:office" } },
     { rule = { class = "Microsoft Teams - Preview" }, properties = { screen = 1, tag = "4:office", floating = true, maximized = false } },
     -- 5:dtp
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "5:dtp", floating = true } },
@@ -531,7 +532,7 @@ awful.rules.rules = {
     { rule = { class = "Easytag" },       properties = { screen = 1, tag = "6:gui", floating = true } },
     { rule = { class = "GeoGebra" },      properties = { screen = 1, tag = "6:gui", floating = true } },
     { rule = { class = "Ghb" },           properties = { screen = 1, tag = "6:gui", floating = true } },
-    { rule = { class = "Pavucontrol" },   properties = { screen = 1, tag = "6:gui", floating = true } },
+    { rule = { class = "Shotcut" },       properties = { screen = 1, tag = "6:gui", floating = true } },
     { rule = { class = "Io.elementary.photos" },  properties = { screen = 1, tag = "6:gui", floating = true } },
     { rule = { class = "SimpleScreenRecorder" },  properties = { screen = 1, tag = "6:gui", floating = true } },
     -- 7:web
@@ -543,6 +544,7 @@ awful.rules.rules = {
     --{ rule = { class = "Darktable" },     properties = { screen = 1, tag = "5:dtp", floating = true } },
     --{ rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "6:gui", floating = true } },
     --{ rule = { class = "Chromium" },      properties = { screen = 1, tag = "7:web" } },
+    --{ rule = { class = "Pavucontrol" },   properties = { screen = 1, tag = "6:gui", floating = true } },
 }
 -- }}}
 
