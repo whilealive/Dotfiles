@@ -1,0 +1,20 @@
+# ==================================================================
+# FILE     /etc/systemd/system/slock@.service
+# INFO     systemctl enable slock@laptop2
+#
+# DATE     21.08.2020
+# OWNER    Bischofberger
+# ==================================================================
+
+[Unit]
+Description=Lock X session using slock for user %i
+Before=sleep.target
+
+[Service]
+User=%i
+Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/xset dpms force suspend
+ExecStart=/usr/bin/slock
+
+[Install]
+WantedBy=sleep.target
