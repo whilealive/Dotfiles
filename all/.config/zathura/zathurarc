@@ -7,7 +7,7 @@
 # OWNER    Bischofberger
 # ==================================================================
 
-set adjust-open "width"
+#set adjust-open "width"
 set vertical-center false
 set selection-clipboard "clipboard"
 set window-title-basename true
