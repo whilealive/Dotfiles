@@ -4,7 +4,7 @@
 # INFO     account bischofberger@fastmail.fm
 #          for use with mbsync
 #
-# DATE     08.08.2017
+# DATE     11.12.2020
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -36,3 +36,7 @@ set smtp_url    = smtps://bischofberger@fastmail.com@mail.messagingengine.com:46
 
 # trash
 macro index,pager d "<save-message>=Trash/<enter>" "move message to trash"
+
+# archive
+macro index,pager a "<save-message>=Archive/<enter>" "move message to Archive"
+

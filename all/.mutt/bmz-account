@@ -4,7 +4,7 @@
 # INFO     account bruno.bischofberger@bms-zuerich.ch
 #          for use with mbsync
 #
-# DATE     11.07.2020
+# DATE     11.12.2020
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -22,7 +22,7 @@ set folder        = "~/Maildir/bmz"
 set postponed     = "~/Maildir/bmz/Drafts/"
 set record        = "~/Maildir/bmz/Sent/"
 
-mailboxes ~/Maildir/bmz/INBOX ~/Maildir/bmz/Sent ~/Maildir/bmz/Trash
+mailboxes ~/Maildir/bmz/INBOX ~/Maildir/bmz/Sent ~/Maildir/bmz/Trash ~/Maildir/bmz/Archiv
 
 # sending mails via SMTP
 # password management via gpg, set in .muttrc
@@ -31,3 +31,6 @@ set smtp_url    = smtps://bruno.bischofberger@bms-zuerich.ch@mta.tam.ch:465
 
 # trash
 macro index,pager d "<save-message>=Trash/<enter>" "move message to trash"
+
+# archive
+macro index,pager a "<save-message>=Archiv/<enter>" "move message to Archiv"

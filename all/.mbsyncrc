@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     11.07.2020
+# DATE     11.12.2020
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -65,7 +65,7 @@ Inbox ~/Maildir/bmz/INBOX
 Channel bmz_in
 Master :bmz-remote:
 Slave :bmz-local:
-Patterns "INBOX" "Sent" "Trash" "Drafts"
+Patterns "INBOX" "Sent" "Trash" "Drafts" "Archiv"
 
 # options for all channels
 Sync All
