@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     11.07.2019
+" DATE     06.01.2021
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -26,3 +26,13 @@ noremap <buffer> <silent> k gk
 noremap <buffer> <silent> j gj
 noremap <buffer> <silent> 0 g0
 noremap <buffer> <silent> $ g$
+
+" update norm: updates filename/date in \SetNorm{filename}{date} macro
+nnoremap ,<F4> magg
+      \/\\SetNorm<CR>
+      \S\SetNorm{<ESC>
+      \"%p
+      \a}{<ESC>
+      \"=strftime("%d.%m.%Y")<CR>p
+      \a}<ESC>
+      \'a
