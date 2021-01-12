@@ -58,9 +58,9 @@ ${color #ff6565}DRIVES - FREE SPACE ${hr 2}$color
 ${color #ff6565}${fs_bar 6 /}$color
 
 ${color #ff6565}TEMPERATURES ${hr 2}$color
-CPU¹ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 1p}°C ${alignc}  CPU² ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 2p}°C ${alignr}HDD ${execi 20 netcat localhost 7634 | cut -c31-32}°C
+CPU¹ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 1p}°C ${alignc}  CPU² ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 2p}°C ${alignr}
 
-${color #ff6565}WIRELESS (${addr wlp3s0}) ${hr 2}$color
-Down: ${downspeed wlp3s0} ${alignr} Up: ${upspeed wlp3s0} 
-${color #FFFFFF}${downspeedgraph wlp3s0 20,120 000000 FFFFFF} ${alignr}${color #CFCFCF}${upspeedgraph wlp3s0  20,120 000000 CFCFCF}$color
+${color #ff6565}WIRELESS (${addr wlp0s20f3}) ${hr 2}$color
+Down: ${downspeed wlp3s0} ${alignr} Up: ${upspeed wlp0s20f3} 
+${color #FFFFFF}${downspeedgraph wlp0s20f3 20,120 000000 FFFFFF} ${alignr}${color #CFCFCF}${upspeedgraph wlp0s20f3 20,120 000000 CFCFCF}$color
 ]];
