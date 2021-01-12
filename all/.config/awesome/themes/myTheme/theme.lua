@@ -2,7 +2,7 @@
 -- FILE     theme.lua
 -- INFO     my awesome theme
 --
--- DATE     08.02.2018
+-- DATE     10.01.2021
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -15,7 +15,8 @@ local themes_path = "~/.config/awesome/themes/"
 
 local theme = {}
 
-theme.font          = "sans 12"
+theme.font          = "sans 10"  -- desktop
+-- theme.font          = "sans 12"  -- laptop3
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#ff6565"
