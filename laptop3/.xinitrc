@@ -4,7 +4,7 @@
 # MACHINE  laptop2
 # INFO     Executed by startx
 #
-# DATE     22.12.2020
+# DATE     13.01.2021
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -27,7 +27,8 @@ xset b off
 numlockx &
 
 # set Wacom tablet to mode "Relative" (requires "xf86-input-wacom" package)
-xsetwacom set 9 mode Relative
+xsetwacom set "Wacom One by Wacom S Pen stylus" mode Relative
+xsetwacom set "Wacom One by Wacom M Pen stylus" mode Relative
 
 # NetworkManager applet
 nm-applet &

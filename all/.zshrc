@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     as usual: mostly stolen from Jason Ryan, bitbucket
 #
-# DATE     20.05.2020
+# DATE     18.01.2021
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -116,4 +116,5 @@ export GREP_COLOR="1;31"
 alias grep="grep --color=auto"
 alias ra="ranger-cd"
 alias llmk="latexmk -lualatex -interaction=nonstopmode -file-line-error"
-
+alias swacom="xsetwacom set \"Wacom One by Wacom S Pen stylus\" mode Relative"
+alias mwacom="xsetwacom set \"Wacom One by Wacom M Pen stylus\" mode Relative"
