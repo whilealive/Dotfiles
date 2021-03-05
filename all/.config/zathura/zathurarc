@@ -1,14 +1,16 @@
 # ==================================================================
-# FILE     ~/.config/zathura/zathurarc
+# FILE     zathurarc
 # MACHINE  all
 # INFO     - 
 #
-# DATE     11.11.2018
+# DATE     02.03.2021
 # OWNER    Bischofberger
 # ==================================================================
 
-#set adjust-open "width"
 set vertical-center false
 set selection-clipboard "clipboard"
 set window-title-basename true
 set synctex false
+
+map <C-f> navigate next
+map <C-b> navigate previous

@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     plugin: use dmenu to open files quickly in vim
 "
-" DATE     01.03.2021
+" DATE     02.03.2021
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -17,15 +17,18 @@ function! DmenuOpen(cmd,type)
 	if (a:type == "git")
 		let fname = Chomp(system("git ls-files | dmenu -i -l 20 -p " . a:cmd))
 	else
-		let fname = Chomp(system("find -type f -printf '%P\n' 
+		let fname = Chomp(system("find . 
           \! -path '*/\.*' 
           \! -path '*/*.jpg' 
+          \! -path '*/*.png' 
           \! -path '*/*.pdf' 
           \! -path '*/*.toc' 
           \! -path '*/*.aux' 
           \! -path '*/*.log' 
           \! -path '*/*.fls' 
           \! -path '*/*.fdb_latexmk' 
+          \  -type f
+          \  -printf '%P\n' 
           \| sort | dmenu -i -l 20 -p " . a:cmd))
 	endif
 	if empty(fname)
@@ -35,5 +38,5 @@ function! DmenuOpen(cmd,type)
 endfunction
 
 " Mappings
-map <c-f> :call DmenuOpen("e", "")<cr>
-map <c-g> :call DmenuOpen("e", "git")<cr>
+map ,f :call DmenuOpen("e", "")<cr>
+map ,g :call DmenuOpen("e", "git")<cr>
