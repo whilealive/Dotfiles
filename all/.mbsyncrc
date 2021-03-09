@@ -3,9 +3,16 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     11.12.2020
+# DATE     09.03.2021
 # OWNER    Bischofberger
 # ==================================================================
+
+
+# options for all channels -------------------------------------------------------------------------------
+Sync All
+Expunge Both
+Create Near
+SyncState *
 
 
 # Account fastmail.com ------------------------------------------------------------------------------------
@@ -26,24 +33,17 @@ Inbox ~/Maildir/fastmail/INBOX
 Flatten "_"
 
 Channel fastmail_in
-Master :fastmail-remote:
-Slave :fastmail-local:
+Far :fastmail-remote:
+Near :fastmail-local:
 Patterns "INBOX" "Sent Items" "Trash" "Drafts" "Archive" "Bandcamp"
 
 Channel fastmail_lists
-Master :fastmail-remote:
-Slave :fastmail-local:
+Far :fastmail-remote:
+Near :fastmail-local:
 Patterns "suckless-dev" "tug"
-
-# options for all channels
-Sync All
-Expunge Both
-Create Slave
-SyncState *
 
 Group fastmail
 Channels fastmail_in fastmail_lists 
-
 
 
 # Account bms-zuerich.ch ------------------------------------------------------------------------------------
@@ -63,15 +63,9 @@ Path ~/Maildir/bmz/
 Inbox ~/Maildir/bmz/INBOX
 
 Channel bmz_in
-Master :bmz-remote:
-Slave :bmz-local:
+Far :bmz-remote:
+Near :bmz-local:
 Patterns "INBOX" "Sent" "Trash" "Drafts" "Archiv"
-
-# options for all channels
-Sync All
-Expunge Both
-Create Slave
-SyncState *
 
 Group bmz
 Channels bmz_in 
