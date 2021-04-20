@@ -15,7 +15,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     06.01.2021
+" DATE     20.04.2021
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -136,6 +136,7 @@ nnoremap <F4> magg
       \/DATE<CR>
       \W:set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
       \'a
+      \:nohlsearch<CR>
 
 "recreate tags file in current folder
 nnoremap ,t :! ctags -R<CR>
