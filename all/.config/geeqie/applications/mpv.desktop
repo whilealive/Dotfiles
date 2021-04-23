@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+
+Name=mpv
+Comment=use mpv within geeqie to play videos
+Icon=media-playback-start
+Exec=mpv %f
+
+Categories=X-Geeqie;
+OnlyShowIn=X-Geeqie;
