@@ -1,6 +1,6 @@
 [user]
 	name = whilealive
-	email = bruno.bischi@gmail.com
+	email = bischofberger@fastmail.fm
 [credential]
 	helper = cache --timeout=3600
 [merge]
