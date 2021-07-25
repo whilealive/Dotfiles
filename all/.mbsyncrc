@@ -3,7 +3,7 @@
 # MACHINE  all
 # INFO     isync/mbsync config file
 #
-# DATE     09.03.2021
+# DATE     25.07.2021
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -46,26 +46,26 @@ Group fastmail
 Channels fastmail_in fastmail_lists 
 
 
-# Account bms-zuerich.ch ------------------------------------------------------------------------------------
-IMAPAccount bmz
-Host tcs.tam.ch
-Port 993
-User bruno.bischofberger@bms-zuerich.ch
-PassCmd "pwdFetch 2"
-SSLType IMAPS
-CertificateFile /etc/ssl/certs/ca-certificates.crt
-
-IMAPStore bmz-remote
-Account bmz
-
-MaildirStore bmz-local
-Path ~/Maildir/bmz/
-Inbox ~/Maildir/bmz/INBOX
-
-Channel bmz_in
-Far :bmz-remote:
-Near :bmz-local:
-Patterns "INBOX" "Sent" "Trash" "Drafts" "Archiv"
-
-Group bmz
-Channels bmz_in 
+## Account bms-zuerich.ch ------------------------------------------------------------------------------------
+#IMAPAccount bmz
+#Host tcs.tam.ch
+#Port 993
+#User bruno.bischofberger@bms-zuerich.ch
+#PassCmd "pwdFetch 2"
+#SSLType IMAPS
+#CertificateFile /etc/ssl/certs/ca-certificates.crt
+#
+#IMAPStore bmz-remote
+#Account bmz
+#
+#MaildirStore bmz-local
+#Path ~/Maildir/bmz/
+#Inbox ~/Maildir/bmz/INBOX
+#
+#Channel bmz_in
+#Far :bmz-remote:
+#Near :bmz-local:
+#Patterns "INBOX" "Sent" "Trash" "Drafts" "Archiv"
+#
+#Group bmz
+#Channels bmz_in 
