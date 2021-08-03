@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     02.07.2021
+-- DATE     27.07.2021
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -21,8 +21,6 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
--- remote module for email widget
-require("awful.remote")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -121,11 +119,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+local mytextclock = wibox.widget.textclock()
 
--- email widget; info from mbsyncsecure-script via awesome-client
-myemailwidget = wibox.widget.textbox()
-myemailwidget.text = " [email] "
+--- Create a widget separator
+local separator = wibox.widget.textbox(" ")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -205,7 +202,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            myemailwidget,
+            separator,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
