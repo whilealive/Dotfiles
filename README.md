@@ -15,7 +15,7 @@ configuration files for my linux machines (desktop/laptop)
 - zsh
 - tmux
 
-#### editor
+#### text editor
 - vim
 
 #### file manager
@@ -23,6 +23,7 @@ configuration files for my linux machines (desktop/laptop)
 
 #### image viewer
 - sxiv
+- geeqie
 
 #### email
 - mutt
@@ -43,6 +44,7 @@ configuration files for my linux machines (desktop/laptop)
 - zathura
 
 ####  miscellaneous
+- Logitech MX Ergo Trackball (see desktop/.xinitrc)
 - conky
 - git
 - gnupg
