@@ -1,14 +1,11 @@
 " ==================================================================
-" FILE     .vim/ftplugin/tex.vim
+" FILE     tex.vim
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     06.01.2021
+" DATE     19.08.2021
 " OWNER    Bischofberger
 " ==================================================================
-
-setlocal sw=2        " little indentation
-setlocal expandtab   " tex intendation works better with spaces
 
 " add myitem etc. (itemize package) environment to indentation rules (see indent/tex.vim)
 let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|myenum\|myitem\|mydotitem\|alphenum\|tabbedenum\|checklist'
