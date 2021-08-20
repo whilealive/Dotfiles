@@ -2,12 +2,13 @@
 " FILE     .vimrc
 " MACHINE  all
 " INFO     minimalistic
-"          <F1> : save file
-"          <F2> : copy to CLIPBOARD
-"          <F3> : paste from CLIPBOARD
-"          <F4> : set date
-"          <F5> : (openPDF.vim) open *filename*.pdf
-"          <F6> : (tex.vim)     compile .tex-file
+"          <F1> :  (.vimrc)       save file
+"          <F2> :  (.vimrc)       copy to CLIPBOARD
+"          <F3> :  (.vimrc)       paste from CLIPBOARD
+"          <F4> :  (.vimrc)       update file header
+"          ,<F4> : (tex.vim)      update norm in tex files
+"          <F5> :  (openPDF.vim)  open *filename*.pdf
+"          <F6> :  (tex.vim)      compile .tex-file
 "          <F7> : 
 "          <F8> : 
 "          <F9> : 
@@ -15,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     20.04.2021
+" DATE     19.08.2021
 " OWNER    Bischofberger
 " ==================================================================
 
