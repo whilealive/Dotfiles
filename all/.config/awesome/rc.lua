@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     27.07.2021
+-- DATE     21.09.2021
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -513,7 +513,7 @@ awful.rules.rules = {
     { rule = { name = "tex" },            properties = { screen = 1, tag = "3:tex" } },
     -- 4:office
     { rule = { name = "LibreOffice" },    properties = { screen = 1, tag = "4:office" } },
-    { rule = { class = "xournalpp" },     properties = { screen = 1, tag = "4:office" } },
+    { rule = { class = "Xournalpp" },     properties = { screen = 1, tag = "4:office" } },
     { rule = { class = "Pdfarranger" },   properties = { screen = 1, tag = "4:office" } },
     { rule = { class = "Microsoft Teams - Preview" }, properties = { screen = 1, tag = "4:office", maximized = false } },
     -- 5:dtp
@@ -524,7 +524,7 @@ awful.rules.rules = {
     { rule = { class = "Darktable" },     properties = { screen = 1, tag = "5:dtp", floating = true } },
     { rule = { class = "Shotcut" },       properties = { screen = 1, tag = "5:dtp", floating = true } },
     -- 6:gui
-    { rule = { class = "Thunar" },        properties = { screen = 1, tag = "6:gui", floating = true } },
+    { rule = { class = "Thunar" },        properties = { screen = 1, tag = "6:gui" } },
     { rule = { class = "mpv" },           properties = { screen = 1, tag = "6:gui", floating = true } },
     { rule = { class = "gogglesmm" },     properties = { screen = 1, tag = "6:gui", floating = true } },
     { rule = { class = "Galculator" },    properties = { screen = 1, tag = "6:gui", floating = true } },
