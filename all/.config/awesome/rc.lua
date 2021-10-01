@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     21.09.2021
+-- DATE     01.10.2021
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -521,7 +521,6 @@ awful.rules.rules = {
     { rule = { class = "Inkscape" },      properties = { screen = 1, tag = "5:dtp", floating = true, maximized = false } },
     { rule = { class = "scribus" },       properties = { screen = 1, tag = "5:dtp", floating = true } },
     { rule = { class = "Xsane" },         properties = { screen = 1, tag = "5:dtp", floating = true } },
-    { rule = { class = "Darktable" },     properties = { screen = 1, tag = "5:dtp", floating = true } },
     { rule = { class = "Shotcut" },       properties = { screen = 1, tag = "5:dtp", floating = true } },
     -- 6:gui
     { rule = { class = "Thunar" },        properties = { screen = 1, tag = "6:gui" } },
@@ -539,6 +538,7 @@ awful.rules.rules = {
     -- 8:virt
     { rule = { class = "VirtualBox" },    properties = { screen = 1, tag = "8:virt", floating = true } },
     -- currently unused
+    --{ rule = { class = "Darktable" },     properties = { screen = 1, tag = "5:dtp", floating = true } },
     --{ rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "6:gui", floating = true } },
     --{ rule = { class = "Chromium" },      properties = { screen = 1, tag = "7:web" } },
     --{ rule = { class = "Pavucontrol" },   properties = { screen = 1, tag = "6:gui", floating = true } },
