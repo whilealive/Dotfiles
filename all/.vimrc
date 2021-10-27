@@ -7,8 +7,8 @@
 "          <F3> :  (.vimrc)       paste from CLIPBOARD
 "          <F4> :  (.vimrc)       update file header
 "          ,<F4> : (tex.vim)      update norm in tex files
-"          <F5> :  (openPDF.vim)  open *filename*.pdf
-"          <F6> :  (tex.vim)      compile .tex-file
+"          <F5> :  (tex.vim)      compile .tex-file
+"          <F6> :  (openPDF.vim)  open *filename*.pdf
 "          <F7> : 
 "          <F8> : 
 "          <F9> : 
@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     19.08.2021
+" DATE     27.10.2021
 " OWNER    Bischofberger
 " ==================================================================
 

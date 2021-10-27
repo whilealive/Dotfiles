@@ -1,9 +1,9 @@
 " ==================================================================
-" File     openPDF.vim
+" FILE     openPDF.vim
 " MACHINE  all
 " INFO     plugin: open corresponding pdf (e.g. to .tex files)
 "
-" DATE     11.07.2019
+" DATE     27.10.2021
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -20,4 +20,4 @@ function! OpenPDF()
 endfunction
 " }}}
 
-map <F5> :call OpenPDF()<cr><cr>
+map <F6> :call OpenPDF()<cr><cr>
