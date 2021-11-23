@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     27.10.2021
+" DATE     18.11.2021
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -153,5 +153,10 @@ nnoremap ,dp[ di[v%p
 
 "space bar un-highlights search
 noremap <silent> <Space> :set hlsearch!<CR>
+
+" :HardcopyPdf
+" print to a pdf (see: https://askubuntu.com/questions/705973/how-can-i-print-from-vim-to-pdf)
+set printfont=Courier:h8
+command! -range=% HardcopyPdf <line1>,<line2> hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo 'Created: %.pdf'
 
 " ------------------------------------------------------------------
