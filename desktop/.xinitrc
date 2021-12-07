@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     03.08.2021
+# DATE     07.12.2021
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -21,11 +21,8 @@ fi
 # set X11 keymap
 setxkbmap -layout ch
 
-# Logitech MX Ergo settings
-# slow pointer / high acceleration
-xinput set-prop "pointer:Logitech MX Ergo" "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 4  # last entry is pointer speed (higher values lead to slower pointer)
-xinput set-prop "pointer:Logitech MX Ergo" "libinput Accel Speed" 1                              # full acceleration speed
-xinput set-prop "pointer:Logitech MX Ergo" "libinput Scroll Method Enabled" 0 0 1                # use track ball to scroll while pressing scroll wheel button
+# Logitech MX Ergo settings (see: ~/Scripts/mxergo)
+mxergo
 
 # mute the stupid "Bing" sound
 xset b off
