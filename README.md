@@ -25,15 +25,6 @@ configuration files for my linux machines (desktop/laptop)
 - sxiv
 - geeqie
 
-#### email
-- mutt
-- mbsync
-
-#### contacts/calendar
-- vdirsyncer
-- khard
-- khal
-
 #### pdf viewer
 - zathura
 
