@@ -1,11 +1,11 @@
 conky.config = {
 -- ==================================================================
 -- FILE     .conkyrc
--- MACHINE  laptop2
+-- MACHINE  laptop3
 -- INFO     for HDD temperature, hddtemp is used as enabled unit under
 --          systemd and netcat has to be installed in addition
 
--- DATE     12.02.2018
+-- DATE     06.04.2022
 -- OWNER    Bischofberger
 -- ==================================================================
 

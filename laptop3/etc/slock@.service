@@ -1,6 +1,7 @@
 # ==================================================================
 # FILE     /etc/systemd/system/slock@.service
 # INFO     systemctl enable slock@laptop3
+# MACHINE  laptop3
 #
 # DATE     28.03.2022
 # OWNER    Bischofberger
