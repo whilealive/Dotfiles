@@ -1,10 +1,10 @@
 #!/bin/sh
 # ==================================================================
 # FILE     .xinitrc
-# MACHINE  laptop2
+# MACHINE  laptop3
 # INFO     Executed by startx
 #
-# DATE     17.03.2021
+# DATE     06.04.2022
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -25,6 +25,9 @@ xset b off
 
 # set NumLock
 numlockx &
+
+# Logitech MX Ergo settings (see: ~/Scripts/mxergo)
+mxergo
 
 # NetworkManager applet
 nm-applet &

@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     07.12.2021
+# DATE     05.04.2022
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -20,9 +20,6 @@ fi
 
 # set X11 keymap
 setxkbmap -layout ch
-
-# Logitech MX Ergo settings (see: ~/Scripts/mxergo)
-mxergo
 
 # mute the stupid "Bing" sound
 xset b off
