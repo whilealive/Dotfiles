@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     06.03.2022
+-- DATE     08.04.2022
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -320,7 +320,9 @@ globalkeys = gears.table.join(
               {description = "increase backlight", group = "own"}),
     awful.key({                   }, "XF86MonBrightnessDown",  function () awful.spawn("xbacklight -dec 10") end,
               {description = "decrease backlight", group = "own"}),
-    awful.key({                   }, "XF86Display",  function () awful.spawn("slock") end,
+    --awful.key({                   }, "XF86Display",  function () awful.spawn("slock") end,
+    --          {description = "lock display by slock", group = "own"}),
+    awful.key({                   }, "Scroll_Lock",  function () awful.spawn("slock") end,
               {description = "lock display by slock", group = "own"}),
 
     -- application switcher
