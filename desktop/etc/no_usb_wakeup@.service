@@ -1,0 +1,17 @@
+# ==================================================================
+# FILE     /etc/systemd/system/no_usb_wakeup@.service
+# INFO     systemctl enable no_usb_wakeup@desktop
+# MACHINE  desktop
+#
+# DATE     14.04.2022
+# OWNER    Bischofberger
+# ==================================================================
+
+[Unit]
+Description=Prevent USB devices to wake up from suspend
+
+[Service]
+ExecStart=/bin/bash -c "echo EHC1 >> /proc/acpi/wakeup ; echo EHC2 >> /proc/acpi/wakeup ; echo XHC >> /proc/acpi/wakeup"
+
+[Install]
+WantedBy=multi-user.target
