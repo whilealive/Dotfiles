@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     05.04.2022
+# DATE     21.04.2022
 # OWNER    Bischofberger
 # ==================================================================
 

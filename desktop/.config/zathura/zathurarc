@@ -1,0 +1,17 @@
+# ==================================================================
+# FILE     zathurarc
+# MACHINE  desktop
+# INFO     - 
+#
+# DATE     12.04.2022
+# OWNER    Bischofberger
+# ==================================================================
+
+set vertical-center false
+set selection-clipboard "clipboard"
+set window-title-basename true
+set synctex false
+set scroll-step 120
+
+map <C-f> navigate next
+map <C-b> navigate previous
