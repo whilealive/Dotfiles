@@ -4,7 +4,7 @@
 # MACHINE  laptop3
 # INFO     Executed by startx
 #
-# DATE     06.04.2022
+# DATE     03.06.2022
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -25,9 +25,6 @@ xset b off
 
 # set NumLock
 numlockx &
-
-# Logitech MX Ergo settings (see: ~/Scripts/mxergo)
-mxergo
 
 # NetworkManager applet
 nm-applet &
