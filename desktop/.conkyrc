@@ -2,10 +2,9 @@ conky.config = {
 -- ==================================================================
 -- FILE     .conkyrc
 -- MACHINE  desktop
--- INFO     for HDD temperature, hddtemp is used as enabled unit 
---          under systemd and netcat has to be installed in addition.
+-- INFO     
 
--- DATE     02.02.2019
+-- DATE     05.07.2022
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -60,8 +59,8 @@ ${color #ff6565}${fs_bar 6 /}$color
 ${color #ff6565}${fs_bar 6 /home}$color
 
 ${color #ff6565}TEMPERATURES ${hr 2}$color
-CPU¹ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 1p}°C ${alignc}  CPU³ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 3p}°C ${alignr}HDD ${execi 20 netcat localhost 7634 | cut -c32-33}°C
-CPU² ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 2p}°C ${alignc}  CPU⁴ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 4p}°C ${alignr} 
+CPU¹ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 1p}°C ${alignc}  CPU³ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 3p}°C
+CPU² ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 2p}°C ${alignc}  CPU⁴ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 4p}°C
 
 ${color #ff6565}LAN (${addr enp2s0}) ${hr 2}$color
 Down: ${downspeed enp2s0} ${alignr} Up: ${upspeed enp2s0} 
