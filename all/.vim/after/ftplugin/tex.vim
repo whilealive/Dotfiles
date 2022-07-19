@@ -3,12 +3,15 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     17.02.2022
+" DATE     19.07.2022
 " OWNER    Bischofberger
 " ==================================================================
 
 " add myitem etc. (itemize package) environment to indentation rules (see indent/tex.vim)
 let g:tex_itemize_env = 'itemize\|description\|enumerate\|thebibliography\|myenum\|myitem\|mydotitem\|alphenum\|tabbedenum\|checklist'
+
+" activate .sty-mode by default (allow underscores etc.)
+let g:tex_stylish = 1
 
 compiler latexmk
 
