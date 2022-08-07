@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     03.06.2022
+# DATE     07.08.2022
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -27,8 +27,8 @@ xset b off
 # set NumLock
 numlockx &
 
-# Logitech MX Ergo settings (see: ~/Scripts/mxergo)
-mxergo
+# x-keys l-trac settings (see: ~/Scripts/ltrac)
+ltrac
 
 # start conky
 conky &
