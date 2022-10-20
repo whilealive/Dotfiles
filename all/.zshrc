@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     as usual: mostly stolen from Jason Ryan, bitbucket
 #
-# DATE     19.02.2022
+# DATE     21.09.2022
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -89,7 +89,7 @@ alias udiskied="udiskie --no-automount --no-file-manager --smart-tray &"
 # various aliasses
 alias susp="systemctl suspend"
 alias ls="ls --color=auto"
-export GREP_COLOR="1;31"
+export GREP_COLORS="mt=1;31"
 alias grep="grep --color=auto"
 alias ra="ranger-cd"
 alias lmk="latexmk -lualatex -interaction=nonstopmode -file-line-error"
