@@ -2,10 +2,9 @@ conky.config = {
 -- ==================================================================
 -- FILE     .conkyrc
 -- MACHINE  laptop3
--- INFO     for HDD temperature, hddtemp is used as enabled unit under
---          systemd and netcat has to be installed in addition
+-- INFO     -
 
--- DATE     06.04.2022
+-- DATE     23.11.2022
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -58,7 +57,8 @@ ${color #ff6565}DRIVES - FREE SPACE ${hr 2}$color
 ${color #ff6565}${fs_bar 6 /}$color
 
 ${color #ff6565}TEMPERATURES ${hr 2}$color
-CPU¹ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 1p}°C ${alignc}  CPU² ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 2p}°C ${alignr}
+CPU¹ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 1p}°C  CPU² ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 2p}°C
+CPU³ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 3p}°C  CPU⁴ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 4p}°C
 
 ${color #ff6565}WIRELESS (${addr wlp0s20f3}) ${hr 2}$color
 Down: ${downspeed wlp3s0} ${alignr} Up: ${upspeed wlp0s20f3} 
