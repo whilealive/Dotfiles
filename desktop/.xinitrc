@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     07.08.2022
+# DATE     11.12.2022
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -26,6 +26,9 @@ xset b off
 
 # set NumLock
 numlockx &
+
+# udiskie automounter
+udiskie -t &
 
 # x-keys l-trac settings (see: ~/Scripts/ltrac)
 ltrac
