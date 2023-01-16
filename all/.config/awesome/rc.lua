@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     20.12.2022
+-- DATE     16.01.2023
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -510,7 +510,7 @@ awful.rules.rules = {
     { rule = { name = "mytmux" },         properties = { screen = 1, tag = "1:term" } },
     -- 2:doc
     { rule = { class = "Zathura" },       properties = { screen = 1, tag = "2:doc" } },
-    { rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
+    { rule = { class = "feh" },           properties = { screen = 1, tag = "2:doc" } },
     -- 3:tex
     { rule = { name = "tex" },            properties = { screen = 1, tag = "3:tex" } },
     -- 4:office
@@ -522,7 +522,7 @@ awful.rules.rules = {
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "5:dtp", floating = true } },
     { rule = { class = "Xsane" },         properties = { screen = 1, tag = "5:dtp", floating = true } },
     { rule = { class = "Shotcut" },       properties = { screen = 1, tag = "5:dtp", floating = true } },
-    { rule = { class = "Rawtherapee" },   properties = { screen = 1, tag = "5:dtp", floating = true } },
+    { rule = { class = "Darktable" },     properties = { screen = 1, tag = "5:dtp", floating = true } },
     -- 6:gui
     { rule = { class = "Thunar" },        properties = { screen = 1, tag = "6:gui" } },
     { rule = { class = "Lollypop" },      properties = { screen = 1, tag = "6:gui" } },
@@ -539,7 +539,8 @@ awful.rules.rules = {
     -- 8:virt
     { rule = { class = "VirtualBox" },    properties = { screen = 1, tag = "8:virt", floating = true } },
     -- currently unused
-    --{ rule = { class = "Darktable" },     properties = { screen = 1, tag = "5:dtp", floating = true } },
+    --{ rule = { class = "Rawtherapee" },   properties = { screen = 1, tag = "5:dtp", floating = true } },
+    --{ rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
     --{ rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "6:gui", floating = true } },
     --{ rule = { class = "Chromium" },      properties = { screen = 1, tag = "7:web" } },
     --{ rule = { class = "Rhythmbox" },     properties = { screen = 1, tag = "6:gui", floating = true } },
