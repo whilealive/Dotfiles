@@ -4,7 +4,7 @@
 # MACHINE  laptop3
 # INFO     Executed by startx
 #
-# DATE     03.06.2022
+# DATE     26.01.2023
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -31,6 +31,9 @@ nm-applet &
 
 # battery state
 cbatticon --update-interval 30 &
+
+# logitech mx ergo trackwheel settings
+mxergo &
 
 # exec awesome WM
 exec awesome
