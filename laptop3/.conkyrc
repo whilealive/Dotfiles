@@ -4,7 +4,7 @@ conky.config = {
 -- MACHINE  laptop3
 -- INFO     -
 
--- DATE     23.11.2022
+-- DATE     29.01.2023
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -61,6 +61,6 @@ CPU¹ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 1p}°C  CPU² ${ex
 CPU³ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 3p}°C  CPU⁴ ${execi 20 sensors | grep 'Core' | cut -c17-18 | sed -n 4p}°C
 
 ${color #ff6565}WIRELESS (${addr wlp0s20f3}) ${hr 2}$color
-Down: ${downspeed wlp3s0} ${alignr} Up: ${upspeed wlp0s20f3} 
+Down: ${downspeed wlp0s20f3} ${alignr} Up: ${upspeed wlp0s20f3} 
 ${color #FFFFFF}${downspeedgraph wlp0s20f3 20,120 000000 FFFFFF} ${alignr}${color #CFCFCF}${upspeedgraph wlp0s20f3 20,120 000000 CFCFCF}$color
 ]];
