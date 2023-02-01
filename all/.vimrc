@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     18.11.2021
+" DATE     01.02.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -160,3 +160,10 @@ set printfont=Courier:h8
 command! -range=% HardcopyPdf <line1>,<line2> hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo 'Created: %.pdf'
 
 " ------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------
+" vimwiki settings
+" ------------------------------------------------------------------
+" use markdown as default syntax
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
