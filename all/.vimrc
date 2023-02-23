@@ -104,7 +104,8 @@ set wrap                         "wrap long lines visually (soft-wrap)
 set nolist                       "make sure wrap option won't be disabled
 set linebreak                    "wrap between words only
 set breakindent                  "keep indentation when soft-wrapping
-set showbreak=>\ 
+"set showbreak=>\ 
+set showbreak=↪\ 
 " ------------------------------------------------------------------
 
 

@@ -1,9 +1,9 @@
 " ==================================================================
-" FILE     .vim/colors/bruno-custom
+" FILE     bruno-custom.vim
 " MACHINE  all
 " INFO     -
 "
-" DATE     18.01.2014
+" DATE     23.02.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -19,7 +19,7 @@ if exists("syntax_on")|syntax reset|endif
 let colors_name = "bruno-custom"
 
 hi SpecialKey term=bold ctermfg=4
-hi NonText term=bold cterm=bold ctermfg=4
+hi NonText term=bold cterm=bold ctermfg=8
 hi Directory term=bold ctermfg=4
 hi ErrorMsg term=standout cterm=bold ctermfg=7 ctermbg=1
 hi IncSearch term=reverse cterm=reverse
