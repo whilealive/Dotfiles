@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     01.02.2023
+" DATE     23.02.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -40,6 +40,7 @@ set mouse=a                 "now works properly with st/tmux
 set showmatch               "shows the opening bracket when typing )}]
 set showcmd                 "for longer commands in command mode
 set ruler                   "shows row/column number of the cursor
+set rulerformat=%22(char:\ %v\ line:\ %l%)
 set nojoinspaces            "insert only one space after .,?!
 set cpo+=$                  "shows the end of the text to be changed when pressing c
 set whichwrap=<,>,[,]       "exceed the end of the line with cursor keys only
