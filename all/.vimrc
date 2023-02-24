@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     23.02.2023
+" DATE     24.02.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -169,3 +169,4 @@ command! -range=% HardcopyPdf <line1>,<line2> hardcopy > %.ps | !ps2pdf %.ps && 
 " ------------------------------------------------------------------
 " use markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_listsyms = ' %✓'
