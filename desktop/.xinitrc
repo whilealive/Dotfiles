@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     11.12.2022
+# DATE     27.02.2023
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -23,6 +23,9 @@ setxkbmap -layout ch
 
 # mute the stupid "Bing" sound
 xset b off
+
+# load icc display profile
+#xcalib -d :0 "$HOME/.color/icc/Displaycal_2023-02-27.icc"
 
 # set NumLock
 numlockx &
