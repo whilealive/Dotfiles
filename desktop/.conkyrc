@@ -4,7 +4,7 @@ conky.config = {
 -- MACHINE  desktop
 -- INFO     
 
--- DATE     26.02.2023
+-- DATE     10.03.2023
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -34,7 +34,7 @@ Uptime  $uptime
 Kernel  $kernel
 
 ${color #ff6565}CPU ${hr 2}${color}
-${cpugraph cpu0 20,250,000000 CFCFCF}
+${cpugraph cpu0 20,250 000000 CFCFCF}
 ${color #ff6565}${cpubar cpu0 6,250} ${color #cc0033}$color
 
 ${color #ff6565}TOP 5 PROCESSES ${hr 2}$color
