@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     19.07.2022
+" DATE     20.06.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -36,3 +36,11 @@ nnoremap ,<F4> magg
       \"=strftime("%d.%m.%Y")<CR>p
       \a}<ESC>
       \'a
+
+" possible alternative: indents wrapped lines like
+" \item blah bkah blah
+"       blahk, aölkj a 
+"       afakdfjaf 
+"set formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*\\\|^\\s*\\\\item\\s*
+"set showbreak=""
+"set breakindentopt+=list:-1

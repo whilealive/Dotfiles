@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     
 "
-" DATE     27.01.2023
+" DATE     20.06.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -18,3 +18,7 @@ noremap <buffer> <silent> k gk
 noremap <buffer> <silent> j gj
 noremap <buffer> <silent> 0 g0
 noremap <buffer> <silent> $ g$
+
+" properly indent wrapped lines in lists, tasks etc.
+set showbreak=""
+set breakindentopt+=list:-1

@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     24.02.2023
+" DATE     20.06.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -104,8 +104,8 @@ set wrap                         "wrap long lines visually (soft-wrap)
 set nolist                       "make sure wrap option won't be disabled
 set linebreak                    "wrap between words only
 set breakindent                  "keep indentation when soft-wrapping
-"set showbreak=>\ 
 set showbreak=↪\ 
+"set showbreak=>\ 
 " ------------------------------------------------------------------
 
 
@@ -169,4 +169,4 @@ command! -range=% HardcopyPdf <line1>,<line2> hardcopy > %.ps | !ps2pdf %.ps && 
 " ------------------------------------------------------------------
 " use markdown as default syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
-let g:vimwiki_listsyms = ' %✓'
+"let g:vimwiki_listsyms = ' %✓'
