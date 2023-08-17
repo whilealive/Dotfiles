@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     20.06.2023
+" DATE     26.07.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -19,9 +19,9 @@ compiler latexmk
 nnoremap <buffer> <silent> <F5> :wa<cr>:make!<cr><cr>:cw 20<cr>:cbo<cr><C-W>k
 
 " soft-wrap
-set formatoptions=l
-set columns=100
-autocmd VimResized * if (&columns > 100) | set columns=100 | endif
+"set formatoptions=l
+"set columns=100
+"autocmd VimResized * if (&columns > 100) | set columns=100 | endif
 noremap <buffer> <silent> k gk
 noremap <buffer> <silent> j gj
 noremap <buffer> <silent> 0 g0
