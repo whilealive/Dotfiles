@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     16.01.2023
+-- DATE     21.09.2023
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -515,7 +515,7 @@ awful.rules.rules = {
     { rule = { name = "tex" },            properties = { screen = 1, tag = "3:tex" } },
     -- 4:office
     { rule = { name = "LibreOffice" },    properties = { screen = 1, tag = "4:office" } },
-    { rule = { class = "Xournalpp" },     properties = { screen = 1, tag = "4:office" } },
+    { rule = { class = "Com.github.xournalpp.xournalpp" },     properties = { screen = 1, tag = "4:office" } },
     { rule = { class = "Pdfarranger" },   properties = { screen = 1, tag = "4:office" } },
     { rule = { class = "Chromium" },      properties = { screen = 1, tag = "4:office" } },  -- teams pwa
     -- 5:dtp
@@ -539,6 +539,7 @@ awful.rules.rules = {
     -- 8:virt
     { rule = { class = "VirtualBox" },    properties = { screen = 1, tag = "8:virt", floating = true } },
     -- currently unused
+    --{ rule = { class = "Xournalpp" },     properties = { screen = 1, tag = "4:office" } },
     --{ rule = { class = "Rawtherapee" },   properties = { screen = 1, tag = "5:dtp", floating = true } },
     --{ rule = { class = "Sxiv" },          properties = { screen = 1, tag = "2:doc" } },
     --{ rule = { class = "Gnome-mplayer" }, properties = { screen = 1, tag = "6:gui", floating = true } },
