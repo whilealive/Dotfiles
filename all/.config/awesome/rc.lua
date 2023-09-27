@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     21.09.2023
+-- DATE     27.09.2023
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -498,7 +498,7 @@ awful.rules.rules = {
     },
 
     -- Floating clients.
-    { rule_any = { class = { "pinentry", "notesd" } }, properties = { floating = true } },
+    { rule_any = { class = { "pinentry" } }, properties = { floating = true } },
 
     -- No titlebars
     { rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
