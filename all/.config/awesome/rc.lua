@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     27.09.2023
+-- DATE     03.10.2023
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -499,6 +499,7 @@ awful.rules.rules = {
 
     -- Floating clients.
     { rule_any = { class = { "pinentry" } }, properties = { floating = true } },
+    { rule_any = { name = { "Java" } },      properties = { floating = true } },  -- temporary hack for Java-Vector2D-project
 
     -- No titlebars
     { rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
