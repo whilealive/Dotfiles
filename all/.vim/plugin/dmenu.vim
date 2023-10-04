@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     plugin: use dmenu to open files quickly in vim
 "
-" DATE     11.02.2022
+" DATE     04.10.2023
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -28,6 +28,7 @@ function! DmenuOpen(cmd,type)
           \! -path '*/*.fls' 
           \! -path '*/*.out' 
           \! -path '*/*.fdb_latexmk' 
+          \! -path '*/*.class' 
           \  -type f
           \  -printf '%P\n' 
           \| sort | dmenu -i -l 20 -p " . a:cmd))
