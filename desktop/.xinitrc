@@ -4,7 +4,7 @@
 # MACHINE  desktop
 # INFO     Executed by startx
 #
-# DATE     27.02.2023
+# DATE     10.10.2023
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -34,7 +34,7 @@ numlockx &
 udiskie -t &
 
 # x-keys l-trac settings (see: ~/Scripts/ltrac)
-ltrac
+#ltrac
 
 # start conky
 conky &
