@@ -2,7 +2,7 @@
 -- FILE     rc.lua
 -- INFO     awesome configuration file
 --
--- DATE     03.10.2023
+-- DATE     12.11.2023
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -518,7 +518,6 @@ awful.rules.rules = {
     { rule = { name = "LibreOffice" },    properties = { screen = 1, tag = "4:office" } },
     { rule = { class = "Com.github.xournalpp.xournalpp" },     properties = { screen = 1, tag = "4:office" } },
     { rule = { class = "Pdfarranger" },   properties = { screen = 1, tag = "4:office" } },
-    { rule = { class = "Chromium" },      properties = { screen = 1, tag = "4:office" } },  -- teams pwa
     -- 5:dtp
     { rule = { class = "Gimp" },          properties = { screen = 1, tag = "5:dtp", floating = true } },
     { rule = { class = "Xsane" },         properties = { screen = 1, tag = "5:dtp", floating = true } },
@@ -553,6 +552,7 @@ awful.rules.rules = {
     --{ rule = { name = "mail" },           properties = { screen = 1, tag = "7:web" } },
     --{ rule = { class = "gogglesmm" },     properties = { screen = 1, tag = "6:gui", floating = true } },
     --{ rule = { class = "Microsoft Teams - Preview" }, properties = { screen = 1, tag = "4:office", maximized = false } },
+    --{ rule = { class = "Chromium" },      properties = { screen = 1, tag = "4:office" } },  -- teams pwa
 }
 -- }}}
 
