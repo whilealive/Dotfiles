@@ -1,0 +1,13 @@
+# ==================================================================
+# FILE      buttons
+# INFO      feh mouse button config
+#
+# DATE      23.03.2024
+# OWNER     Bischofberger
+# ==================================================================
+
+scroll_up   C-4
+scroll_down C-5
+
+#zoom_in  4
+#zoom_out 5

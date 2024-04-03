@@ -1,0 +1,44 @@
+# ==================================================================
+# FILE      keys
+# INFO      feh key bindings config
+#
+# DATE      23.03.2024
+# OWNER     Bischofberger
+# ==================================================================
+
+## Examples for vim-like menu bindings on a qwerty keyboard:
+#menu_parent h Left
+#menu_child  l Right
+#menu_down   j Down
+#menu_up     k Up
+#menu_select space Return
+#
+## Same for image navigation ...
+next_img n
+prev_img p
+
+# image movement
+scroll_up    Up
+scroll_down  Down
+scroll_left  Left
+scroll_right Right
+
+## File deletion
+#remove     d   Delete
+#delete   C-d C-Delete
+#
+## remove now conflicts with toggle_filenames, so change that
+#toggle_filenames f
+
+# zooming
+zoom_in  KP_Add plus
+zoom_out KP_Subtract minus
+#zoom_default d
+#zoom_fit s
+
+## I only hit these accidentally
+#save_image
+#save_filelist
+#
+## This leaves some conflicts with existing default bindings, but you should
+## get the idea.  And I'm not gonna fix the conflicts, I don't use qwerty ;-)
