@@ -4,7 +4,7 @@ conky.config = {
 -- MACHINE  desktop
 -- INFO     
 
--- DATE     10.03.2023
+-- DATE     11.05.2024
 -- OWNER    Bischofberger
 -- ==================================================================
 
@@ -20,7 +20,7 @@ update_interval = 3.0,
 
 -- Colors, Sizes, Fonts --
 maximum_width = 250,
-default_color = 'white',
+default_color = white,
 use_xft = true,
 font = 'Monospace:size=10',
 };
