@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     28.07.2023
+" DATE     04.06.2024
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -29,8 +29,27 @@ set autowrite               "automatically writes when switching buffers, :wnext
 set autoread                "automatically re-read file if modified outside of vim
 filetype plugin indent on
 syntax enable
-set ttymouse=xterm          "vim doesn't know st
 set mouse=a                 "now works properly with st/tmux 
+"set ttymouse=xterm          "vim doesn't know st
+" ------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------
+" foot terminal
+" ------------------------------------------------------------------
+set termguicolors
+let &t_8f = "\<Esc>[38:2::%lu:%lu:%lum"
+let &t_8b = "\<Esc>[48:2::%lu:%lu:%lum"
+
+set ttymouse=sgr
+
+" Workaround bug in vim, where it incorrectly thinks modifyOtherKeys level 2 is
+" enabled, even when it's not. The snippets below ensure modifyOtherKeys=2 is
+" enabled. https://github.com/vim/vim/issues/9014
+"let &t_TI = "\<Esc>[>4;2m"
+"let &t_TE = "\<Esc>[>4;m"
+"set timeoutlen=3000
+"set ttimeoutlen=100
 " ------------------------------------------------------------------
 
 
@@ -128,9 +147,16 @@ imap <F1> <ESC>:w<CR>a
 nnoremap <F1> :w<CR>
 
 "copy/paste to/from CLIPBOARD
-vnoremap <F2> "+y
-nnoremap <F3> :set paste<CR>"+p:set nopaste<CR>
-vnoremap <F3> <ESC>:set paste<CR>gv"+p:set nopaste<CR>
+"Wayland
+vnoremap <F2> y:call system("wl-copy", @")<CR>
+nnoremap <F3> :let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>:set paste<CR>"+p:set nopaste<CR>
+vnoremap <F3> <ESC>:let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>:set paste<CR>gv"+p:set nopaste<CR>
+
+"X11
+"vnoremap <F2> "+y
+"nnoremap <F3> :set paste<CR>"+p:set nopaste<CR>
+"vnoremap <F3> <ESC>:set paste<CR>gv"+p:set nopaste<CR>
+
 
 "update filename and date in file header
 nnoremap <F4> magg

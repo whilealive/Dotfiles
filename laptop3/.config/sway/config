@@ -1,0 +1,29 @@
+# ==================================================================
+# FILE      config
+# INFO      laptop3 specific configuration for sway
+#
+# DATE      06.06.2024
+# OWNER     Bischofberger
+# ==================================================================
+
+include ~/.config/sway/config_base
+
+# Read `man 5 sway` for a complete reference.
+
+font pango: Sans 10
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+  xkb_numlock enabled
+}
+
+input "1267:12351:ELAN0511:00_04F3:303F_Touchpad" {
+  tap enabled
+#  dwt enabled
+#  natural_scroll enabled
+#  middle_emulation enabled
+}
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+include /etc/sway/config.d/*

@@ -1,0 +1,17 @@
+# ==================================================================
+# FILE      configs_desktop
+# INFO      desktop specific configuration parts for sway config
+#
+# DATE      06.06.2024
+# OWNER     Bischofberger
+# ==================================================================
+
+include ~/.config/sway/config_base
+
+font pango: Hack 10
+
+input "1241:840:DuckyChannel_International_Co.,_Ltd._Ducky_Keyboard" {
+  xkb_numlock enabled
+}
+
+include /etc/sway/config.d/*
