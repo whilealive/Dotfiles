@@ -17,7 +17,7 @@
     ],
     "modules-right": [
         "tray",
-        "mpd",
+        //"mpd",
         "idle_inhibitor",
         "pulseaudio",
         //"network",

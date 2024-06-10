@@ -1,16 +1,14 @@
 # ==================================================================
-# FILE      config
+# FILE      .config/sway/config
 # INFO      laptop3 specific configuration for sway
 #
-# DATE      06.06.2024
+# DATE      10.06.2024
 # OWNER     Bischofberger
 # ==================================================================
 
 include ~/.config/sway/config_base
 
-# Read `man 5 sway` for a complete reference.
-
-font pango: Sans 10
+font pango: Hack 14px
 
 input "1:1:AT_Translated_Set_2_keyboard" {
   xkb_numlock enabled
@@ -25,5 +23,8 @@ input "1267:12351:ELAN0511:00_04F3:303F_Touchpad" {
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+
+# lock screen before going to sleep/suspend (swayidle/swaylock)
+exec swayidle -w before-sleep "swaylock -c 484030"
 
 include /etc/sway/config.d/*
