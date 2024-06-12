@@ -2,7 +2,7 @@
 # FILE      .config/sway/config
 # INFO      laptop3 specific configuration for sway
 #
-# DATE      10.06.2024
+# DATE      12.06.2024
 # OWNER     Bischofberger
 # ==================================================================
 
@@ -26,5 +26,13 @@ input "1267:12351:ELAN0511:00_04F3:303F_Touchpad" {
 
 # lock screen before going to sleep/suspend (swayidle/swaylock)
 exec swayidle -w before-sleep "swaylock -c 484030"
+
+# special keys
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
 include /etc/sway/config.d/*
