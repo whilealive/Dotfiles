@@ -146,17 +146,18 @@ let g:netrw_special_syntax = 1
 imap <F1> <ESC>:w<CR>a
 nnoremap <F1> :w<CR>
 
-"copy/paste to/from CLIPBOARD
+"copy/paste to/from X11-/Wayland-CLIPBOARD
 "Wayland
+function! CopyWaylandClipboardToPlusRegister()
+  let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')
+endfunction
 vnoremap <F2> y:call system("wl-copy", @")<CR>
-nnoremap <F3> :let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>:set paste<CR>"+p:set nopaste<CR>
-vnoremap <F3> <ESC>:let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>:set paste<CR><ESC>gv"+p:set nopaste<CR>
-
+nnoremap <F3> :call CopyWaylandClipboardToPlusRegister()<CR>:set paste<CR>"+p:set nopaste<CR>
+vnoremap <F3> <ESC>:call CopyWaylandClipboardToPlusRegister()<CR>:set paste<CR><ESC>gv"+p:set nopaste<CR>
 "X11
 "vnoremap <F2> "+y
 "nnoremap <F3> :set paste<CR>"+p:set nopaste<CR>
 "vnoremap <F3> <ESC>:set paste<CR>gv"+p:set nopaste<CR>
-
 
 "update filename and date in file header
 nnoremap <F4> magg

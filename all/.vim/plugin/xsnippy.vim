@@ -1,14 +1,14 @@
 " ==================================================================
-" FILE     snippy.vim
-" MACHINE  all (wayland)
-" INFO     plugin: use snippy script as snippet manager for vim
+" File     xsnippy.vim
+" MACHINE  all (X11)
+" INFO     plugin: use xsnippy script as snippet manager for vim
 "
-" DATE     12.06.2024
+" DATE     14.01.2017
 " OWNER    Bischofberger
 " ==================================================================
 
 if !exists("g:snippy_command")
-  let g:snippy_command = "snippy"
+  let g:snippy_command = "xsnippy"
 endif
 
 " Note: Placeholder starts with < and ends with >. Otherwise replacing it
@@ -28,14 +28,12 @@ function! SnippyPreview()
     "create new window, horizontally splitted
     new
     "paste CLIPBOARD
-    call CopyWaylandClipboardToPlusRegister()  "see .vimrc
     set paste
     normal! "+p
     set nopaste
   endif
 endfunction
 " }}}
-
 " Function: SnippyPaste() {{{
 " Description: Pastes the snippet (i.e. content of CLIPBOARD) directly into
 "   the current position and intends block. If a placeholder is found it will
@@ -45,7 +43,6 @@ function! SnippyPaste()
   redraw!
   if v:shell_error == 0
     "paste CLIPBOARD
-    call CopyWaylandClipboardToPlusRegister()  "see .vimrc
     normal! "+p
     "indent pasted block
     normal! =}
