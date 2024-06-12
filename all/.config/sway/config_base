@@ -1,8 +1,8 @@
 # ==================================================================
-# FILE      config_base
+# FILE      .config/sway/config_base
 # INFO      base configuration for sway (machine-independent)
 #
-# DATE      06.06.2024
+# DATE      12.06.2024
 # OWNER     Bischofberger
 # ==================================================================
 
@@ -68,10 +68,19 @@ swaybg_command -
 
 ### Input configuration
 #
+# keyboard layout
 input * {
   xkb_layout "ch"
   #xkb_layout "ch,us"
 }
+
+# Wacom tablets
+#
+# tool_mode relative does not work well with xournalpp...
+#input type:tablet_tool {
+#  tool_mode * relative
+#  #pointer_accel 0.1
+#}
 
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -180,6 +189,7 @@ bindsym $mod+Tab workspace back_and_forth
 
 assign [app_id="firefox"] 7:web
 for_window [app_id="firefox"] focus
+for_window [app_id="galculator"] floating enable
 
 
 # Layout stuff:
