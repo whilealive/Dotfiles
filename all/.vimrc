@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     04.06.2024
+" DATE     10.06.2024
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -150,7 +150,7 @@ nnoremap <F1> :w<CR>
 "Wayland
 vnoremap <F2> y:call system("wl-copy", @")<CR>
 nnoremap <F3> :let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>:set paste<CR>"+p:set nopaste<CR>
-vnoremap <F3> <ESC>:let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>:set paste<CR>gv"+p:set nopaste<CR>
+vnoremap <F3> <ESC>:let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>:set paste<CR><ESC>gv"+p:set nopaste<CR>
 
 "X11
 "vnoremap <F2> "+y
