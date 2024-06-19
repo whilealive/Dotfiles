@@ -2,15 +2,13 @@
 # FILE      .config/sway/config_base
 # INFO      base configuration for sway (machine-independent)
 #
-# DATE      12.06.2024
+# DATE      18.06.2024
 # OWNER     Bischofberger
 # ==================================================================
 
 # Read `man 5 sway` for a complete reference.
 
-#gaps inner 4
-#gaps outer 4
-
+# red color for focused window borders
 #client.<class>         <border>  <background>    <text>      <indicator>   <child_border> 
 client.focused          "#ff6565" "#ff6565"      "#ffffff"   "#2e9ef4"      "#ff6565"
 #client.focused_inactive "#23242a" "$background"  "#666666"   "#000000"     "#999999"
@@ -77,10 +75,10 @@ input * {
 # Wacom tablets
 #
 # tool_mode relative does not work well with xournalpp...
-#input type:tablet_tool {
-#  tool_mode * relative
-#  #pointer_accel 0.1
-#}
+input type:tablet_tool {
+  tool_mode * relative
+  pointer_accel 0.5
+}
 
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -139,27 +137,50 @@ bindsym $mod+Shift+Right move right
 # Workspaces:
 #
 # Switch to workspace
-bindsym $mod+1 workspace 1:term
-bindsym $mod+2 workspace 2:term
-bindsym $mod+3 workspace 3:term
-bindsym $mod+4 workspace 4:office
-bindsym $mod+5 workspace 5:dtp
-bindsym $mod+6 workspace 6:gui
-bindsym $mod+7 workspace 7:web
-bindsym $mod+8 workspace 8:virt
-bindsym $mod+9 workspace 9:spare
-bindsym $mod+0 workspace 10:spare
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace 9:web
+bindsym $mod+0 workspace 10:virt
 # Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:term
-bindsym $mod+Shift+2 move container to workspace 2:term
-bindsym $mod+Shift+3 move container to workspace 3:term
-bindsym $mod+Shift+4 move container to workspace 4:office
-bindsym $mod+Shift+5 move container to workspace 5:dtp
-bindsym $mod+Shift+6 move container to workspace 6:gui
-bindsym $mod+Shift+7 move container to workspace 7:web
-bindsym $mod+Shift+8 move container to workspace 8:virt
-bindsym $mod+Shift+9 move container to workspace 9:spare
-bindsym $mod+Shift+0 move container to workspace 10:spare
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace 9:web
+bindsym $mod+Shift+0 move container to workspace 10:virt
+
+## Switch to workspace
+#bindsym $mod+1 workspace 1:term
+#bindsym $mod+2 workspace 2:term
+#bindsym $mod+3 workspace 3:term
+#bindsym $mod+4 workspace 4:office
+#bindsym $mod+5 workspace 5:dtp
+#bindsym $mod+6 workspace 6:gui
+#bindsym $mod+7 workspace 7:web
+#bindsym $mod+8 workspace 8:virt
+#bindsym $mod+9 workspace 9:spare
+#bindsym $mod+0 workspace 10:spare
+## Move focused container to workspace
+#bindsym $mod+Shift+1 move container to workspace 1:term
+#bindsym $mod+Shift+2 move container to workspace 2:term
+#bindsym $mod+Shift+3 move container to workspace 3:term
+#bindsym $mod+Shift+4 move container to workspace 4:office
+#bindsym $mod+Shift+5 move container to workspace 5:dtp
+#bindsym $mod+Shift+6 move container to workspace 6:gui
+#bindsym $mod+Shift+7 move container to workspace 7:web
+#bindsym $mod+Shift+8 move container to workspace 8:virt
+#bindsym $mod+Shift+9 move container to workspace 9:spare
+#bindsym $mod+Shift+0 move container to workspace 10:spare
 
 #bindsym $mod+1 workspace number 1
 #bindsym $mod+2 workspace number 2
@@ -187,8 +208,15 @@ bindsym $mod+Shift+0 move container to workspace 10:spare
 
 bindsym $mod+Tab workspace back_and_forth
 
-assign [app_id="firefox"] 7:web
+# use `swaymsg -t get_tree` to get window informations
+assign [app_id="firefox"] 9:web
 for_window [app_id="firefox"] focus
+
+assign [instance="VirtualBox Manager"] 10:virt
+for_window [instance="VirtualBox Manager"] floating enable
+for_window [instance="VirtualBox Manager"] focus
+for_window [instance="VirtualBox Machine"] floating enable
+
 for_window [app_id="galculator"] floating enable
 
 
