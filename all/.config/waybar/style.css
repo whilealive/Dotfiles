@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Hack;
+    font-family: Hack, "Font Awesome 5 Free", "Font Awesome 6 Free";
     font-size: 14px;
     border-radius: 4px;
 }
