@@ -208,6 +208,9 @@ bindsym $mod+Shift+0 move container to workspace 10:virt
 
 bindsym $mod+Tab workspace back_and_forth
 
+# rename current workspace
+bindsym $mod+Insert exec echo "" | wmenu -S 000000 -M 000000 -p "rename workspace to" | xargs -r swaymsg rename workspace to
+
 # use `swaymsg -t get_tree` to get window informations
 assign [app_id="firefox"] 9:web
 for_window [app_id="firefox"] focus
