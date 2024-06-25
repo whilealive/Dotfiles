@@ -3,7 +3,7 @@
 " MACHINE  all
 " INFO     plugin: use wmenu (wayland) to open files quickly in vim
 "
-" DATE     05.06.2024
+" DATE     24.06.2024
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -13,6 +13,10 @@ function! Chomp(str)
 endfunction
 
 "Find a file and pass it to cmd
+" FIXME: 
+" - when typing ESC, plugin throws an error
+" - use parent folder of current file as starting point for search
+"   (strip folder from filename?)
 function! WmenuOpen(cmd,type)
 	if (a:type == "git")
 		let fname = Chomp(system("git ls-files | wmenu -i -l 20 -p " . a:cmd))
