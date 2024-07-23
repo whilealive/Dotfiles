@@ -3,7 +3,7 @@
 " MACHINE  all (wayland)
 " INFO     plugin: use snippy script as snippet manager for vim
 "
-" DATE     12.06.2024
+" DATE     23.07.2024
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -28,9 +28,9 @@ function! SnippyPreview()
     "create new window, horizontally splitted
     new
     "paste CLIPBOARD
-    call CopyWaylandClipboardToPlusRegister()  "see .vimrc
+    call CopyWaylandClipboardToXRegister()  "see .vimrc
     set paste
-    normal! "+p
+    normal! "xp
     set nopaste
   endif
 endfunction
@@ -45,8 +45,8 @@ function! SnippyPaste()
   redraw!
   if v:shell_error == 0
     "paste CLIPBOARD
-    call CopyWaylandClipboardToPlusRegister()  "see .vimrc
-    normal! "+p
+    call CopyWaylandClipboardToXRegister()  "see .vimrc
+    normal! "xp
     "indent pasted block
     normal! =}
     "delete blank line at the end (was needed for indenting)

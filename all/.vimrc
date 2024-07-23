@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     10.06.2024
+" DATE     23.07.2024
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -148,12 +148,12 @@ nnoremap <F1> :w<CR>
 
 "copy/paste to/from X11-/Wayland-CLIPBOARD
 "Wayland
-function! CopyWaylandClipboardToPlusRegister()
-  let @+=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')
+function! CopyWaylandClipboardToXRegister()
+  let @x=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')
 endfunction
 vnoremap <F2> y:call system("wl-copy", @")<CR>
-nnoremap <F3> :call CopyWaylandClipboardToPlusRegister()<CR>:set paste<CR>"+p:set nopaste<CR>
-vnoremap <F3> <ESC>:call CopyWaylandClipboardToPlusRegister()<CR>:set paste<CR><ESC>gv"+p:set nopaste<CR>
+nnoremap <F3> :call CopyWaylandClipboardToXRegister()<CR>:set paste<CR>"xp:set nopaste<CR>
+vnoremap <F3> <ESC>:call CopyWaylandClipboardToXRegister()<CR>:set paste<CR><ESC>gv"xp:set nopaste<CR>
 "X11
 "vnoremap <F2> "+y
 "nnoremap <F3> :set paste<CR>"+p:set nopaste<CR>
