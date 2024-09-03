@@ -1,8 +1,8 @@
 # ==================================================================
 # FILE     .zshrc
-# INFO     as usual: mostly stolen from Jason Ryan, bitbucket
+# INFO     --
 #
-# DATE     23.03.2024
+# DATE     23.08.2024
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -83,7 +83,6 @@ ranger-cd() {
 # mount media (using udiskie)
 alias sdm="udiskie-mount -a"
 alias sdu="udiskie-umount --detach -a"
-alias udiskied="udiskie --no-automount --no-file-manager --smart-tray &"
 
 
 # various aliasses
@@ -97,4 +96,5 @@ alias clmk="latexmk -lualatex -interaction=nonstopmode -file-line-error -pvc"
 alias swacom="xsetwacom set \"Wacom One by Wacom S Pen stylus\" mode Relative"
 alias mwacom="xsetwacom set \"Wacom One by Wacom M Pen stylus\" mode Relative"
 alias thfeh="feh --scale-down --action7 'trash %F' -d -S filename -t --thumb-width 470 --thumb-height 500 --limit-width=1910"
+alias beamer="wl-mirror -F eDP-1"
 
