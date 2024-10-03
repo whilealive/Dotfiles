@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     --
 #
-# DATE     23.08.2024
+# DATE     03.10.2024
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -93,8 +93,6 @@ alias grep="grep --color=auto"
 alias ra="ranger-cd"
 alias lmk="latexmk -lualatex -interaction=nonstopmode -file-line-error"
 alias clmk="latexmk -lualatex -interaction=nonstopmode -file-line-error -pvc"
-alias swacom="xsetwacom set \"Wacom One by Wacom S Pen stylus\" mode Relative"
-alias mwacom="xsetwacom set \"Wacom One by Wacom M Pen stylus\" mode Relative"
 alias thfeh="feh --scale-down --action7 'trash %F' -d -S filename -t --thumb-width 470 --thumb-height 500 --limit-width=1910"
 alias beamer="wl-mirror -F eDP-1"
 
