@@ -2,7 +2,7 @@
 # FILE     .zshrc
 # INFO     --
 #
-# DATE     03.10.2024
+# DATE     04.11.2024
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -92,7 +92,7 @@ export GREP_COLORS="mt=1;31"
 alias grep="grep --color=auto"
 alias ra="ranger-cd"
 alias lmk="latexmk -lualatex -interaction=nonstopmode -file-line-error"
-alias clmk="latexmk -lualatex -interaction=nonstopmode -file-line-error -pvc"
+alias plmk="latexmk -lualatex -interaction=nonstopmode -file-line-error -pvc"
 alias thfeh="feh --scale-down --action7 'trash %F' -d -S filename -t --thumb-width 470 --thumb-height 500 --limit-width=1910"
 alias beamer="wl-mirror -F eDP-1"
 
