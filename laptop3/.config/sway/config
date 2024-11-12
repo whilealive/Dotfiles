@@ -1,8 +1,8 @@
 # ==================================================================
-# FILE      .config/sway/config
+# FILE      config
 # INFO      laptop3 specific configuration for sway
 #
-# DATE      12.06.2024
+# DATE      07.11.2024
 # OWNER     Bischofberger
 # ==================================================================
 
@@ -34,5 +34,27 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+# wl-mirror / wl-present keybindings
+# TODO: evtl. sind die ganzen Befehle nutzlos, ausser m
+#       Vorgehen: 
+#       1. mit "wl-present mirror" eine Region auswählen und auf ein neues Fenster spiegeln
+#       2. dann dieses Fenster auf den beamer-workspace bewegen
+mode "mirror" {
+    # command starts mirroring
+    bindsym m mode "default"; exec wl-present mirror
+    # these commands modify an already running mirroring window
+    bindsym o mode "default"; exec wl-present set-output
+    bindsym r mode "default"; exec wl-present set-region
+    bindsym Shift+r mode "default"; exec wl-present unset-region
+    bindsym s mode "default"; exec wl-present set-scaling
+    bindsym f mode "default"; exec wl-present toggle-freeze
+    bindsym c mode "default"; exec wl-present custom
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+m mode "mirror"
 
 include /etc/sway/config.d/*
