@@ -16,7 +16,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     23.07.2024
+" DATE     10.02.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -63,11 +63,22 @@ set rulerformat=%22(char:\ %v\ line:\ %l%)
 set nojoinspaces            "insert only one space after .,?!
 set cpo+=$                  "shows the end of the text to be changed when pressing c
 set whichwrap=<,>,[,]       "exceed the end of the line with cursor keys only
-set hlsearch                "highlight searching results
 set scrolloff=5							"keep some lines before and after cursor
 set scrolljump=5            "lines to scroll when cursor leaves screen
 set display=lastline        "show as much as possible of a wrapped last line, not just "@"
 set hidden                  "keep history when switching buffers
+" ------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------
+" searching
+" ------------------------------------------------------------------
+set ignorecase  "search case insensitively by default
+set smartcase   "search case sensitively, if search pattern contains upper case letters
+set hlsearch    "highlight searching results
+
+"space bar un-highlights search
+noremap <silent> <Space> :set hlsearch!<CR>
 " ------------------------------------------------------------------
 
 
@@ -179,9 +190,6 @@ nnoremap ,mf :setlocal formatoptions-=a<CR>
 nnoremap ,dp{ di{v%p
 nnoremap ,dp( di(v%p
 nnoremap ,dp[ di[v%p
-
-"space bar un-highlights search
-noremap <silent> <Space> :set hlsearch!<CR>
 
 " :HardcopyPdf
 " print to a pdf (see: https://askubuntu.com/questions/705973/how-can-i-print-from-vim-to-pdf)
