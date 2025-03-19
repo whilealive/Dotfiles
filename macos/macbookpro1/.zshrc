@@ -1,9 +1,10 @@
 # ==================================================================
 # FILE     .zshrc
-# INFO     linux version adapted for macos
-# MACHINE  MacBookPro
+# OS       macOS
+# MACHINE  MacBookPro1
+# INFO     --
 #
-# DATE     16.03.2025
+# DATE     19.03.2025
 # OWNER    Bischofberger
 # ==================================================================
 
