@@ -1,9 +1,9 @@
 # ==================================================================
-# FILE     .gitignore (for Dotfiles repository)
+# FILE     .gitignore
 # MACHINE  all
 # INFO     -
 #
-# DATE     11.02.2018
+# DATE     19.03.2025
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -11,5 +11,3 @@
 
 # git shall ignore the following
 all/.vim/spell/
-all/.my-pwds.gpg
-all/.zshhistfile
