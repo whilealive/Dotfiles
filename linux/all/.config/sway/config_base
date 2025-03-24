@@ -2,7 +2,7 @@
 # FILE      config_base
 # INFO      base configuration for sway (machine-independent)
 #
-# DATE      26.08.2024
+# DATE      24.03.2025
 # OWNER     Bischofberger
 # ==================================================================
 
@@ -190,8 +190,8 @@ bindsym $mod+Insert exec swayrenameworkspace
 assign [app_id="firefox"] 7:web
 for_window [app_id="firefox"] focus
 
-assign [app_id="lollypop"] 8:music
-for_window [app_id="lollypop"] focus
+assign [app_id="org.gnome.Lollypop"] 8:music
+for_window [app_id="org.gnome.Lollypop"] focus
 
 # `foot --app-id=btop btop`  (see .zshrc)
 assign [app_id="btop"] 9:btop
