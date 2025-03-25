@@ -17,7 +17,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     19.03.2025
+" DATE     25.03.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -106,7 +106,7 @@ set softtabstop=2   "softtabstop length
 " ------------------------------------------------------------------
 " layout
 " ------------------------------------------------------------------
-colorscheme bruno-custom         "my personal color scheme
+colorscheme desert               "seems to be the best for my needs
 set cursorline                   "cursorline, sometimes pretty slow...
 set number                       "show line numbers
 if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
