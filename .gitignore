@@ -10,4 +10,4 @@
 *.swp
 
 # git shall ignore the following
-all/.vim/spell/
+linux/all/.vim/spell/

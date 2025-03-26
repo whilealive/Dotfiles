@@ -1,3 +1,13 @@
+// ==================================================================
+// FILE      config.jsonc
+// OS        linux
+// MACHINE   all
+// INFO      - 
+//
+// DATE      26.03.2025
+// OWNER     Bischofberger
+// ==================================================================
+
 // -*- mode: jsonc -*-
 {
     // "layer": "top", // Waybar at top layer

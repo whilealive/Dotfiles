@@ -1,7 +1,8 @@
 # ==================================================================
 # FILE     /etc/systemd/system/no_usb_wakeup@.service
+# OS       linux
+# MACHINE  all
 # INFO     systemctl enable no_usb_wakeup@desktop
-# MACHINE  desktop
 #
 # DATE     14.04.2022
 # OWNER    Bischofberger

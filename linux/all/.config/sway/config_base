@@ -1,5 +1,7 @@
 # ==================================================================
 # FILE      config_base
+# OS        linux
+# MACHINE   all
 # INFO      base configuration for sway (machine-independent)
 #
 # DATE      24.03.2025

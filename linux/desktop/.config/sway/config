@@ -1,9 +1,11 @@
 # ==================================================================
-# FILE      configs_desktop
-# INFO      desktop specific configuration parts for sway config
+# FILE     configs_desktop
+# OS       linux
+# MACHINE  desktop
+# INFO     machine specific configuration parts for sway config
 #
-# DATE      06.06.2024
-# OWNER     Bischofberger
+# DATE     06.06.2024
+# OWNER    Bischofberger
 # ==================================================================
 
 include ~/.config/sway/config_base

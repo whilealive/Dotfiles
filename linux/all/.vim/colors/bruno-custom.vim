@@ -1,5 +1,6 @@
 " ==================================================================
 " FILE     bruno-custom.vim
+" OS       linux
 " MACHINE  all
 " INFO     -
 "

@@ -1,5 +1,6 @@
 " ==================================================================
 " FILE     .vimrc
+" OS       linux
 " MACHINE  all
 " INFO     minimalistic
 "          <F1> :  (.vimrc)       save file

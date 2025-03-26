@@ -1,3 +1,15 @@
+/* 
+ * ==================================================================
+ * FILE      style.css
+ * OS        linux
+ * MACHINE   all
+ * INFO      - 
+ * 
+ * DATE      26.03.2025
+ * OWNER     Bischofberger
+ ==================================================================
+ */
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Hack, "Font Awesome 5 Free", "Font Awesome 6 Free";

@@ -1,5 +1,6 @@
 " ==================================================================
 " FILE     .vim/ftplugin/text.vim
+" OS       linux
 " MACHINE  all
 " INFO     
 "

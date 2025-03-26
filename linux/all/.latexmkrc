@@ -1,5 +1,7 @@
 # ==================================================================
 # FILE     .latexmkrc
+# OS       linux
+# MACHINE  all
 # INFO     latexmk rc file
 #          runs --lualatex by default
 #

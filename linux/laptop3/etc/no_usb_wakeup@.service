@@ -1,7 +1,8 @@
 # ==================================================================
 # FILE     no_usb_wakeup@.service
-# INFO     systemctl enable no_usb_wakeup@laptop3
+# OS       linux
 # MACHINE  laptop3
+# INFO     systemctl enable no_usb_wakeup@laptop3
 #
 # DATE     12.04.2022
 # OWNER    Bischofberger

@@ -1,9 +1,11 @@
 # ==================================================================
-# FILE      config
-# INFO      laptop3 specific configuration for sway
+# FILE     config
+# OS       linux
+# MACHINE  laptop3
+# INFO     machine specific configuration for sway
 #
-# DATE      07.11.2024
-# OWNER     Bischofberger
+# DATE     07.11.2024
+# OWNER    Bischofberger
 # ==================================================================
 
 include ~/.config/sway/config_base

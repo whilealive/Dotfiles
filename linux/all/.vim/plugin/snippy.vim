@@ -1,5 +1,6 @@
 " ==================================================================
 " FILE     snippy.vim
+" OS       linux
 " MACHINE  all (wayland)
 " INFO     plugin: use snippy script as snippet manager for vim
 "

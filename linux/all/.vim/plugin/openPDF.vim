@@ -1,5 +1,6 @@
 " ==================================================================
 " FILE     openPDF.vim
+" OS       linux
 " MACHINE  all
 " INFO     plugin: open corresponding pdf (e.g. to .tex files)
 "

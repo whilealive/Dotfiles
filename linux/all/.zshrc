@@ -1,8 +1,10 @@
 # ==================================================================
 # FILE     .zshrc
+# OS       linux
+# MACHINE  all
 # INFO     --
 #
-# DATE     04.11.2024
+# DATE     26.03.2025
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -65,7 +67,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 
 # tmux-helpers
-source "$HOME/Scripts/f_tmuxHelpers"
+source "$HOME/Scripts/linux/f_tmuxHelpers"
 
 
 # functions
