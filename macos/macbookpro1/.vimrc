@@ -106,7 +106,7 @@ set softtabstop=2   "softtabstop length
 " ------------------------------------------------------------------
 " layout
 " ------------------------------------------------------------------
-colorscheme desert               "seems to be the best for my needs
+colorscheme bruno-custom-mac    
 set cursorline                   "cursorline, sometimes pretty slow...
 set number                       "show line numbers
 if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
