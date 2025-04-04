@@ -4,7 +4,7 @@
 // MACHINE   all
 // INFO      - 
 //
-// DATE      26.03.2025
+// DATE      04.04.2025
 // OWNER     Bischofberger
 // ==================================================================
 
@@ -117,7 +117,7 @@
     },
     "clock": {
         "timezone": "Europe/Zurich",
-        "format": "{:%a %d.%b %Y | %R Uhr}",
+        "format": "{:%a %d.%b %Y | KW %V | %R Uhr}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
