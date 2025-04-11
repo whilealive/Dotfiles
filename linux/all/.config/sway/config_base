@@ -3,13 +3,15 @@
 # OS        linux
 # MACHINE   all
 # INFO      base configuration for sway (machine-independent)
+#           Read `man 5 sway` for a complete reference.
 #
-# DATE      24.03.2025
+# DATE      11.04.2025
 # OWNER     Bischofberger
 # ==================================================================
 
-# Read `man 5 sway` for a complete reference.
 
+### Appearance ------------------------------------------------------
+ 
 # red color for focused window borders
 #client.<class>         <border>  <background>    <text>      <indicator>   <child_border> 
 client.focused          "#ff6565" "#ff6565"      "#ffffff"   "#2e9ef4"      "#ff6565"
@@ -17,12 +19,16 @@ client.focused          "#ff6565" "#ff6565"      "#ffffff"   "#2e9ef4"      "#ff
 #client.unfocused        "#666666" "#fff5e5"      "#666666"   "#000000"     "#999999"
 
 default_border pixel 3
-#default_border normal 3
 
+
+### Startup applications ------------------------------------------------------
+ 
+# clipboard manager
 exec wl-paste --watch cliphist store
 
-### Variables
-#
+
+### Variables ------------------------------------------------------
+ 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 
@@ -41,8 +47,9 @@ set $term foot tmux
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu wmenu-run
 
-### Output configuration
-#
+
+### Output configuration ------------------------------------------------------
+ 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 swaybg_command -
@@ -66,8 +73,9 @@ swaybg_command -
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-### Input configuration
-#
+
+### Input configuration ------------------------------------------------------
+ 
 # keyboard layout
 input * {
   xkb_layout "ch"
@@ -86,10 +94,11 @@ input type:tablet_tool {
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-### Key bindings
-#
-# Basics:
-#
+
+### Key bindings ------------------------------------------------------
+ 
+# Basics
+# ------
 # Start a terminal
 bindsym $mod+Return exec $term
 
@@ -111,19 +120,14 @@ bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
-# Moving around:
-#
+ 
+# Moving around
+# -------------
 # Move your focus around
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-# Or use $mod+[up|down|left|right]
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
 
 # Move the focused window with the same, but add Shift
 bindsym $mod+Shift+$left move left
@@ -135,9 +139,9 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-#
-# Workspaces:
-#
+ 
+# Workspaces
+# ----------
 # Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -162,19 +166,6 @@ bindsym $mod+Shift+8 move container to workspace 8:music
 bindsym $mod+Shift+9 move container to workspace 9:btop
 bindsym $mod+Shift+0 move container to workspace 10:virt
 bindsym $mod+Shift+w move container to workspace work
-## my current BMZ wokspaces (handling more than 10)
-#bindsym $mod+Ctrl+1 workspace 11:BGS22c
-#bindsym $mod+Ctrl+2 workspace 12:EVT24e
-#bindsym $mod+Ctrl+3 workspace 13:BZI24a
-#bindsym $mod+Ctrl+4 workspace 14:BIN21e
-#bindsym $mod+Ctrl+5 workspace 15:BEL22a
-#bindsym $mod+Ctrl+6 workspace 16:ETS24b
-#bindsym $mod+Ctrl+Shift+1 move container to workspace 11:BGS22c
-#bindsym $mod+Ctrl+Shift+2 move container to workspace 12:EVT24e
-#bindsym $mod+Ctrl+Shift+3 move container to workspace 13:BZI24a
-#bindsym $mod+Ctrl+Shift+4 move container to workspace 14:BIN21e
-#bindsym $mod+Ctrl+Shift+5 move container to workspace 15:BEL22a
-#bindsym $mod+Ctrl+Shift+6 move container to workspace 16:ETS24b
 
 bindsym $mod+Tab workspace back_and_forth
 
@@ -183,9 +174,6 @@ bindsym $mod+Right workspace next
 bindsym $mod+Left workspace prev
 
 # rename current workspace
-#bindsym $mod+Insert exec echo "" | wmenu -S 000000 -M 000000 -p "rename workspace to" | xargs -r swaymsg rename workspace to
-#bindsym $mod+Insert exec swaymsg -p -t get_workspaces | awk '/(focused)/ {print $2}' | wmenu -S 000000 -M 000000 -p "rename workspace to" | xargs -r swaymsg rename workspace to
-#bindsym $mod+Shift+Insert exec wl-copy $(swaymsg -p -t get_workspaces | awk '/(focused)/ {print $2}')
 bindsym $mod+Insert exec swayrenameworkspace
 
 # use `swaymsg -t get_tree` to get window informations
@@ -195,8 +183,7 @@ for_window [app_id="firefox"] focus
 assign [app_id="org.gnome.Lollypop"] 8:music
 for_window [app_id="org.gnome.Lollypop"] focus
 
-# `foot --app-id=btop btop`  (see .zshrc)
-assign [app_id="btop"] 9:btop
+assign [app_id="btop"] 9:btop  # `foot --app-id=btop btop`  (see .zshrc)
 for_window [app_id="btop"] focus
 
 assign [instance="VirtualBox Manager"] 10:virt
@@ -205,10 +192,10 @@ for_window [instance="VirtualBox Manager"] focus
 for_window [instance="VirtualBox Machine"] floating enable
 
 for_window [app_id="galculator"] floating enable
+for_window [app_id="gcr-prompter"] floating enable  # pgp passphrase window
 
-
-# Layout stuff:
-#
+# Layout stuff
+# ------------
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
@@ -234,9 +221,9 @@ bindsym $mod+space focus mode_toggle
 
 # Move focus to the parent container
 bindsym $mod+a focus parent
-#
-# Scratchpad:
-#
+
+# Scratchpad
+# ----------
 # Sway has a "scratchpad", which is a bag of holding for windows.
 # You can send windows there and get them back later.
 
@@ -246,53 +233,39 @@ bindsym $mod+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+Shift+minus scratchpad show
-#
-# Resizing containers:
-#
+ 
+# Resizing containers
+# -------------------
 mode "resize" {
-# left will shrink the containers width
-# right will grow the containers width
-# up will shrink the containers height
-# down will grow the containers height
+  # left will shrink the containers width
+  # right will grow the containers width
+  # up will shrink the containers height
+  # down will grow the containers height
   bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+  bindsym $down resize grow height 10px
+  bindsym $up resize shrink height 10px
+  bindsym $right resize grow width 10px
 
-# Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+  # Ditto, with arrow keys
+  bindsym Left resize shrink width 10px
+  bindsym Down resize grow height 10px
+  bindsym Up resize shrink height 10px
+  bindsym Right resize grow width 10px
 
-# Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  # Return to default mode
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-#exec mako
+
+### Status bar ------------------------------------------------------
+
+# start network manager applet
 exec nm-applet --indicator
 
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-  swaybar_command waybar
-  
-#  position top
-#
-#  # not working with nm-applet:
-#  tray_bindcode 272 ContextMenu
-#
-## When the status_command prints a new line to stdout, swaybar updates.
-## The default just shows the current date and time.
-#    status_command while ~/.config/sway/scripts/sway_bar.sh; do sleep 10; done
-#
-#    colors {
-#      statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
+# use waybar as default bar since applets don't work fine in sway-bar
+bar { 
+  swaybar_command waybar 
 }
