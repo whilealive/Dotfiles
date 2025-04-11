@@ -1,7 +1,7 @@
 " ==================================================================
 " FILE     wmenu.vim
 " OS       linux
-" MACHINE  all
+" MACHINE  all (wayland)
 " INFO     plugin: use wmenu (wayland) to open files quickly in vim
 "
 " DATE     24.06.2024

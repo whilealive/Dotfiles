@@ -1,6 +1,6 @@
 " ==================================================================
 " FILE     filetype.vim
-" OS       linux
+" OS       all
 " MACHINE  all
 " INFO     
 "

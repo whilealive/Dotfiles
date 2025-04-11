@@ -1,6 +1,6 @@
 " ==================================================================
 " FILE     markdown.vim
-" OS       linux
+" OS       all
 " MACHINE  all
 " INFO     
 "

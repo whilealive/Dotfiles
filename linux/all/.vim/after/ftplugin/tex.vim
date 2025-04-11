@@ -1,6 +1,6 @@
 " ==================================================================
 " FILE     tex.vim
-" OS       linux
+" OS       all
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
