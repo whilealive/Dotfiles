@@ -5,7 +5,7 @@
 # INFO      base configuration for sway (machine-independent)
 #           Read `man 5 sway` for a complete reference.
 #
-# DATE      11.04.2025
+# DATE      14.04.2025
 # OWNER     Bischofberger
 # ==================================================================
 
@@ -183,7 +183,8 @@ for_window [app_id="firefox"] focus
 assign [app_id="org.gnome.Lollypop"] 8:music
 for_window [app_id="org.gnome.Lollypop"] focus
 
-assign [app_id="btop"] 9:btop  # `foot --app-id=btop btop`  (see .zshrc)
+# `foot --app-id=btop btop` (see Scripts/linux/bbtop)
+assign [app_id="btop"] 9:btop
 for_window [app_id="btop"] focus
 
 assign [instance="VirtualBox Manager"] 10:virt
