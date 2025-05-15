@@ -4,7 +4,7 @@
 # MACHINE  MacBookPro1
 # INFO     --
 #
-# DATE     19.03.2025
+# DATE     15.05.2025
 # OWNER    Bischofberger
 # ==================================================================
 
@@ -12,7 +12,7 @@ autoload -U colors && colors
 
 # prompts
 LPROMPT () {
-PS1="┌─[%{$fg[red]%}%m%{$fg[green]%} %~%{$fg_no_bold[yellow]%}%(0?.. %?)%{$reset_color%}]
+PS1="┌─[%{$fg[red]%}%n@%M%{$fg[green]%} %~%{$fg_no_bold[yellow]%}%(0?.. %?)%{$reset_color%}]
 └─╼ "
 }
 
