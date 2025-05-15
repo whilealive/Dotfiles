@@ -17,7 +17,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     25.03.2025
+" DATE     15.05.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -29,7 +29,9 @@ set autowrite               "automatically writes when switching buffers, :wnext
 set autoread                "automatically re-read file if modified outside of vim
 filetype plugin indent on
 syntax enable
-set mouse=a                 "now works properly with st/tmux 
+set mouse=a
+set modeline
+set modelines=5             "macOS sets this to 0, so we have to change it explicitly
 " ------------------------------------------------------------------
 
 
