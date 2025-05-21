@@ -4,7 +4,7 @@
 " MACHINE  all
 " INFO     plugin: open corresponding pdf (e.g. to .tex files)
 "
-" DATE     11.04.2025
+" DATE     21.05.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -30,7 +30,8 @@ function! OpenPDF()
       redraw!
     endif
     if g:env =~ 'DARWIN'
-      silent execute '!open -a preview ' . b:bufname . '&'
+      silent execute '!open -a skim ' . b:bufname . '&'
+      "silent execute '!open -a preview ' . b:bufname . '&'
       redraw!
     endif
   else
