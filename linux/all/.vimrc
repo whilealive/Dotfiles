@@ -17,7 +17,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     10.02.2025
+" DATE     09.06.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -31,7 +31,6 @@ set autoread                "automatically re-read file if modified outside of v
 filetype plugin indent on
 syntax enable
 set mouse=a                 "now works properly with st/tmux 
-"set ttymouse=xterm          "vim doesn't know st
 " ------------------------------------------------------------------
 
 
@@ -166,10 +165,6 @@ endfunction
 vnoremap <F2> y:call system("wl-copy", @")<CR>
 nnoremap <F3> :call CopyWaylandClipboardToXRegister()<CR>:set paste<CR>"xp:set nopaste<CR>
 vnoremap <F3> <ESC>:call CopyWaylandClipboardToXRegister()<CR>:set paste<CR><ESC>gv"xp:set nopaste<CR>
-"X11
-"vnoremap <F2> "+y
-"nnoremap <F3> :set paste<CR>"+p:set nopaste<CR>
-"vnoremap <F3> <ESC>:set paste<CR>gv"+p:set nopaste<CR>
 
 "update filename and date in file header
 nnoremap <F4> magg
@@ -179,9 +174,6 @@ nnoremap <F4> magg
       \W:set paste<CR>v5e"=strftime("%d.%m.%Y")<CR>p:set nopaste<CR>
       \'a
       \:nohlsearch<CR>
-
-"recreate tags file in current folder
-nnoremap ,t :! ctags -R<CR>
 
 "toggle auto formatting
 nnoremap ,af :setlocal formatoptions+=a<CR>
