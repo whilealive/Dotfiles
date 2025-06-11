@@ -1,22 +1,44 @@
 " ==================================================================
 " FILE     snippy.vim
-" OS       linux
-" MACHINE  all (wayland)
+" OS       all
+" MACHINE  all (wayland for linux)
 " INFO     plugin: use snippy script as snippet manager for vim
+"          with some fallback method for macOS using netrw
 "
-" DATE     23.07.2024
+" DATE     11.06.2025
 " OWNER    Bischofberger
 " ==================================================================
 
-if !exists("g:snippy_command")
-  let g:snippy_command = "snippy"
+" Description: Define a global variable containing the current environment's name {{{
+"   if it hasn't been already defined.
+"   see: https://vi.stackexchange.com/questions/2572/detect-os-in-vimscript/2577#2577
+if !exists('g:env')
+  if has('win64')
+    let g:env = 'WINDOWS'
+  else
+    let g:env = toupper(substitute(system('uname'), '\n', '', ''))
+  endif
 endif
+" }}}
 
-" Note: Placeholder starts with < and ends with >. Otherwise replacing it
-" in SnippyPaste() could fail.
+
+" Description: define placeholder. This is where cursor jumps to after {{{
+"   pasting snippet content
+"   Placeholder must start with < and end with >. Otherwise replacing it
+"   in SnippyPaste() could fail.
 if !exists("g:snippy_placeholder")
   let g:snippy_placeholder = "<+++>"
 endif
+" }}}
+
+
+" Description: (linux only) snippy bash script uses dmenu/wmenu {{{
+"   to list files in ~/.snippy folder
+if !exists("g:snippy_command")
+  let g:snippy_command = "snippy"
+endif
+" }}}
+
 
 " Function: SnippyPreview() {{{
 " Description: Opens a new window and pastes the snippet (i.e. content of
@@ -36,6 +58,7 @@ function! SnippyPreview()
   endif
 endfunction
 " }}}
+
 
 " Function: SnippyPaste() {{{
 " Description: Pastes the snippet (i.e. content of CLIPBOARD) directly into
@@ -60,5 +83,36 @@ function! SnippyPaste()
 endfunction
 " }}}
 
-nnoremap ,S  :call SnippyPreview()<cr>
-nnoremap ,sn :call SnippyPaste()<cr>
+
+" Description: netrw solution for macOS without dmenu/wmenu {{{
+"   Works for linux as well, just uses netrw plugin
+"   Some stuff taken from `https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/`
+function! NetrwMapping()
+endfunction
+
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+  nmap <buffer> <Leader>dd <CR>:%y<CR>:bd<CR>
+endfunction
+" }}}
+
+
+" Description: define the mappings
+" linux: both methods will work
+" macOS: only netrw solution should be enabled
+if g:env =~ 'LINUX'
+  nnoremap ,S  :call SnippyPreview()<cr>
+  nnoremap ,sn :call SnippyPaste()<cr>
+  "nnoremap ,SS :Vexplore ~/vimsnippy/<cr>
+  redraw!
+endif
+
+if g:env =~ 'DARWIN'
+  nnoremap ,S :Vexplore ~/vimsnippy/<cr>
+  redraw!
+endif
+
