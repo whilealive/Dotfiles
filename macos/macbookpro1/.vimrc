@@ -1,5 +1,5 @@
 " ==================================================================
-" FILE     .vimrc
+" FILE     macos/macbookpro1/.vimrc
 " OS       macOS
 " MACHINE  MacBookPro1
 " INFO 
@@ -17,7 +17,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     15.05.2025
+" DATE     12.06.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -118,6 +118,17 @@ set linebreak                    "wrap between words only
 set breakindent                  "keep indentation when soft-wrapping
 set showbreak=↪\ 
 "set showbreak=>\ 
+" ------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------
+" netrw settings
+" ------------------------------------------------------------------
+let g:netrw_banner         = 0
+let g:netrw_keepdir        = 0
+let g:netrw_liststyle      = 2
+let g:netrw_retmap         = 1
+let g:netrw_special_syntax = 1
 " ------------------------------------------------------------------
 
 
