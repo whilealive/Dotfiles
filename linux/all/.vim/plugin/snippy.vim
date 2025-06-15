@@ -5,7 +5,7 @@
 " INFO     plugin: use snippy script as snippet manager for vim
 "          with some fallback method for macOS using netrw
 "
-" DATE     11.06.2025
+" DATE     15.06.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -108,11 +108,9 @@ if g:env =~ 'LINUX'
   nnoremap ,S  :call SnippyPreview()<cr>
   nnoremap ,sn :call SnippyPaste()<cr>
   "nnoremap ,SS :Vexplore ~/vimsnippy/<cr>
-  redraw!
 endif
 
 if g:env =~ 'DARWIN'
   nnoremap ,S :Vexplore ~/vimsnippy/<cr>
-  redraw!
 endif
 
