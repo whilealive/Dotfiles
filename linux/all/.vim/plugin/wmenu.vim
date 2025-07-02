@@ -4,7 +4,7 @@
 " MACHINE  all (wayland)
 " INFO     plugin: use wmenu (wayland) to open files quickly in vim
 "
-" DATE     24.06.2024
+" DATE     02.07.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -20,7 +20,7 @@ endfunction
 "   (strip folder from filename?)
 function! WmenuOpen(cmd,type)
 	if (a:type == "git")
-		let fname = Chomp(system("git ls-files | wmenu -i -l 20 -p " . a:cmd))
+		let fname = Chomp(system("git ls-files | wmenu -i -l 20 -p " . a:cmd . " 2>/dev/null"))
 	else
 		let fname = Chomp(system("find . 
           \! -path '*/\.*' 
@@ -37,7 +37,7 @@ function! WmenuOpen(cmd,type)
           \! -path '*/*.xopp' 
           \  -type f
           \  -printf '%P\n' 
-          \| sort | wmenu -i -l 20 -p " . a:cmd))
+          \| sort | wmenu -i -l 20 -p " . a:cmd . " 2>/dev/null"))
 	endif
 	if empty(fname)
 		return
