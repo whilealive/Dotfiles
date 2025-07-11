@@ -1,10 +1,10 @@
 " ==================================================================
-" FILE     bruno-custom.vim
+" FILE     bruno-custom-mac.vim
 " OS       macos
 " MACHINE  MacBookPro1
 " INFO     -
 "
-" DATE     29.03.2025
+" DATE     11.07.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -37,8 +37,8 @@ hi Visual term=reverse ctermfg=253 cterm=reverse
 hi VisualNOS term=bold,underline cterm=bold,underline
 hi WarningMsg term=standout ctermfg=1
 hi WildMenu term=standout ctermfg=0 ctermbg=3
-hi Folded term=standout ctermfg=4 ctermbg=7
-hi FoldColumn term=standout ctermfg=4 ctermbg=7
+hi Folded term=standout ctermfg=white ctermbg=236
+hi FoldColumn term=standout ctermfg=white ctermbg=239
 hi DiffAdd term=bold ctermfg=7 ctermbg=4
 hi DiffChange term=bold ctermbg=5
 hi DiffDelete term=bold cterm=bold ctermfg=4 ctermbg=6
