@@ -17,7 +17,7 @@
 "          <F11> : 
 "          <F12> : 
 "
-" DATE     09.06.2025
+" DATE     17.07.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -124,9 +124,20 @@ set softtabstop=2   "softtabstop length
 
 
 " ------------------------------------------------------------------
+" colors
+" ------------------------------------------------------------------
+colorscheme evening
+
+"some tweaks to the "evening" colorscheme
+highlight Normal guibg=NONE      
+highlight EndOfBuffer guibg=NONE
+highlight Folded guibg=NONE guifg=lightyellow
+" ------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------
 " layout
 " ------------------------------------------------------------------
-colorscheme bruno-custom         "my personal color scheme
 set cursorline                   "cursorline, sometimes pretty slow...
 set number                       "show line numbers
 if &diff | syntax off | endif	   "disable syntax highlighting in vimdiff...
@@ -136,6 +147,22 @@ set linebreak                    "wrap between words only
 set breakindent                  "keep indentation when soft-wrapping
 set showbreak=↪\ 
 "set showbreak=>\ 
+" ------------------------------------------------------------------
+
+
+" ------------------------------------------------------------------
+" folding
+" ------------------------------------------------------------------
+"simpler folding text (see :help fold-options)
+"for folding colors, see "colorscheme" above
+function! MyFoldText()
+  let line = getline(v:foldstart)
+  let sub = substitute(line, '/\*\|\*/\|{{{\d\=', '', 'g')
+  return sub
+  "return "+ " .. sub
+  "return v:folddashes .. sub
+endfunction
+set foldtext=MyFoldText()
 " ------------------------------------------------------------------
 
 
