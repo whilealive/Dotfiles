@@ -4,7 +4,7 @@
 " MACHINE  all
 " INFO     Personal tex.vim config file
 "
-" DATE     25.06.2024
+" DATE     14.08.2025
 " OWNER    Bischofberger
 " ==================================================================
 
@@ -36,7 +36,9 @@ nnoremap ,<F4> magg
       \a}{<ESC>
       \"=strftime("%d.%m.%Y")<CR>p
       \a}<ESC>
+      \:s/_/\\_/g<CR>
       \'a
+      \:set hlsearch!<CR>
 
 " possible alternative: indents wrapped lines like
 " \item blah bkah blah
